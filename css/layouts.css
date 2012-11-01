@@ -1,0 +1,30 @@
+/*cols*/
+/* line 3, ../scss/layouts.scss */
+.cols {
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+/* line 7, ../scss/layouts.scss */
+.col-1 {
+  float: left;
+  width: 687px;
+}
+
+/* line 11, ../scss/layouts.scss */
+.col-2 {
+  float: right;
+  width: 240px;
+}
+
+/* line 15, ../scss/layouts.scss */
+.col-3 {
+  float: left;
+  width: 380px;
+}
+
+/* line 19, ../scss/layouts.scss */
+.col-4 {
+  float: right;
+  width: 287px;
+}
