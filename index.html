@@ -5,13 +5,18 @@
 <head>
 	<title>Sport.ua</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/screen.css" />
 	<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
+<!-- BEGIN .go-top -->
+<div class="go-top"><i></i></div>
+<!-- END .go-top -->
 <!-- BEGIN .wrap -->
-<div class="wrap">
+<div class="wrap" id="top">
 	<!-- BEGIN .top-nav -->	
 	<div class="top-nav">
 		<ul>
@@ -25,7 +30,7 @@
 			<li><a href="#">Билеты</a></li>	                                       
 		</ul>
 		<div class="enter">
-			<a href="#">Войти</a>
+			<a href="#" class="enter__open">Войти</a>
 			<span>или</span>
 			<a href="#">Зарегистрироваться</a>	
 			<a href="#" class="enter__fb"></a>
@@ -38,6 +43,58 @@
 		<h1 class="logo">
 			<a href="#">Sport.ua</a>
 		</h1>
+		<!-- BEGIN .header-live -->
+		<div class="live">
+			<button class="live__prev"><i class="live__prev-arr"></i></button>
+			<button class="live__next"><i class="live__next-arr"></i></button>
+			<div class="live__slider">
+				<div class="items">
+					<div class="live__item">
+						<div class="live__flag"></div>
+						<div class="live__link">
+							<a href="#">Футбол — Чемпионат Украины</a>
+						</div>
+						<div class="live__teams">
+							<span>СКА Одесса<b>0</b></span>
+							<span>Скала<b>0</b></span>
+						</div>
+						<div class="live__time">
+							<span>Онлайн</span>
+							<span>42"</span>
+						</div>
+					</div>
+					<div class="live__item">
+						<div class="live__flag"></div>
+						<div class="live__link">
+							<a href="#">Футбол — Чемпионат Украины</a>
+						</div>
+						<div class="live__teams">
+							<span>СКА Одесса<b>0</b></span>
+							<span>Скала<b>0</b></span>
+						</div>
+						<div class="live__time">
+							<span>Онлайн</span>
+							<span>42"</span>
+						</div>
+					</div>
+					<div class="live__item">
+						<div class="live__flag"></div>
+						<div class="live__link">
+							<a href="#">Футбол — Чемпионат Украины</a>
+						</div>
+						<div class="live__teams">
+							<span>СКА Одесса<b>0</b></span>
+							<span>Скала<b>0</b></span>
+						</div>
+						<div class="live__time">
+							<span>Онлайн</span>
+							<span>42"</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END .header-live -->
 		<a class="site-title" href="#"></a>
 		<div class="nav">
 			<ul class="nav-list">
@@ -63,9 +120,9 @@
 			</div>        
 		</div>
 		<form class="search" action="">
-			<input class="serch__txt" type="text">
-			<input class="serch__btn" type="submit">
-		</form>
+			<input class="serch__txt" type="text" placeholder="Поиск">
+			<input class="btn-white" type="submit" value="Найти">
+		</form>		
 	</div>
 	<!-- END .header -->
 	<!-- BEGIN .actual -->
@@ -84,16 +141,121 @@
 	<!-- BEGIN .cols -->
 	<div class="cols">
 		<div class="col-1">
-			<div class="col-3">
-				<!-- BEGIN .main-post -->				
-				<div class="main-post">
-					<a href="#"><img src="img/pic1.jpg" alt=""></a>
-					<div class="main-post__title">
-						<a href="#">Германия — Аргентина 1:3<i></i></a>
-					</div>			
-					<p>Сборная Германии потерпела в товарищеском матче против Аргентины поражение 1:3.Голы у победителей забивали: Хедира (автогол), Месси, Ли Мария, единственный гол у Германии записал на свой счет Хеведес</p>
+			<div class="main-block">
+				<div class="col-3">
+					<!-- BEGIN .main-post -->				
+					<div class="main-post">
+						<a href="#"><img src="img/pic1.jpg" alt=""></a>
+						<div class="main-post__title">
+							<a href="#">Германия — Аргентина 1:3<i></i></a>
+						</div>			
+						<p>Сборная Германии потерпела в товарищеском матче против Аргентины поражение 1:3.Голы у победителей забивали: Хедира (автогол), Месси, Ли Мария, единственный гол у Германии записал на свой счет Хеведес</p>
+					</div>
+					<!-- END .main-post -->
 				</div>
-				<!-- END .main-post -->
+				<div class="col-4">
+					<!-- BEGIN .main-news -->				
+					<div class="main-news">
+						<div class="items">
+							<div class="main-news__items">
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>	
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+							</div>	
+							<div class="main-news__items">
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>	
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+							</div>
+							<div class="main-news__items">
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>	
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+							</div>
+							<div class="main-news__items">
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>	
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+								<div class="main-news__item">
+									<a href="#"><img src="img/pic2.jpg" alt=""></a>
+									<a href="#">Олимпийское золото бразильянок в волейболе</a>
+									<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
+								</div>
+							</div>					
+						</div>
+						<div class="navi"></div>
+						<div class="arrs-nav main-news__nav">						
+							<span class="arrs-nav__prev"><i class="arrs-nav__arr-p"></i></span>
+							<span class="arrs-nav__next"><i class="arrs-nav__arr-n"></i></span>
+						</div>
+					</div>
+					<!-- END .main-news -->
+				</div>
+			</div>
+			<div class="col-3">				
 				<!-- BEGIN .result -->
 				<div class="result">
 					<h2 class="h2">Результаты LIVE
@@ -429,7 +591,38 @@
 						</div>
 					</div>
 				</div>
-				<!-- END .result -->
+				<!-- END .result -->				
+				<!-- BEGIN .pop-news -->
+				<div class="pop-news">
+					<h2 class="h2">Популярное</h2>
+					<ul>
+						<li>
+							<a href="#"><img src="img/pic5.jpg" alt=""></a>							
+							<a href="#">Хасим Рахман: к бою с Поветкиным готов!</a>
+							<p>Экс-чемпион мира в супертяжелом весе и обязательный претендент на титул WBA Хасим Рахман провел пресс-конференцию перед встречей с Александром.</p>
+							<span>Бокс<em>•</em><span class="pop-news__date">28 сентября 22:01</span></span>
+						</li>
+						<li>
+							<a href="#"><img src="img/pic5.jpg" alt=""></a>							
+							<a href="#">Хасим Рахман: к бою с Поветкиным готов!</a>
+							<p>Экс-чемпион мира в супертяжелом весе и обязательный претендент на титул WBA.</p>
+							<span>Бокс<em>•</em><span class="pop-news__date">28 сентября 22:01</span></span>
+						</li>
+						<li>
+							<a href="#">Хасим Рахман: к бою с Поветкиным готов!</a>
+							<p>«Ростов» не выигрывал на своем поле у «Рубина» с 2006 года, «Амкар» балансирует на грани тревожного юбилея, в Махачкалу приедет худшая гостевая команда текущего сезона. Подробности матчей 10-го тура чемпионата страны — в статистическом превью Валерия Ведерникова.</p>
+							<span>Бокс<em>•</em><span class="pop-news__date">28 сентября 22:01</span></span>
+						</li>
+						<li>
+							<a href="#"><img src="img/pic5.jpg" alt=""></a>							
+							<a href="#">Хасим Рахман: к бою с Поветкиным готов!</a>
+							<p>Экс-чемпион мира в супертяжелом весе и обязательный претендент на титул WBA Хасим Рахман провел пресс-конференцию перед встречей с Александром.<b class="link-comm">72<i></i></b></p>
+							<span>Бокс<em>•</em><span class="pop-news__date">28 сентября 22:01</span></span>
+						</li>
+					</ul>
+					<button class="btn-white btn-white_more">Показать еще<i></i></button>
+				</div>
+				<!-- END .pop-news -->
 				<!-- BEGIN .photo-report -->
 				<div class="photo-report">
 					<h2 class="h2">Фоторепортажи</h2>
@@ -596,142 +789,19 @@
 					</div>
 				</div>
 				<!-- END .photo-report -->
-				<!-- BEGIN .pop-news -->
-				<div class="pop-news">
-					<h2 class="h2">Популярное</h2>
-					<ul>
-						<li>
-							<a href="#"><img src="img/pic5.jpg" alt=""></a>							
-							<a href="#">Хасим Рахман: к бою с Поветкиным готов!</a>
-							<p>Экс-чемпион мира в супертяжелом весе и обязательный претендент на титул WBA Хасим Рахман провел пресс-конференцию перед встречей с Александром.</p>
-							<span>Бокс<em>•</em><span class="pop-news__date">28 сентября 22:01</span></span>
-						</li>
-						<li>
-							<a href="#"><img src="img/pic5.jpg" alt=""></a>							
-							<a href="#">Хасим Рахман: к бою с Поветкиным готов!</a>
-							<p>Экс-чемпион мира в супертяжелом весе и обязательный претендент на титул WBA.</p>
-							<span>Бокс<em>•</em><span class="pop-news__date">28 сентября 22:01</span></span>
-						</li>
-						<li>
-							<a href="#">Хасим Рахман: к бою с Поветкиным готов!</a>
-							<p>«Ростов» не выигрывал на своем поле у «Рубина» с 2006 года, «Амкар» балансирует на грани тревожного юбилея, в Махачкалу приедет худшая гостевая команда текущего сезона. Подробности матчей 10-го тура чемпионата страны — в статистическом превью Валерия Ведерникова.</p>
-							<span>Бокс<em>•</em><span class="pop-news__date">28 сентября 22:01</span></span>
-						</li>
-						<li>
-							<a href="#"><img src="img/pic5.jpg" alt=""></a>							
-							<a href="#">Хасим Рахман: к бою с Поветкиным готов!</a>
-							<p>Экс-чемпион мира в супертяжелом весе и обязательный претендент на титул WBA Хасим Рахман провел пресс-конференцию перед встречей с Александром.<b class="link-comm">72<i></i></b></p>
-							<span>Бокс<em>•</em><span class="pop-news__date">28 сентября 22:01</span></span>
-						</li>
-					</ul>
-					<button class="btn-white btn-white_more">Показать еще<i></i></button>
-				</div>
-				<!-- END .pop-news -->
 			</div>
-			<div class="col-4">
-				<!-- BEGIN .main-news -->				
-				<div class="main-news">
-					<div class="items">
-						<div class="main-news__items">
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>	
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-						</div>	
-						<div class="main-news__items">
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>	
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-						</div>
-						<div class="main-news__items">
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>	
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-						</div>
-						<div class="main-news__items">
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>	
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-							<div class="main-news__item">
-								<a href="#"><img src="img/pic2.jpg" alt=""></a>
-								<a href="#">Олимпийское золото бразильянок в волейболе</a>
-								<p>Женская сборная Бразилии по волейболу, переигравла в финале команду США</p>
-							</div>
-						</div>					
-					</div>
-					<div class="navi"></div>
-					<div class="arrs-nav main-news__nav">						
-						<span class="arrs-nav__prev"><i class="arrs-nav__arr-p"></i></span>
-						<span class="arrs-nav__next"><i class="arrs-nav__arr-n"></i></span>
-					</div>
-				</div>
-				<!-- END .main-news -->
+			<div class="col-4">				
 				<!-- BEGIN .all-news -->
 				<div class="all-news">
 					<h2 class="h2">Новости</h2>
-					<ul>
+					<div class="all-news__detail">
+						<ul class="all-news__service">
+							<li><a class="all-news__rss" href="#"></a></li>
+							<li><a class="all-news__tw" href="#"></a></li>
+							<li><a class="all-news__mail" href="#"></a></li>
+						</ul>
+					</div>
+					<ul class="all-news__list">
 						<li>
 							<p><span class="all-news__time">00:14</span><a href="#">Мирча ЛУЧЕСКУ: «Будем думать, что делать с Димой»</a> − Футбол<b class="link-comm">72<i></i></b><span class="count-views">8979<i></i></span></p>
 						</li>
@@ -758,6 +828,9 @@
 						</li>
 						<li>
 							<p><span class="all-news__time">00:14</span><a href="#">Мирча ЛУЧЕСКУ: «Будем думать, что делать с Димой»</a> − Футбол<span class="count-views">8979<i></i></span></p>
+						</li>
+						<li>
+							<p><span class="all-news__time">00:14</span><a href="#">Мирча ЛУЧЕСКУ: «Будем думать, что делать с Димой»</a> − Футбол</p>
 						</li>
 						<li>
 							<p><span class="all-news__time">00:14</span><a href="#">Мирча ЛУЧЕСКУ: «Будем думать, что делать с Димой»</a> − Футбол</p>
@@ -895,16 +968,19 @@
 			</div>
 			<!-- END .main-videos -->
 			<!-- BEGIN .webinar -->
-			<div class="webinar">
-				<h2 class="h2">Веб-конференции</h2>
-				<div class="webinar__desc">
-					<div class="webinar__pic">
-						<a href="#"><img src="img/pic10.jpg" alt=""></a>						
+			<div class="webinar-out">
+				<div class="webinar">
+					<h2 class="h2">Веб-конференции</h2>
+					<div class="webinar__desc">
+						<div class="webinar__pic">
+							<a href="#"><img src="img/pic10.jpg" alt=""></a>						
+						</div>
+						<b>28 августа, 13:00</b>
+						<a href="#">Владимир Геннинсон</a>
+						<p>Генеральный директор госконцерна «Укрспортарена»</p>
 					</div>
-					<b>28 августа, 13:00</b>
-					<a href="#">Владимир Геннинсон</a>
-					<p>Генеральный директор госконцерна «Укрспортарена»</p>
 				</div>
+				<div class="webinar__shadow"></div>
 			</div>
 			<!-- END .webinar -->
 			<!-- BEGIN .partners -->
@@ -1028,5 +1104,41 @@
 	<!-- END .counters -->
 </div>
 <!-- END .wrap -->
+<!-- BEGIN all for popups -->
+<div class="hide-popup-opacity"></div>
+<div class="hide-popup-dark"></div>
+<div class="popup-enter">
+	<button class="close"></button>
+	<b>Вход на сайт</b>
+	<form action="">
+		<div class="popup-enter__fields">
+			<div class="form-field">
+				<span>Логин</span>
+				<input type="text">
+			</div>
+			<div class="form-field">
+				<span>Пароль</span>
+				<input type="text">
+			</div>
+			<div class="form-field form-field_check">			
+				<input type="checkbox">
+				<span>Помнить меня</span>
+			</div>
+		</div>
+		<div class="popup-enter__social">
+			<span>Быстрый вход</span>
+			<ul>
+				<li><a class="popup-enter__social-fb" href="#"></a></li>
+				<li><a class="popup-enter__social-tw" href="#"></a></li>
+			</ul>
+		</div>
+		<div class="clr"></div>
+		<div class="popup-enter__btn">
+			<input class="btn-white" type="submit" value="Войти">
+			<a href="#">Зарегистрироваться</a>
+		</div>
+	</form>
+</div>
+<!-- END all for popups -->
 </body>
 </html>
