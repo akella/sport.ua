@@ -32,6 +32,7 @@ $('.result__title .open').click(function() {
 		}
 	};
 });
+
 //result group
 $('.play-group .open').each(function() {
   if ($(this).hasClass('plus')) {
@@ -50,6 +51,7 @@ $('.play-group .open').click(function() {
 		}
 	};
 });
+
 //result play
 $('.play__open button').each(function() {
   if ($(this).hasClass('active')) {
@@ -97,5 +99,51 @@ $(window).scroll(function() {
   	$('.go-top').fadeOut(300);
   }
 });
+
+//sub nav
+$('.nav-list li a').hover(	
+  function () {  	
+  	nav_list = $(this).attr('class');
+  	$('#'+nav_list).fadeIn(300);  	
+  },
+  function () {
+  	nav_list = $(this).attr('class');
+    $('#'+nav_list).fadeOut(300);
+  }
+);
+
+//all news filter
+$('.all-news__filter').hover(	
+  function () {  	
+  	$(this).addClass('active').children('ul').show();  	
+  },
+  function () {
+  	$(this).removeClass('active').children('ul').hide();  	
+  }
+);
+$('.all-news__filter ul li').click(function() {
+	filter_val = $(this).text();
+	$(this).parent().prev().html(filter_val+'<i></i>').parent().removeClass('active').children('ul').fadeOut(300);
+});
+
+//datepicker
+if ($('.datepicker').length>0) {
+	$(function() {
+    $('.datepicker').datepicker({
+      inline: true,
+      monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+      'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+      monthNamesShort: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+      'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+      dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+      dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+      dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+      weekHeader: 'Не',
+      dateFormat: 'dd.mm.yy',
+      firstDay: 1,
+    	onSelect: function(){ alert('asdasd'); }
+  });
+});
+};
 
 });
