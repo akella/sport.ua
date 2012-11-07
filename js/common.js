@@ -101,14 +101,13 @@ $(window).scroll(function() {
 });
 
 //sub nav
-$('.nav-list li a').hover(	
+$('.nav-list li').hover(	
   function () {  	
-  	nav_list = $(this).attr('class');
-  	$('#'+nav_list).fadeIn(300);  	
+  	$(this).children('.nav-sub').show();	
   },
   function () {
   	nav_list = $(this).attr('class');
-    $('#'+nav_list).fadeOut(300);
+    $(this).children('.nav-sub').hide(); 
   }
 );
 
@@ -127,23 +126,32 @@ $('.all-news__filter ul li').click(function() {
 });
 
 //datepicker
-if ($('.datepicker').length>0) {
-	$(function() {
+$('.datepicker-out').hover( 
+  function () {   
+    $(this).children('.datepicker-date').addClass('datepicker-date_active'); 
+    $(this).children('.datepicker').show();   
     $('.datepicker').datepicker({
       inline: true,
-      monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
-      'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-      monthNamesShort: ['Январь','Февраль','Март','Апрель','Май','Июнь',
-      'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+      monthNames: ['январь','февраль','март','апрель','май','июнь',
+      'июль','август','сентябрь','октябрь','ноябрь','декабрь'],
+      monthNamesShort: ['января','февраля','марта','апреля','мая','июня',
+      'июля','августа','сентября','октября','ноября','декабря'],
       dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
       dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
       dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
       weekHeader: 'Не',
-      dateFormat: 'dd.mm.yy',
+      dateFormat: 'd M, yy',
       firstDay: 1,
-    	onSelect: function(){ alert('asdasd'); }
+      onSelect: function(){ 
+        $('.datepicker-date span').html($(this).val());
+        $('.datepicker').hide().prev().removeClass('datepicker-date_active');
+      }
   });
-});
-};
+  },
+  function () {
+    $(this).children('.datepicker-date').removeClass('datepicker-date_active'); 
+    $(this).children('.datepicker').hide(); 
+  }
+);
 
 });

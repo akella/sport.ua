@@ -322,55 +322,58 @@ table {
 	position: absolute;
 	left: 8px;
 	bottom: 0;
+	height: 40px;
 }
 .nav-list {
 	position: relative;
-	overflow: hidden;
 	z-index: 10;
-	li {
-		position: relative;
-		float: left;
-		a {		
-			display: block;	
-			height: 40px;				
-			line-height: 40px;	
-			font-family: Arial,Tahoma,sans-serif;		
-			font-size: 12px;
-			font-weight: bold;
-			color: #fff;
+	.nav-list__item {
+		float: left;			
+	}
+	.nav-list__title {
+		position: relative;		
+		display: block;	
+		height: 40px;				
+		line-height: 40px;	
+		font-family: Arial,Tahoma,sans-serif;		
+		font-size: 12px;
+		font-weight: bold;
+		color: #fff;
+		z-index: 20;
+		span {
+			position: relative;
+			padding: 0 20px 0 15px;
+			i {
+				position: absolute;
+				top: 6px;
+				right: 12px;
+				@include sized-sprite($icons, arr1);
+			}
+			em {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 1px;
+				height: 100%;
+				background: #575757;
+			}
+		}	
+	}	
+	li.active, li:hover {
+		background: #fff;
+		z-index: 2;
+		.nav-list__title {
+			background: #fff;
 		}
 		span {
 			padding: 0 20px 0 15px;
-			border-left: 1px solid #575757;
-		}
-		i {
-			position: absolute;
-			top: 19px;
-			right: 12px;
-			@include sized-sprite($icons, arr1);
-		}
-	}
-	li:first-child {
-		span {
-			border: none;
-		}
-		&:hover, &.active {
-			span {
-				padding: 0 20px 0 16px;
-			}
-		}
-	}
-	li.active, li:hover {
-		margin-right: -1px;
-		background: #fff;
-		z-index: 2;
-		span {
-			padding: 0 21px 0 16px;
-			border: none;
 			color: #000;
 		}
 		i {
 			@include sized-sprite($icons, arr2);
+		}
+		em {
+			display: none;
 		}
 	}
 }
@@ -383,7 +386,7 @@ table {
 	padding: 20px 16px;
 	background: #fff;		
 	@include box-shadow(#999 0px 0px 15px);
-	z-index: 5;
+	z-index: 10;
 	ul {
 		float: left;
 		li {
@@ -1249,25 +1252,33 @@ table {
 	}
 }
 /*datepicker*/
+.datepicker-out {
+	position: absolute;
+	top: 7px;
+	left: 180px;
+	width: 150px;
+	height: 30px;
+}
 .datepicker-date {
 	position: absolute;
-	left: 180px;
-	bottom: 0;
+	top: 0px;
+	left: 0px;
 	height: 30px;
-	padding: 0 15px;
-	@include box-shadow(rgba(0,0,0,0.3) 0px 4px 20px);
-	line-height: 30px;
+	padding: 0 15px;	
+	line-height: 30px;	
 	font-size: 13px;
-	color: #596374;
+	color: #3b6ab7;	
 	z-index: 60;
+	span {		
+		border-bottom: 1px dashed #c4d2e9;
+		cursor: pointer;
+	}	
+}
+.datepicker-date_active {	
+	@include box-shadow(rgba(0,0,0,0.3) 0px 4px 20px);
+	color: #596374;
 	span {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 50px;
-		padding-left: 15px;
-		background: #fff;
+		border: none;
 	}
 	&:after {
 		content: "";
@@ -1280,9 +1291,10 @@ table {
 	}
 }
 .datepicker {
+	display: none;
 	position: absolute;
 	top: 35px;
-	left: 180px;
+	left: 0px;
 	padding: 10px 10px 50px 10px;
 	background: #fff;
 	@include box-shadow(rgba(0,0,0,0.3) 0px 4px 20px);
@@ -1306,14 +1318,27 @@ table {
 		background: #fff;
 		cursor: pointer;
 		span {
-			display: none;
+			position: absolute;
+			top: 7px;
+			line-height: 0;
+			font-size: 0;
+			text-shadow: none;
+			color: transparent;
 		}
 	}
 	.ui-datepicker-prev {
 		left: 20px;
+		span {			
+			left: 8px;
+			@include sized-sprite($icons, arr12);
+		}
 	}
 	.ui-datepicker-next {
 		right: 20px;
+		span {			
+			left: 9px;
+			@include sized-sprite($icons, arr13);
+		}
 	}
 	.ui-datepicker-title {
 		text-align: center;
@@ -1341,7 +1366,7 @@ table {
 		&.ui-state-highlight {
 			padding: 0;
 			background: #47aef9;
-			border: 3px solid #d5f6ff;			
+			border: 3px solid #d5f6ff !important;			
 			color: #fff;
 		}
 		&.ui-state-active {
