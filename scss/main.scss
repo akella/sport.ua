@@ -109,6 +109,21 @@ $icons: sprite-map("icons/*.png");
 		right: 35px;
 		width: 84px;		
 	}		
+	.active {
+		i {
+			@include sized-sprite($icons, minus);
+		}		
+		&:hover {
+			i {
+				@include sized-sprite($icons, minus1);
+			}
+		}
+		&:active {
+			i {
+				@include sized-sprite($icons, minus2);
+			}
+		}
+	}
 }
 .result__nav {
 	height: 25px;
@@ -126,6 +141,10 @@ $icons: sprite-map("icons/*.png");
 	}
 	a {
 		color: #686868;
+		&:hover {
+			color: #000;
+			text-decoration: underline;
+		}
 	}
 	span {
 		color: #c9c9c9;

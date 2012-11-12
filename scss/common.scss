@@ -744,6 +744,17 @@ table {
 		top: 50%;
 		left: 50%;
 		margin: -5px 0 0 -5px;	
+		@include sized-sprite($icons, plus);
+	}
+	&:hover {
+		i {
+			@include sized-sprite($icons, plus1);
+		}
+	}
+	&:active {
+		i {
+			@include sized-sprite($icons, plus2);
+		}
 	}
 	&:hover {
 		border: 1px solid #1981cf;
@@ -757,49 +768,12 @@ table {
 		@include box-shadow(#dfdfdf 0px 1px 1px inset, #fff 0 1px 1px);
 	}
 }
-.minus {
-	i {
-		@include sized-sprite($icons, minus);
-	}		
-	&:hover {
-		i {
-			@include sized-sprite($icons, minus1);
-		}
-	}
-	&:active {
-		i {
-			@include sized-sprite($icons, minus2);
-		}
-	}
-}
-.plus {
-	i {
-		@include sized-sprite($icons, plus);
-	}		
-	&:hover {
-		i {
-			@include sized-sprite($icons, plus1);
-		}
-	}
-	&:active {
-		i {
-			@include sized-sprite($icons, plus2);
-		}
-	}
-}
 .close {
 	position: absolute;
 	top: 10px;
 	right: 10px;
 	@include sized-sprite($icons, close);
 	cursor: pointer;
-}
-/*banners and advert*/
-.banner {
-	margin-bottom: 35px;
-}
-.adsense {
-	margin-bottom: 20px;
 }
 /*for sliders*/
 .items {
@@ -916,7 +890,7 @@ table {
 		padding: 8px 0;
 		overflow: hidden;
 		border-bottom: 1px solid #d8d8d8;
-/*		&:nth-child(even) {
+		/*&:nth-child(even) {
 			background: #f7f7f7;
 		}
 		&:nth-child(odd) {
@@ -929,7 +903,8 @@ table {
 	.play-open {
 		background: #fffdca;
 		.play__result {
-			b {
+			a {
+				display: block;
 				height: 16px;
 				line-height: 16px;
 				background: none;
@@ -980,7 +955,7 @@ table {
 .play__result {
 	width: 38px;
 	text-align: center;
-	b {
+	a {
 		display: block;
 		height: 18px;
 		line-height: 18px;
@@ -1071,6 +1046,21 @@ table {
 		top: 50%;
 		height: 18px;
 		margin-top: -9px;
+	}
+	.active {
+		i {
+			@include sized-sprite($icons, minus);
+		}		
+		&:hover {
+			i {
+				@include sized-sprite($icons, minus1);
+			}
+		}
+		&:active {
+			i {
+				@include sized-sprite($icons, minus2);
+			}
+		}
 	}
 }
 /*base link*/
@@ -1378,7 +1368,31 @@ table {
 		border-bottom: 1px solid #c4d0e1;
 	}
 }
-
+/*banners and advert*/
+.banner240x400 {
+	margin-bottom: 35px;
+}
+.banner1000x90 {
+	width: 1000px;	
+}
+.banner760x90 {
+	width: 760px;	
+}
+.banner728x90 {
+	width: 728px;	
+}
+.banner1000x90, .banner760x90, .banner728x90 {
+	height: 90px;
+	margin: 0 auto;
+}
+.banner685x90 {
+	width: 685px;
+	height: 90px;
+	margin: -10px 0 15px 0;
+}
+.banner240x220 {
+	margin-bottom: 20px;
+}
 
 
 /*END*/
