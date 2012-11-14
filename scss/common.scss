@@ -108,7 +108,7 @@ table {
 	position: relative;
 	height: 140px;
 	background: url(../img/head-bg.jpg);
-	//z-index: 10;
+	z-index: 10;
 }
 /*header live*/
 .live {
@@ -359,14 +359,15 @@ table {
 			}
 		}	
 	}	
-	li.active, li:hover {
+	li.active, li:hover {		
 		background: #fff;
 		z-index: 2;
 		.nav-list__title {
 			background: #fff;
+			margin-left: -1px;
 		}
 		span {
-			padding: 0 20px 0 15px;
+			padding: 0 20px 0 16px;
 			color: #000;
 		}
 		i {
@@ -381,8 +382,8 @@ table {
 	display: none;
 	position: absolute;
 	top: 40px;
-	left: 0;
-	width: 938px;
+	left: -1px;
+	width: 940px;
 	padding: 20px 16px;
 	background: #fff;		
 	@include box-shadow(#999 0px 0px 15px);
@@ -745,6 +746,7 @@ table {
 		left: 50%;
 		margin: -5px 0 0 -5px;	
 		@include sized-sprite($icons, plus);
+		vertical-align: top;
 	}
 	&:hover {
 		i {
@@ -887,6 +889,7 @@ table {
 .play {
 	font-family: Verdana, Tahoma, sans-serif;
 	.play__item {		
+		position: relative;
 		padding: 8px 0;
 		overflow: hidden;
 		border-bottom: 1px solid #d8d8d8;
@@ -931,6 +934,7 @@ table {
 		}
 	}
 	.play__cell {
+		position: relative;
 		float: left;
 		line-height: 18px;
 	}
@@ -997,7 +1001,7 @@ table {
 		text-decoration: underline;
 	}	
 }
-.play__open {
+.play__open {	
 	button {
 		position: relative;
 		width: 18px;

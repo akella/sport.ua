@@ -3,3 +3,16 @@
   display: inline;
   zoom: 1;
 }
+
+/* line 12, ../scss/ie.scss */
+.ie8 .live button i {
+  margin-top: -7px;
+}
+/* line 18, ../scss/ie.scss */
+.ie8 .open i {
+  margin-top: -13px;
+}
+/* line 24, ../scss/ie.scss */
+.ie8 .play__open button i {
+  margin-top: -13px;
+}

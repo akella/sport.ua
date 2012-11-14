@@ -1,21 +1,33 @@
 $(document).ready(function () {
 
 //local storage
- if('undefined' != typeof window['localStorage']) {
-  $('#btn1').attr('class', localStorage.data);
-  $('#btn1').click(function() {
-    if ($(this).hasClass('active')) {
-      $(this).removeClass('active');
-      $(this).parent().next().slideUp();    
-    }
-    else {
-      $(this).addClass('active');
-      $(this).parent().next().slideDown();    
-    };
-    localStorage.data = $(this).attr('class');
-  });
+if('undefined' != typeof window['localStorage']) {
 
- }
+  //function for save id active buttons
+  function save_active_btns() {
+    var btns_id = "";
+    $('.result button.active').each(function() {
+      btns_id =  btns_id + $(this).attr('id') + ' ';      
+    });
+    localStorage['active-btns'] = btns_id;
+  };
+
+  //
+  var btns_id = localStorage['active-btns'];
+  var new_btns_id = btns_id.split(' ');
+
+  //alert(new_btns_id);
+
+  for (var i = 0; i < new_btns_id.length; i++) {
+    //alert(new_btns_id[1]);
+    $('#'+new_btns_id[i]).addClass('active');
+  };
+
+
+  // var foo = localStorage["bar"];
+  // localStorage["bar"] = foo;
+
+};
 
 //main sliders
 $('.main-news').scrollable({
@@ -31,10 +43,6 @@ $('.live__slider').scrollable({
 	next: '.live__next'
 });
 
-
-
-
-
 //result title
 $('.result__title .open').each(function() {
   if ($(this).hasClass('active')) {}
@@ -42,16 +50,17 @@ $('.result__title .open').each(function() {
     $(this).parent().next().hide();
   }
 });
-// $('.result__title .open').click(function() {
-// 	if ($(this).hasClass('active')) {
-//     $(this).removeClass('active');
-// 		$(this).parent().next().slideUp();		
-// 	}
-// 	else {
-//     $(this).addClass('active');
-// 		$(this).parent().next().slideDown();		
-// 	};
-// });
+$('.result__title .open').click(function() {
+	if ($(this).hasClass('active')) {
+    $(this).removeClass('active');
+		$(this).parent().next().slideUp(200);		
+	}
+	else {
+    $(this).addClass('active');
+		$(this).parent().next().slideDown(200);		
+	};
+  save_active_btns();
+});
 
 //result group
 $('.play-group .open').each(function() {
@@ -62,11 +71,12 @@ $('.play-group .open').each(function() {
 });
 $('.play-group .open').click(function() {
 	if ($(this).hasClass('active')) {		
-		$(this).removeClass('active').parent().next().slideUp();
+		$(this).removeClass('active').parent().next().slideUp(200);
 	}
 	else {		
-		$(this).addClass('active').parent().next().slideDown();
+		$(this).addClass('active').parent().next().slideDown(200);
 	};
+  save_active_btns();
 });
 
 //result play
@@ -79,14 +89,15 @@ $('.play__open button').each(function() {
 $('.play__open button').click(function() {	
 	if ($(this).hasClass('active')) {	
 		$(this).removeClass('active');
-		$(this).parent().parent().next().slideUp(200);
+		$(this).parent().parent().next().slideUp(100);
 		$(this).parent().parent().removeClass('play-open');		
 	}
 	else {
 		$(this).addClass('active');
-		$(this).parent().parent().next().slideDown(200);
+		$(this).parent().parent().next().slideDown(100);
 		$(this).parent().parent().addClass('play-open');
 	};
+  save_active_btns();
 });
 
 //popup open
