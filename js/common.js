@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 //local storage
-if('undefined' != typeof window['localStorage']) {
+if('undefined' != typeof window['localStorage'] && localStorage['active-btns']) {
 
   //function for save id active buttons
   function save_active_btns() {
