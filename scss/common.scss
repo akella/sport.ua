@@ -1,7 +1,5 @@
 @import "compass/css3";
 @import "base";
-$icons-layout: smart;
-$icons: sprite-map("icons/*.png");
 /*resets*/
 * { margin: 0; padding: 0;}
 body{
@@ -33,7 +31,7 @@ table {
 	border-spacing: 0;
 	border-collapse: collapse;
 }
-.h2 {
+.title {
 	position: relative;
 	height: 35px;
 	line-height: 35px;
@@ -54,6 +52,7 @@ table {
 	position: relative;
 	width: 987px;
 	margin: 2px auto 275px;
+	padding-top: 167px;
 	background: #fff;
 	@include box-shadow(rgba(178,178,178,0.5) 0px 15px 30px);
 }
@@ -105,15 +104,18 @@ table {
 }
 /*header*/
 .header {
-	position: relative;
-	height: 140px;
-	background: url(../img/head-bg.jpg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 987px;
+	height: 167px;
+	background: url(../img/head-bg.jpg) repeat-x 0 27px;
 	z-index: 10;
 }
 /*header live*/
 .live {
 	position: absolute;
-	top: 25px;
+	top: 52px;
 	right: 0;
 	width: 360px;
 	height: 56px;
@@ -243,7 +245,7 @@ table {
 /*logo*/
 .logo {
 	position: absolute;
-	top: 16px;
+	top: 43px;
 	left: 22px;
 	@include sized-sprite($icons, logo);
 	a {
@@ -255,7 +257,7 @@ table {
 }
 .site-title {
 	position: absolute;
-	top: 39px;
+	top:66px;
 	left: 206px;
 	@include sized-sprite($icons, logo1);
 }
@@ -263,7 +265,7 @@ table {
 .search {
 	display: none;
 	position: absolute;
-	top: 130px;
+	top: -5px;
 	right: 8px;
 	width: 259px;
 	padding: 13px;
@@ -342,23 +344,27 @@ table {
 		z-index: 20;
 		span {
 			position: relative;
-			padding: 0 20px 0 15px;
-			i {
-				position: absolute;
-				top: 6px;
-				right: 12px;
-				@include sized-sprite($icons, arr1);
-			}
-			em {
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 1px;
-				height: 100%;
-				background: #575757;
-			}
+			padding: 0 20px 0 15px;			
 		}	
-	}	
+		h3 {
+			display: inline;
+			font-size: 12px;
+		}
+		i {
+			position: absolute;
+			top: 6px;
+			right: 12px;
+			@include sized-sprite($icons, arr1);
+		}
+		em {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 1px;
+			height: 100%;
+			background: #575757;
+		}
+	}		
 	li.active, li:hover {		
 		background: #fff;
 		z-index: 2;
@@ -386,7 +392,7 @@ table {
 	width: 940px;
 	padding: 20px 16px;
 	background: #fff;		
-	@include box-shadow(#999 0px 0px 15px);
+	@include box-shadow(rgba(0,0,0,0.3) 0px 0px 15px);
 	z-index: 10;
 	ul {
 		float: left;
@@ -526,6 +532,9 @@ table {
 	a {
 		font-size: 11px;
 		color: #3b6ab7;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
 .footer__social {
@@ -557,6 +566,9 @@ table {
 	color: #000;
 	a {
 		color: #3b6ab7;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
 .footer__developer {
@@ -577,6 +589,9 @@ table {
 	}
 	a {
 		color: #3b6ab7;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 	b {
 		font-weight: normal;

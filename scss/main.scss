@@ -1,7 +1,5 @@
 @import "compass/css3";
 @import "base";
-$icons-layout: smart;
-$icons: sprite-map("icons/*.png");
 /*main*/
 .main-block {
 	margin-bottom: 40px;
@@ -26,6 +24,10 @@ $icons: sprite-map("icons/*.png");
 			text-decoration: underline;
 		}
 	}	
+	h3 {
+		display: inline;
+		font-size: 18px;
+	}
 	i {
 		position: absolute;
 		top: 8px;
@@ -77,7 +79,7 @@ $icons: sprite-map("icons/*.png");
 /*result*/
 .result {
 	font-family: Verdana, Tahoma, sans-serif;
-	.h2 {
+	.title {
 		border-bottom: 2px solid #a5a5a5;
 	}
 }
@@ -153,7 +155,7 @@ $icons: sprite-map("icons/*.png");
 /*photo report*/
 .photo-report {
 	margin-top: 30px;
-	.h2 {
+	.title {
 		border-bottom: 2px solid #fbd10d;
 		margin-bottom: 15px;
 	}
@@ -200,7 +202,7 @@ $icons: sprite-map("icons/*.png");
 /*pop-news*/
 .pop-news {
 	margin-top: 40px;	
-	.h2 {
+	.title {
 		margin-bottom: 20px;
 		border-bottom: 2px solid #ff5b01;
 	}
@@ -250,7 +252,7 @@ $icons: sprite-map("icons/*.png");
 /*all news*/
 .all-news {
 	margin-bottom: 50px;
-	.h2 {
+	.title {
 		border-bottom: 2px solid #ff5b01;
 	}	
 }
@@ -392,7 +394,7 @@ $icons: sprite-map("icons/*.png");
 /*best blog*/
 .best-blog {
 	margin-bottom: 15px;
-	.h2 {
+	.title {
 		border-bottom: 2px solid #fbd10d;
 	}
 }
@@ -524,7 +526,7 @@ $icons: sprite-map("icons/*.png");
 	padding: 0 12px 17px 12px;
 	border-bottom: 1px solid #e0e5f4;
 	border-top: 1px solid #fff;
-	.h2 {
+	.title {
 		height: 40px;
 		line-height: 40px;
 	}
@@ -591,7 +593,7 @@ $icons: sprite-map("icons/*.png");
 	margin-bottom: 40px;
 	background: #fff3a8;
 	z-index: 10;
-	.h2 {
+	.title {
 		height: 40px;
 		line-height: 40px;
 		padding-left: 12px;
@@ -646,7 +648,7 @@ $icons: sprite-map("icons/*.png");
 	position: relative;
 	padding: 20px 0 10px 12px;
 	border: 1px solid #e0e0e0;
-	.h2 {
+	.title {
 		position: absolute;
 		top: -10px;
 		left: 12px;
