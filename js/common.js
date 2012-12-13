@@ -2,7 +2,6 @@ $(document).ready(function () {
 
 //local storage
 if('undefined' != typeof window['localStorage'] && localStorage['active-btns']) {
-
   //function for save id active buttons
   function save_active_btns() {
     var btns_id = "";
@@ -11,37 +10,12 @@ if('undefined' != typeof window['localStorage'] && localStorage['active-btns']) 
     });
     localStorage['active-btns'] = btns_id;
   };
-
-  //
   var btns_id = localStorage['active-btns'];
   var new_btns_id = btns_id.split(' ');
-
-  //alert(new_btns_id);
-
   for (var i = 0; i < new_btns_id.length; i++) {
-    //alert(new_btns_id[1]);
     $('#'+new_btns_id[i]).addClass('active');
   };
-
-
-  // var foo = localStorage["bar"];
-  // localStorage["bar"] = foo;
-
 };
-
-//main sliders
-$('.main-news').scrollable({
-	prev: '.main-news__nav .arrs-nav__prev',
-	next: '.main-news__nav .arrs-nav__next'
-}).navigator();
-$('.photo-report__slider').scrollable({
-	prev: '.photo-report__nav .arrs-nav__prev',
-	next: '.photo-report__nav .arrs-nav__next'
-}).navigator();
-$('.live__slider').scrollable({
-	prev: '.live__prev',
-	next: '.live__next'
-});
 
 //result title
 $('.result__title .open').each(function() {
@@ -134,7 +108,6 @@ $('.nav-list li').hover(
   	$(this).children('.nav-sub').show();	
   },
   function () {
-  	nav_list = $(this).attr('class');
     $(this).children('.nav-sub').hide(); 
   }
 );
@@ -181,5 +154,91 @@ $('.datepicker-out').hover(
     $(this).children('.datepicker').hide(); 
   }
 );
+
+//author
+$('.author').hover( 
+  function () { 
+    $(this).addClass('hover');
+    $(this).children('ul').show();
+  },
+  function () { 
+    $(this).removeClass('hover');
+    $(this).children('ul').hide();
+  }
+);
+
+//main news
+if ($('.main-news')) {
+  $('.main-news ul').carouFredSel({
+    items: 1,
+    circular: false,
+    infinite: false,
+    auto: false,
+    prev: {
+      button: '.main-news .arrs-nav__prev',
+      key: 'left'
+    },
+    next: {
+      button: '.main-news .arrs-nav__next',
+      key: 'right'
+    },
+    pagination: '.main-news .navi'
+  });
+};
+
+//photo report slider
+if ($('.photo-report__slider').length>0) {
+  $('.photo-report__slider').carouFredSel({
+    items: 1,
+    circular: false,
+    infinite: false,
+    auto: false,
+    prev: {
+      button: '.photo-report .arrs-nav__prev',
+      key: 'left'
+    },
+    next: {
+      button: '.photo-report .arrs-nav__next',
+      key: 'right'
+    },
+    pagination: '.photo-report .navi'
+  });
+};
+
+//live skider
+if ($('.live__slider').length>0) {
+  $('.live__slider').carouFredSel({
+    items: 1,
+    circular: false,
+    infinite: false,
+    auto: false,
+    prev: {
+      button: '.live__prev',
+      key: 'left'
+    },
+    next: {
+      button: '.live__next',
+      key: 'right'
+    }
+  });
+};
+
+//athlete slider
+if ($('.athlete__slider').length>0) {
+  $('.athlete__slider').carouFredSel({
+    items: 1,
+    circular: false,
+    infinite: false,
+    auto: false,
+    prev: {
+      button: '.athlete .arrs-nav__prev',
+      key: 'left'
+    },
+    next: {
+      button: '.athlete .arrs-nav__next',
+      key: 'right'
+    }
+  });
+};
 
 });

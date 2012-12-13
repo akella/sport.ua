@@ -1,6 +1,6 @@
 $experimental-support-for-svg: true;
 $icons-layout: smart;
-$icons: sprite-map("icons/*.png");
+$icons: sprite-map("icons/*.png", $spacing: 10px);
 @mixin image-size($path) {
 	width: image-width($path);
 	height: image-height($path);

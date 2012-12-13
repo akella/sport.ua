@@ -1,6 +1,10 @@
 @import "compass/css3";
 @import "base";
 /*resets*/
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section { 
+ display: block;
+}
 * { margin: 0; padding: 0;}
 body{
 	font: {
@@ -10,6 +14,7 @@ body{
   }
   background: #f3f3f3;
   line-height: 1;
+  color: #373737;
 }
 a img, fieldset {
 	border:none;
@@ -30,6 +35,9 @@ button {
 table {
 	border-spacing: 0;
 	border-collapse: collapse;
+}
+i, em {
+	font-style: normal;
 }
 .title {
 	position: relative;
@@ -55,6 +63,22 @@ table {
 	padding-top: 167px;
 	background: #fff;
 	@include box-shadow(rgba(178,178,178,0.5) 0px 15px 30px);
+}
+.shadow {
+	&:after {
+		content: "";
+		position:absolute; 	  
+		bottom: 12px;
+		left: 10px;
+		width: 245px;
+		height: 20px;
+		@include box-shadow(0 15px 10px rgba(0, 0, 0, 0.2));
+		-webkit-transform: rotate(-4deg);
+		-moz-transform: rotate(-4deg);
+		-ms-transform: rotate(-4deg);
+		-o-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+	}	
 }
 /*top-nav*/
 .top-nav {
@@ -183,17 +207,19 @@ table {
 			}
 		}
 	}
+	.caroufredsel_wrapper {
+		padding-bottom: 10px;
+		background: rgba(0,0,0,0.3);
+		@include border-radius(7px);
+		@include box-shadow(rgba(255,255,255,0.15 ) 0 1px 1px inset);
+	}
 }
 .live__slider {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 285px;
-	height: 64px;
-	background: rgba(0,0,0,0.3);
-	@include border-radius(7px);
-	@include box-shadow(rgba(255,255,255,0.15 ) 0 1px 1px inset);
-	overflow: hidden;
+	height: 64px;	
 }
 .live__item {
 	float: left;
@@ -226,8 +252,9 @@ table {
 		margin-top: 2px;
 		padding-bottom: 12px;
 		color: #fff;
-		b {
+		i {
 			float: right;
+			font-weight: bold;
 			color: #d0d0d0;
 		}
 	}
@@ -331,58 +358,67 @@ table {
 	z-index: 10;
 	.nav-list__item {
 		float: left;			
+		&:hover {
+			.nav-list__title {
+				background: #fff;
+				margin-left: -1px;
+				h3 {
+					padding: 16px 23px 12px 16px;
+					color: #000;
+				}
+				i {
+					@include sized-sprite($icons, arr2);
+				}
+				em {
+					display: none;
+				}
+				&.active {	
+				top: 0;				
+					h3 {
+						padding: 16px 23px 12px 16px;
+						margin: 0;
+					}
+				}
+			}			
+		}
 	}
 	.nav-list__title {
 		position: relative;		
 		display: block;	
-		height: 40px;				
-		line-height: 40px;	
 		font-family: Arial,Tahoma,sans-serif;		
 		font-size: 12px;
 		font-weight: bold;
 		color: #fff;
 		z-index: 20;
-		span {
-			position: relative;
-			padding: 0 20px 0 15px;			
-		}	
 		h3 {
-			display: inline;
-			font-size: 12px;
-		}
+			position: relative;
+			padding: 16px 23px 12px 15px;				
+			font-size: 12px;		
+		}	
 		i {
 			position: absolute;
-			top: 6px;
-			right: 12px;
+			bottom: 17px;
+			right: 14px;
 			@include sized-sprite($icons, arr1);
 		}
 		em {
 			position: absolute;
-			top: 0;
+			bottom: 9px;
 			right: 0;
 			width: 1px;
-			height: 100%;
+			height: 19px;
 			background: #575757;
-		}
+		}	
+		&.active {
+			top: 5px;
+			h3 {
+				padding: 11px 18px 12px 10px;
+				margin: 0 5px;
+				background: #fff;
+				color: #000;
+			}
+		}	
 	}		
-	li.active, li:hover {		
-		background: #fff;
-		z-index: 2;
-		.nav-list__title {
-			background: #fff;
-			margin-left: -1px;
-		}
-		span {
-			padding: 0 20px 0 16px;
-			color: #000;
-		}
-		i {
-			@include sized-sprite($icons, arr2);
-		}
-		em {
-			display: none;
-		}
-	}
 }
 .nav-sub {
 	display: none;
@@ -593,8 +629,7 @@ table {
 			text-decoration: underline;
 		}
 	}
-	b {
-		font-weight: normal;
+	em {
 		font-size: 10px;
 		color: #8b9191;
 	}
@@ -610,7 +645,7 @@ table {
 	}
 }
 /*actual*/
-.actual {
+.actual, .breadcrumbs {
 	position: relative;
 	padding: 12px 0 24px 0;
 	height: 19px;
@@ -621,32 +656,27 @@ table {
 	span {
 		position: relative;
 		float: left;
-		margin-right: 15px;
-		padding: 0 15px 0 10px;
-		border-left: 4px solid #2fba0a;
-		background: #3cc817;
+		margin-right: 15px;		
 		color: #fff;
 		i {
 			position: absolute;
 			top: 0;
 			right: -5px;
 			width: 0;
-	    height: 0;
-	    border-top: 19px solid #3cc817; 
+	    height: 0;	    
 	    border-right: 5px solid transparent;	
 		}
 	}
 	ul {
+		float: left;		
+	}
+	li {
 		float: left;
-		li {
-			float: left;
-			margin-right: 30px;
-		}
-		a {
-			color: #676767;
-			&:hover {
-				text-decoration: underline;
-			}
+	}
+	a {
+		color: #676767;
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 	button {
@@ -671,6 +701,62 @@ table {
 			i {
 				@include sized-sprite($icons, search);
 			}
+		}
+	}
+}
+.actual {
+	li {
+		margin-right: 30px;
+	}
+	span {
+		padding: 0 15px 0 10px;
+		border-left: 4px solid #2fba0a;
+		background: #3cc817;
+		i {
+			border-top: 19px solid #3cc817; 
+		}
+	}
+	a {
+		h3 {
+			font-size: 11px;
+			font-weight: normal;
+		}
+	}
+}
+.breadcrumbs {
+	li {
+		margin-right: 14px;
+		&:first-child {
+			a {
+				&:after {
+					content: "";
+				}
+			}
+		}
+	}
+	span {
+		width: 20px;
+		height: 19px;
+		border-left: 4px solid #0a94e3;
+		background: #3bb8ff;
+		i {
+	    border-top: 19px solid #3bb8ff; 
+		}
+		em {
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			@include sized-sprite($icons, arr14);
+		}
+	}
+	a {
+		position: relative;
+		&:after {
+			content: "›";
+			position: absolute;
+			top: -3px;
+			left: -10px;
+			color: #acacac;
 		}
 	}
 }
@@ -820,8 +906,11 @@ table {
 			background: #3c87d7;
 			@include box-shadow(#1a5cb2 0px 1px 2px inset);
 		}
+		span {
+			display: none;
+		}
 	}
-	.active {
+	.selected {
 		padding: 1px;
 		border: none;
 		@include box-shadow(#c3dffb 0px 1px 1px);
@@ -840,7 +929,7 @@ table {
 	position: absolute;	
 	width: 46px;
 	height: 21px;
-	span {
+	button {
 		position: absolute;
 		top: 3px;
 		width: 14px;
@@ -907,13 +996,7 @@ table {
 		position: relative;
 		padding: 8px 0;
 		overflow: hidden;
-		border-bottom: 1px solid #d8d8d8;
-		/*&:nth-child(even) {
-			background: #f7f7f7;
-		}
-		&:nth-child(odd) {
-			background: #fdfdfd;
-		}*/
+		border-bottom: 1px solid #d8d8d8;		
 	}
 	.play__view {		
 		background: #fffdca;
@@ -1150,12 +1233,11 @@ table {
 	margin-left: -240px;
 	background: #fff;
 	z-index: 300;
-	b {
+	i {
 		display: block;
 		padding: 15px 0 20px 20px;
 		font-size: 20px;
 		color: #000;
-		font-weight: normal;
 	}
 }
 .popup-enter__fields {
@@ -1267,13 +1349,18 @@ table {
 	left: 180px;
 	width: 150px;
 	height: 30px;
+	&:hover {
+		.datepicker-date {
+			background: #fff;
+		}
+	}
 }
 .datepicker-date {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	height: 30px;
-	padding: 0 15px;	
+	padding: 0 15px;		
 	line-height: 30px;	
 	font-size: 13px;
 	color: #3b6ab7;	
@@ -1389,7 +1476,7 @@ table {
 }
 /*banners and advert*/
 .banner240x400 {
-	margin-bottom: 35px;
+	margin-bottom: 20px;
 }
 .banner1000x90 {
 	width: 1000px;	
@@ -1411,6 +1498,12 @@ table {
 }
 .banner240x220 {
 	margin-bottom: 20px;
+}
+.banner690x200 {
+	margin-bottom: 15px;
+}
+.banner160x270 {
+	margin-bottom: 15px;
 }
 
 

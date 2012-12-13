@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+<!--[if lt IE 9]> 
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+<![endif]-->
 <!--[if lt IE 8]><html lang="ru-RU" class="ltie8"><![endif]-->
 <!--[if IE 8]><html lang="ru-RU" class="ie8"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="ru-RU"> <!--<![endif]-->
@@ -12,6 +15,7 @@
 	<script src="js/jquery.tools.min.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script src="js/jquery-ui-1.9.1.custom.min.js"></script>
+	<script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>	
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -20,15 +24,29 @@
 <!-- END .go-top -->
 <!-- BEGIN .wrap -->
 <div class="wrap" id="top">	
-	<!-- BEGIN .actual -->
-	<div class="actual">
-		<span>Актуально<i></i></span>
+	<!-- BEGIN .menu -->
+	<ul class="menu">
+		<li><a href="#">Лига чемпионов</a></li>
+		<li><a href="#">Лига Европы</a></li>
+		<li><a href="#">ЧМ-2014</a></li>
+		<li><a href="#">Украина</a></li>
+		<li><a href="#">Кубок Украины</a></li>
+		<li><a href="#">Англия</a></li>
+		<li><a href="#">Россия</a></li>
+		<li><a href="#">Испания</a></li>
+		<li><a href="#">Италия</a></li>
+		<li><a href="#">Германия</a></li>               
+		<li><a href="#">Франция</a></li>
+		<li><a href="#">Все турниры</a></li>
+	</ul>
+	<!-- END .menu -->
+	<!-- BEGIN .breadcrumbs -->
+	<div class="breadcrumbs">
+		<span><em></em><i></i></span>
 		<ul>
-			<li><a href="#">Олимпиада 2012 в Лондоне</a></li>
-			<li><a href="#">Суперкубок Украины</a></li>
-			<li><a href="#">Все о бое Кличко - Томпсон</a></li>
-			<li><a href="#">Уимбилдон-2012</a></li>
-			<li><a href="#">Тур де Франс</a></li>	                            
+			<li><a href="#">Футбол</a></li>
+			<li><a href="#">Датагруп Кубок Украины</a></li>
+			<li><a href="#">Новости</a></li>                        
 		</ul>
 		<button class="search-open btn-white">Поиск<i></i></button>		
 		<form class="search" action="">
@@ -36,14 +54,343 @@
 			<input class="btn-white" type="submit" value="Найти">
 		</form>	
 	</div>
-	<!-- END .actual -->
+	<!-- END .breadcrumbs -->
 	<!-- BEGIN .cols -->
 	<div class="cols">
-		
+		<section class="col-1">
+			<!-- BEGIN .news-title -->
+			<div class="news-title">
+				<h2>Бразилия власти. Как «Челси» дожал «Шахтер»</h2>
+				<p>Иван Калашников наблюдал за шоу бразильцев на «Стэмфорд Бридж», куда решил вмешаться АндрейПятов.</p>
+			</div>
+			<!-- END .news-title -->
+			<div class="cols cols_no-pad">
+				<!-- BEGIN .tags -->
+				<div class="tags">
+					<div class="title">Метки</div>
+					<ul>
+						<li><a href="#">Металлург Донецк</a></li>
+						<li><a href="#">Ворскла Полтава</a></li>
+						<li><a href="#">Александр Бандура</a></li>
+					</ul>
+				</div>
+				<!-- END .tags -->
+				<div class="col-5">
+					<!-- BEGIN .news-detail -->
+					<div class="news-detail">
+						<div class="author-wrap">
+							<div class="author">
+								<div class="author__name">
+									<img src="img/pic16.jpg" alt="">
+									<a href="#">Константин  Никопольский</a>
+								</div>								
+								<ul class="author__detail">
+									<li><a href="#">Написать автору<i class="author__send"></i></a></li>
+									<li><a href="#">Сообщить об ошибке<i class="author__error"></i></a></li>
+									<li><a href="#">Версия для печати<i class="author__print"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<ul class="news-social">
+							<li><a class="news-social__fb" href="#"></a></li>
+							<li><a class="news-social__vk" href="#"></a></li>
+							<li><a class="news-social__tw" href="#"></a></li>
+							<li><a class="news-social__gg" href="#"></a></li>
+							<li><a class="news-social__ok" href="#"></a></li>
+							<li><a class="news-social__sh" href="#"></a></li>
+						</ul>
+						<ul class="news-info">
+							<li><span>05.11.2012 в 10:27<i class="news-info__date"></i></span></li>
+							<li><span>8012 просмотров<i class="news-info__views"></i></span></li>
+							<li><span>3 комментария<i class="news-info__comms"></i></span></li>
+						</ul>
+					</div>
+					<!-- END .news-detail -->
+					<!-- BEGIN .pari-match -->
+					<div class="pari-match">
+						<a href="#"></a>
+					</div>
+					<!-- END .pari-match -->
+					<!-- BEGIN .athlete -->
+					<div class="athlete">
+						<ul class="athlete__slider">
+							<li>
+								<img src="img/pic23.jpg" alt="" width="144" height="144">
+								<a class="athlete__name" href="#">Вилльян Боргес да Силва<i style="background: urlimg/flags/bl.png)"></i></a>
+								<p>Клуб «<a href="#">Шахтер</a>» <span>(Донецк)</span> Полузащитник. Номер 10</p>
+							</li>
+							<li>
+								<img src="img/pic23.jpg" alt="" width="144" height="144">
+								<a class="athlete__name" href="#">Вилльян Силва<i style="background: url(img/flags/bl.png)"></i></a>
+								<p>Клуб «<a href="#">Шахтер</a>» <span>(Донецк)</span> Полузащитник. Номер 10</p>
+							</li>
+							<li>
+								<img src="img/pic23.jpg" alt="" width="144" height="144">
+								<a class="athlete__name" href="#">Вилльян Боргес да Силва<i style="background: urlimg/flags/bl.png)"></i></a>
+								<p>Клуб «<a href="#">Шахтер</a>» <span>(Донецк)</span> Полузащитник. Номер 10</p>
+							</li>
+							<li>
+								<img src="img/pic23.jpg" alt="" width="144" height="144">
+								<a class="athlete__name" href="#">Вилльян<i style="background: url(img/flags/bl.png)"></i></a>
+								<p>Клуб «<a href="#">Шахтер</a>» <span>(Донецк)</span> Полузащитник. Номер 10</p>
+							</li>
+						</ul>		
+						<div class="arrs-nav">						
+							<button class="arrs-nav__prev"><i class="arrs-nav__arr-p"></i></button>
+							<button class="arrs-nav__next"><i class="arrs-nav__arr-n"></i></button>
+						</div>					
+					</div>
+					<!-- END .`te -->	
+					<!-- BEGIN .banner -->
+					<div class="banner160x270">
+						<img src="img/pic19.jpg" alt="">
+					</div>
+					<!-- END .banner -->
+				</div>
+				<div class="col-6">
+					<!-- BEGIN .news-content -->
+					<div class="content">
+						<figure>
+							<img src="img/pic17.jpg" alt="">
+							<figcaption>© Фото: Reuters/Stefan Wermuth</figcaption>
+						</figure>				
+						<h3>«Шахтер» привычно видеть в Лиге чемпионов</h3>		
+						<p>Торрес уже успел забить, <a class="link-man" href="#">Виллиан</a> уже успел сравнять – итолько где-то на 15-й минуте я поймал паузу в игре, чтобы понять: этот «Шахтер» кажется мнеболее сформировавшейся командой, чем «Челси». Может быть, не такой классной, но лучше знакомой –кажется, уже без малого сто лет Срна навешивает с фланга, Фернандиньо ест соперников в центреполя, а разные бразильцы в стадии предпродажной подготовки забивают голы. Стратегия развитиядонецкого клуба привела как минимум к тому, что в Лиге чемпионов «Шахтер» смотрится совершенноестественно – в отличие, скажем, от «Манчестер Сити». Было ужасно интересно наблюдать, каксмертельно опасная, но еще сырая команда Ди Маттео волком набрасывается на монолитный, спаянный«Шахтер», и если не обламывает зубы, то хотя бы оказывается вынуждена регулярно их пересчитывать По сути, обе команды весь матч показывали, насколько они хороши, и счет этой игры, наверное,должен был быть равным.</p>
+						<h3>У Пятова будут проблемы</h3>
+						<p>В ритм матча не попал лишь один игрок – вратарь <a class="link-man" href="#">Андрей Пятов</a> Сначала он коряво отбил мяч перед собой, но успел прибрать его к рукам – и сразу же присодействии защитника подарил Торресу первый гол. Двадцать минут пустя Пятов еще эффектнееассистировал Оскару, который волшебно исполнил удар шведой, но это снова был подарок. МирчаЛуческу был настолько зол, что на пресс-конференции решил отвечать на заданный по-русски вопросо Пятове на английском – видимо, потому, что так ему легче было удержаться от гнева. Я не оченьхорошо представляю, насколько крепка позиция Пятова в «Шахтере», но после такой игры – где онбыл осязаемо худшим на поле – ему наверняка придется пережить не лучшие дни в карьере.</p>
+						<h3>Рамирес – это Фернандиньо 2.0</h3>
+						<p>Впрочем, ошибки Пятова – лишь пара эпизодов. Все остальное время игру можно было смотреть неотрываясь, причем особенно рьяно искры высекали два парня в центре, Рамирес и Фернандиньо.Одного роста, одной комплекции, одного игрового плана и под одним и тем же номером, двабразильца делали на поле примерно одно и то же – и при этом пытались друг другу помешать. В 2011м я с удовольствием следил за их заочным соперничеством в гастролирующей сборной Бразилии, нолицом к лицу оно оказалось еще более увлекательным. Рамирес часто был быстрее, а Фернандиньо –умнее, но временами казалось, что это просто две разные версии одного и того же игрока; лично явчера не смог бы выбрать лучшего.</p>
+						<h3>Давид Луиз – самый классный бразилец</h3>
+						<p>Вообще в этом матче было слишком много бразильцев – возможно, именно поэтому он получилсятаким ярким. Рамирес бодался с Фернандиньо, Виллиан забивал, Оскар финтил, Луиз Адриано комичнотолкался с Кейхиллом, Алекс Тейшейра замучил Бертрана, но круче всех был Давид Луиз – футбольныйБарт Симпсон, рассекающий по футбольном полю на скейтборде и с прической набекрень. В одном изэпизодов Луиз отобрал мяч у своей штрафной, сыграл в стенку с Матой, промчался по флангу,попробовал ударить, потерял мяч, а потом опять догнал и отобрал – и все это словно забавы ради.Я не понимаю, почему Давид Луиз с его склонностями к импровизационной стендап-комедии нафутбольном поле стал именно центральным защитником, но такого веселого центрального защитника яне видел со времен Алекси Лаласа – и уже сейчас хочу как можно скорее увидеть его снова.</p>
+					</div>
+					<!-- BEGIN .news-label -->
+					<div class="news-label">
+						<a href="#">ФК «Шахтер»</a>
+					</div>
+					<!-- END .news-label -->
+					<!-- BEGIN .vote -->
+					<div class="vote-res">
+						<div class="vote-res__title">Кто выйдет из группы в Лиге Чемпионов?</div>
+						<ul>
+							<li>
+								<div class="vote-res__val">
+									<span>22%</span>
+									<i>51274</i>
+								</div>
+								<div class="vote-res__party">
+									<span>Динамо Киев</span>
+									<div class="vote-res__scale" style="width: 130px"></div>
+								</div>
+							</li>
+							<li>
+								<div class="vote-res__val">
+									<span>47%</span>
+									<i>51274</i>
+								</div>
+								<div class="vote-res__party">
+									<span>Шахтер</span>
+									<div class="vote-res__scale vote-res__scale_won" style="width: 280px"></div>
+								</div>
+							</li>
+							<li>
+								<div class="vote-res__val">
+									<span>31%</span>
+									<i>51274</i>
+								</div>
+								<div class="vote-res__party">
+									<span>Обе команды</span>
+									<div class="vote-res__scale" style="width: 180px"></div>
+								</div>
+							</li>
+						</ul>
+						<div class="vote-res__sort">
+							<span>Проголосовали — 1274</span>
+							<span>Воздержались — 38</span>							
+							<button class="vote-res__random active"><i></i></button>
+							<button class="vote-res__reduction"><i></i></button>
+						</div>
+					</div>
+					<!-- END .vote -->
+					<!-- BEGIN .materials -->
+					<div class="materials">
+						<div class="materials__title">Материалы по теме</div>
+						<ul>
+							<li><a href="#">Мирча ЛУЧЕСКУ: «Будем думать, что делать с Димой»</a> − Футбол<i>•</i><span>23октября, 00:14</span></li>
+							<li><a href="#">Анатолий ДЕМЬЯНЕНКО: «Короче, отдали игру»</a> − Футбол<i>•</i><span>23октября, 00:14</span></li>
+							<li><a href="#">Барселона - Реал Сосьедад - 5:1</a> − Футбол<i>•</i><span>23 октября, 00:14</span></li>
+						</ul>
+					</div>
+					<!-- END .materials -->
+				</div>
+			</div>
+			<!-- BEGIN .likes -->
+			<div class="likes">
+				<div class="likes__line"></div>
+				<div class="likes__btns">
+					<img src="img/pic22.jpg" alt="">
+				</div>
+			</div>
+			<!-- END .likes -->
+			<!-- BEGIN .banner690x200 -->
+			<div class="banner690x200">
+				<img src="img/pic20.jpg" alt="">
+			</div>
+			<!-- END .banner690x200 -->
+			<!-- BEGIN .facts -->
+			<div class="facts">
+				<div class="facts__title">Интересные факты</div>
+				<ul>
+					<li><img src="img/pic21.jpg" alt=""><a href="#">Тренер Алжира "вымочил" ФИНТ, непосильныРоналду</a></li>
+					<li><img src="img/pic21.jpg" alt=""><a href="#">Акинфеев в пятерке лучших футболистов в мире?</a></li>
+					<li><img src="img/pic21.jpg" alt=""><a href="#">После поражения от Греции Дзагоев сделал Послпоражения от Дзагоев сделал</a></li>
+					<li><img src="img/pic21.jpg" alt=""><a href="#">Алиев ПРОШЕЛСЯ по "Динамо"!</a></li>
+					<li><img src="img/pic21.jpg" alt=""><a href="#">Вот это Маркевич высказался о проигрыш"Динамо"!</a></li>
+				</ul>
+			</div>
+			<!-- END .facts -->
+			<!-- BEGIN .comments -->
+			<div class="comments">
+				<div class="comments__title">5 комментариев<label for="subscribe-news"><input id="subscribe-new" type="checkbox" checked="checked">подписаться на новые комментарии</label></div>
+				<ul class="comments__list">
+					<li>
+						<div class="comments__user">
+							<img src="img/pic7.jpg" alt=""><a href="#">BlueBeetle</a>, 29 октября в 22:35
+							<div class="rate rate_pos">
+								<span>+15</span>
+								<button class="rate__plus"><i></i></button>
+								<button class="rate__minus"><i></i></button>
+							</div>
+						</div>
+						<p>За это одно заработанное очко надо сказать спасибо именно вратарю донецкого Металлурга он пару раз серьезно выручал команду, а так могли и пропустить.</p>
+						<div class="comments__detail">
+							<a href="#">Ответить</a><a href="#">Ссылка</a><span>3<i></i></span>
+						</div>							
+					</li>
+					<li class="comments__child">
+						<div class="comments__user">
+							<img src="img/pic7.jpg" alt=""><a href="#">BlueBeetle</a>, 29 октября в 22:35
+							<div class="rate rate_neg">
+								<span>-3</span>
+								<button class="rate__plus"><i></i></button>
+								<button class="rate__minus"><i></i></button>
+							</div>
+						</div>
+						<p>За это одно заработанное очко надо сказать спасибо именно вратарю донецкого Металлурга он пару раз серьезно выручал команду, а так могли и пропустить.</p>
+						<div class="comments__detail">
+							<a href="#">Ответить</a><a href="#">Ссылка</a><span>3<i></i></span>
+						</div>							
+					</li>
+					<li>
+						<div class="comments__user">
+							<img src="img/pic7.jpg" alt=""><a href="#">BlueBeetle</a>, 29 октября в 22:35
+							<div class="rate rate_pos">
+								<span>+9</span>										
+								<button class="rate__plus active"><i></i></button>
+							</div>
+						</div>
+						<p>За это одно заработанное очко надо сказать спасибо именно вратарю донецкого Металлурга он пару раз серьезно выручал команду, а так могли и пропустить.</p>
+						<div class="comments__detail">
+							<a href="#">Ответить</a><a href="#">Ссылка</a><span class="active">8<i></i></span>
+						</div>							
+					</li>
+				</ul>
+				<form action="" class="comments__add">
+					<span>Добавить комментарий</span>
+					<textarea></textarea>
+					<input type="submit" value="Добавить">
+					<button>Предпросмотр</button>
+				</form>
+			</div>
+			<!-- END .comments -->
+		</section>
+		<aside class="col-2">
+			<!-- BEGIN .banner -->
+			<div class="banner240x400">
+				<img src="img/pic18.jpg" alt="">
+			</div>
+			<!-- END .banner -->
+			<!-- BEGIN .matches -->
+			<div class="matches">
+				<div class="matches__top">
+					<div class="matches__title">Результаты матчей</div>					
+					<!-- BEGIN .datepicker -->
+					<div class="datepicker-out">
+						<div class="datepicker-date"><span>12 августа, Пт</span></div>
+						<div class="datepicker"></div>
+					</div>
+					<!-- END .datepicker -->						
+				</div>
+				<div class="matches__chemp">
+					<span>Чемпионат Италии</span>
+					<i>11-й тур</i>
+				</div>
+				<div class="play-group">
+					группа А
+					<button id="btn8" class="open active"><i></i></button>
+				</div>
+				<div class="play">
+					<div class="play__item">
+						<div class="play__cell play__team-1 play__winner">Пескара</div>
+						<div class="play__cell play__result"><a href="#">4:1</a></div>
+						<div class="play__cell play__team-2">Волынь</div>
+					</div>
+					<div class="play__item">
+						<div class="play__cell play__team-1 play__winner">Пескара</div>
+						<div class="play__cell play__result"><a href="#">4:1</a></div>
+						<div class="play__cell play__team-2">Волынь</div>
+					</div>
+					<div class="play__item">
+						<div class="play__cell play__team-1 play__winner">Пескара</div>
+						<div class="play__cell play__result"><a href="#">4:1</a></div>
+						<div class="play__cell play__team-2">Волынь</div>
+					</div>
+					<div class="play__item">
+						<div class="play__cell play__team-1 play__winner">Пескара</div>
+						<div class="play__cell play__result"><a href="#">4:1</a></div>
+						<div class="play__cell play__team-2">Волынь</div>
+					</div>
+					<div class="play__item">
+						<div class="play__cell play__team-1 play__winner">Пескара</div>
+						<div class="play__cell play__result"><a href="#">4:1</a></div>
+						<div class="play__cell play__team-2">Волынь</div>
+					</div>
+				</div>
+				<ul class="matches__nav">
+					<li><a href="#">Турнирная таблица </a></li>
+					<li><a href="#">Бомбардиры</a></li>
+					<li><a href="#">Календарь</a></li>
+					<li><a href="#">Зрители</a></li>
+				</ul>
+			</div>
+			<!-- END .matches -->
+			<!-- BEGIN .sport-news -->
+			<div class="sport-news">
+				<div class="sport-news__top">
+					<span>Спортивные новости</span>
+					<button>Популярные</button>
+					<button class="active">Последние</button>
+				</div>
+				<ul class="sport-news__list">
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Николай КОСТОВ: «Сегодня была тяжелая игра»</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Черноморец - Шахтер - 1:5</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Металлист может подписать контракт с румынским вундеркиндом</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Николай КОСТОВ: «Сегодня была тяжелая игра»</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Черноморец - Шахтер - 1:5</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Металлист может подписать контракт с румынским вундеркиндом</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Николай КОСТОВ: «Сегодня была тяжелая игра»</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Черноморец - Шахтер - 1:5</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Металлист может подписать контракт с румынским вундеркиндом</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Николай КОСТОВ: «Сегодня была тяжелая игра»</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Черноморец - Шахтер - 1:5</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Металлист может подписать контракт с румынским вундеркиндом</strong></a> − Футбол</li>
+				</ul>
+			</div>
+			<!-- END .sport-news -->
+		</aside>
 	</div>
 	<!-- END .cols -->
 	<!-- BEGIN .footer-nav -->
-	<div class="footer-nav">
+	<nav class="footer-nav">
 		<ul class="footer-nav__list-1">
 			<li><a href="#">ФУТБОЛ</a></li>
 			<li><a href="#">ЧМ-2014</a></li>
@@ -111,10 +458,10 @@
 			<li><a href="#">ЕВРО-2013(U-21)</a></li>
 			<li><a href="#">Лига Чемпионов</a></li>
 		</ul>
-	</div>
+	</nav>
 	<!-- END .footer-nav -->
 	<!-- BEGIN .footer -->
-	<div class="footer">
+	<footer class="footer">
 		<span class="copyright">© 2003-2012 «Sport.ua»</span>
 		<ul class="footer__nav">
 			<li><a href="#">Реклама на сайте</a></li>
@@ -131,9 +478,9 @@
 		<span class="footer__developer">
 			<i></i>
 			<span>Дизайн от <a href="#">xeoart</a></span>
-			<b>2012</b>
+			<em>2012</em>
 		</span>
-	</div>
+	</footer>
 	<!-- END .footer -->
 	<!-- BEGIN .counters -->
 	<ul class="counters">
@@ -144,9 +491,9 @@
 	</ul>
 	<!-- END .counters -->
 	<!-- BEGIN .header -->
-	<div class="header">
+	<header class="header">
 		<!-- BEGIN .top-nav -->	
-		<div class="top-nav">
+		<nav class="top-nav">
 			<ul>
 				<li><a href="#">Результаты LIVE</a></li>
 				<li><a href="#">Видео</a></li>
@@ -164,7 +511,7 @@
 				<a href="#" class="enter__fb"></a>
 				<a href="#" class="enter__tw"></a>
 			</div>
-		</div>
+		</nav>
 		<!-- END .top-nav -->
 		<h1 class="logo">
 			<a href="#">Sport.ua</a>
@@ -174,58 +521,56 @@
 			<button class="live__prev"><i class="live__prev-arr"></i></button>
 			<button class="live__next"><i class="live__next-arr"></i></button>
 			<div class="live__slider">
-				<div class="items">
-					<div class="live__item">
-						<div class="live__flag"></div>
-						<div class="live__link">
-							<a href="#">Футбол — Чемпионат Украины</a>
-						</div>
-						<div class="live__teams">
-							<span>СКА Одесса<b>0</b></span>
-							<span>Скала<b>0</b></span>
-						</div>
-						<div class="live__time">
-							<span>Онлайн</span>
-							<span>42"</span>
-						</div>
+				<div class="live__item">
+					<div class="live__flag"></div>
+					<div class="live__link">
+						<a href="#">Футбол — Чемпионат Украины</a>
 					</div>
-					<div class="live__item">
-						<div class="live__flag"></div>
-						<div class="live__link">
-							<a href="#">Футбол — Чемпионат Украины</a>
-						</div>
-						<div class="live__teams">
-							<span>СКА Одесса<b>0</b></span>
-							<span>Скала<b>0</b></span>
-						</div>
-						<div class="live__time">
-							<span>Онлайн</span>
-							<span>42"</span>
-						</div>
+					<div class="live__teams">
+						<span>СКА Одесса<i>0</i></span>
+						<span>Скала<i>0</i></span>
 					</div>
-					<div class="live__item">
-						<div class="live__flag"></div>
-						<div class="live__link">
-							<a href="#">Футбол — Чемпионат Украины</a>
-						</div>
-						<div class="live__teams">
-							<span>СКА Одесса<b>0</b></span>
-							<span>Скала<b>0</b></span>
-						</div>
-						<div class="live__time">
-							<span>Онлайн</span>
-							<span>42"</span>
-						</div>
+					<div class="live__time">
+						<span>Онлайн</span>
+						<span>42"</span>
+					</div>
+				</div>
+				<div class="live__item">
+					<div class="live__flag"></div>
+					<div class="live__link">
+						<a href="#">Футбол — Чемпионат Украины</a>
+					</div>
+					<div class="live__teams">
+						<span>СКА Одесса<i>0</i></span>
+						<span>Скала<i>0</i></span>
+					</div>
+					<div class="live__time">
+						<span>Онлайн</span>
+						<span>42"</span>
+					</div>
+				</div>
+				<div class="live__item">
+					<div class="live__flag"></div>
+					<div class="live__link">
+						<a href="#">Футбол — Чемпионат Украины</a>
+					</div>
+					<div class="live__teams">
+						<span>СКА Одесса<i>0</i></span>
+						<span>Скала<i>0</i></span>
+					</div>
+					<div class="live__time">
+						<span>Онлайн</span>
+						<span>42"</span>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- END .header-live -->
 		<a class="site-title" href="#"></a>
-		<div class="nav">
+		<nav class="nav">
 			<ul class="nav-list">
 				<li class="nav-list__item">
-					<a class="nav-list__title" href="#"><span>ФУТБОЛ<i></i><em></em></span></a>
+					<a class="nav-list__title active" href="#"><h3>ФУТБОЛ</h3><i></i><em></em></a>
 					<div class="nav-sub">
 						<ul class="nav-sub__tournirs">
 							<li class="nav-sub__title">Турниры</li>
@@ -279,17 +624,17 @@
 						</div>
 					</div>     
 				</li>
-				<li class="nav-list__item"><a class="nav-list__title" href="#"><span>БОКС<i></i><em></em></span></a></li>
-				<li class="nav-list__item"><a class="nav-list__title" href="#"><span>ХОККЕЙ<i></i><em></em></span></a></li>
-				<li class="nav-list__item"><a class="nav-list__title" href="#"><span>БАСКЕТБОЛ<i></i><em></em></span></a></li>
-				<li class="nav-list__item"><a class="nav-list__title" href="#"><span>ТЕННИС<i></i><em></em></span></a></li>
-				<li class="nav-list__item"><a class="nav-list__title" href="#"><span>ВОЛЕЙБОЛ<i></i><em></em></span></a></li>
-				<li class="nav-list__item"><a class="nav-list__title" href="#"><span>АВТОСПОРТ<i></i><em></em></span></a></li>
-				<li class="nav-list__item"><a class="nav-list__title" href="#"><span>ОЛИМПИАДА-2012<i></i><em></em></span></a></li>
-				<li class="nav-list__item"><a class="nav-list__title" href="#"><span>ДРУГИЕ ВИДЫ<i></i></span></a></li>
+				<li class="nav-list__item"><a class="nav-list__title" href="#"><h3>БОКС</h3><i></i><em></em></a></li>
+				<li class="nav-list__item"><a class="nav-list__title" href="#"><h3>ХОККЕЙ</h3><i></i><em></em></a></li>
+				<li class="nav-list__item"><a class="nav-list__title" href="#"><h3>БАСКЕТБОЛ</h3><i></i><em></em></a></li>
+				<li class="nav-list__item"><a class="nav-list__title" href="#"><h3>ТЕННИС</h3><i></i><em></em></a></li>
+				<li class="nav-list__item"><a class="nav-list__title" href="#"><h3>ВОЛЕЙБОЛ</h3><i></i><em></em></a></li>
+				<li class="nav-list__item"><a class="nav-list__title" href="#"><h3>АВТОСПОРТ</h3><i></i><em></em></a></li>
+				<li class="nav-list__item"><a class="nav-list__title" href="#"><h3>ОЛИМПИАДА-2012</h3><i></i><em></em></a></li>
+				<li class="nav-list__item"><a class="nav-list__title" href="#"><h3>ДРУГИЕ ВИДЫ</h3><i></i></a></li>
 			</ul>			   
-		</div>			
-	</div>
+		</nav>			
+	</header>
 	<!-- END .header -->
 </div>
 <!-- END .wrap -->
@@ -298,7 +643,7 @@
 <div class="hide-popup-dark"></div>
 <div class="popup-enter">
 	<button class="close"></button>
-	<b>Вход на сайт</b>
+	<i>Вход на сайт</i>
 	<form action="">
 		<div class="popup-enter__fields">
 			<div class="form-field">

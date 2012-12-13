@@ -4,9 +4,16 @@
 	padding: 0 20px;
 	overflow: hidden;	
 }
+.cols_no-pad {
+	position: relative;
+	padding: 0;
+	.col-5 {
+		padding-bottom: 200px;
+	}
+}
 .col-1 {
 	float: left;
-	width: 687px; 
+	width: 690px; 
 }
 .col-2 {
 	float: right;
@@ -19,5 +26,13 @@
 .col-4 {
 	float: right;
 	width: 287px;
+}
+.col-5 {
+	float: left;
+	width: 164px;
+}
+.col-6 {
+	float: right;
+	width: 503px;
 }
 
