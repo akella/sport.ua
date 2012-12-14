@@ -241,4 +241,13 @@ if ($('.athlete__slider').length>0) {
   });
 };
 
+//sport-news tabs
+$('.sport-news__top button').click(function() {
+  $('.sport-news__top button').removeClass('active');
+  $('.sport-news__list').hide();
+  $(this).addClass('active');
+  sport_val = $(this).attr('data-tab');
+  $('.'+sport_val).show();
+});
+
 });

@@ -9,43 +9,44 @@
 .cols_no-pad {
   position: relative;
   padding: 0;
+  overflow: visible;
 }
-/* line 10, ../scss/layouts.scss */
+/* line 11, ../scss/layouts.scss */
 .cols_no-pad .col-5 {
   padding-bottom: 200px;
 }
 
-/* line 14, ../scss/layouts.scss */
+/* line 15, ../scss/layouts.scss */
 .col-1 {
   float: left;
   width: 690px;
 }
 
-/* line 18, ../scss/layouts.scss */
+/* line 19, ../scss/layouts.scss */
 .col-2 {
   float: right;
   width: 240px;
 }
 
-/* line 22, ../scss/layouts.scss */
+/* line 23, ../scss/layouts.scss */
 .col-3 {
   float: left;
   width: 380px;
 }
 
-/* line 26, ../scss/layouts.scss */
+/* line 27, ../scss/layouts.scss */
 .col-4 {
   float: right;
   width: 287px;
 }
 
-/* line 30, ../scss/layouts.scss */
+/* line 31, ../scss/layouts.scss */
 .col-5 {
   float: left;
   width: 164px;
 }
 
-/* line 34, ../scss/layouts.scss */
+/* line 35, ../scss/layouts.scss */
 .col-6 {
   float: right;
   width: 503px;

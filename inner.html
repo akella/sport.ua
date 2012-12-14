@@ -97,7 +97,13 @@
 							<li><a class="news-social__tw" href="#"></a></li>
 							<li><a class="news-social__gg" href="#"></a></li>
 							<li><a class="news-social__ok" href="#"></a></li>
-							<li><a class="news-social__sh" href="#"></a></li>
+							<li>
+								<div class="news-social__sh">
+									<div class="news-social__another">
+										Здесь будут выводится есче социальные кнопки
+									</div>
+								</div>								
+							</li>
 						</ul>
 						<ul class="news-info">
 							<li><span>05.11.2012 в 10:27<i class="news-info__date"></i></span></li>
@@ -222,6 +228,7 @@
 					</div>
 					<!-- END .materials -->
 				</div>
+				<div class="clr"></div>
 			</div>
 			<!-- BEGIN .likes -->
 			<div class="likes">
@@ -367,10 +374,10 @@
 			<div class="sport-news">
 				<div class="sport-news__top">
 					<span>Спортивные новости</span>
-					<button>Популярные</button>
-					<button class="active">Последние</button>
+					<button data-tab="sport-news__list-1" class="active">Популярные</button>
+					<button data-tab="sport-news__list-2">Последние</button>
 				</div>
-				<ul class="sport-news__list">
+				<ul class="sport-news__list sport-news__list-1" style="display: block">
 					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Николай КОСТОВ: «Сегодня была тяжелая игра»</strong></a> − Футбол</li>
 					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Черноморец - Шахтер - 1:5</strong></a> − Футбол</li>
 					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Металлист может подписать контракт с румынским вундеркиндом</strong></a> − Футбол</li>
@@ -383,6 +390,18 @@
 					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Николай КОСТОВ: «Сегодня была тяжелая игра»</strong></a> − Футбол</li>
 					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Черноморец - Шахтер - 1:5</strong></a> − Футбол</li>
 					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Металлист может подписать контракт с румынским вундеркиндом</strong></a> − Футбол</li>
+				</ul>
+				<ul class="sport-news__list sport-news__list-2">
+					<li><span class="sport-news__time">00:25</span><a href="#"><strong>Николай КОСТОВ: «Сегодня была тяжелая игра»</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Черноморец - Шахтер - 1:5</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Металлист может подписать контракт с румынским вундеркиндом</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Николай КОСТОВ: «Сегодня была тяжелая игра»</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Черноморец - Шахтер - 1:5</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Металлист может подписать контракт с румынским вундеркиндом</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Николай КОСТОВ: «Сегодня была тяжелая игра»</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Черноморец - Шахтер - 1:5</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Металлист может подписать контракт с румынским вундеркиндом</strong></a> − Футбол</li>
+					<li><span class="sport-news__time">00:14</span><a href="#"><strong>Николай КОСТОВ: «Сегодня была тяжелая игра»</strong></a> − Футбол</li>
 				</ul>
 			</div>
 			<!-- END .sport-news -->
@@ -474,7 +493,6 @@
 			<li><a class="footer__social-gg" href="#"></a></li>
 			<li><a class="footer__social-ok" href="#"></a></li>
 		</ul>
-		<span class="footer__idea">Идея — <a href="#">Копий Дмитрий</a></span>
 		<span class="footer__developer">
 			<i></i>
 			<span>Дизайн от <a href="#">xeoart</a></span>

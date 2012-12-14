@@ -597,18 +597,8 @@ i, em {
 .footer__social-ok {
 	@include sized-sprite($icons, ok);
 }
-.footer__idea {
-	font-size: 11px;
-	color: #000;
-	a {
-		color: #3b6ab7;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-}
 .footer__developer {
-	float: left;
+	float: right;
 	position: relative;
 	padding-left: 95px;
 	font-size: 11px;

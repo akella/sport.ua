@@ -106,16 +106,29 @@
 }
 //news-social 
 .news-social {
+	position: relative;
 	padding: 15px 0 15px 10px;
-	border-bottom: 1px solid #e0e0e0;
-	overflow: hidden;
+	border-bottom: 1px solid #e0e0e0;	
+	font-size: 0;
 	li {
-		float: left;
+		display: inline-block;
 		margin-right: 2px;
 	}
 	a {
 		display: block;
 	}
+}
+.news-social__another {
+	display: none;
+	position: absolute;
+	top: 35px;
+	left: 0;
+	width: 144px;
+	padding: 10px;
+	background: #fff;
+	@include box-shadow(rgba(0, 0, 0, 0.3) 0px 4px 20px);
+	font-size: 12px;
+	z-index: 10;
 }
 .news-social__fb {
 	@include sized-sprite($icons, fb_);
@@ -151,6 +164,9 @@
 	@include sized-sprite($icons, sh_);
 	&:hover {
 		@include sized-sprite($icons, sh_h);
+		.news-social__another {
+			display: block;
+		}
 	}
 }
 .news-info {
@@ -661,7 +677,9 @@
 }
 //sport-news
 .sport-news {
-
+	.sport-news__list {
+		display: none;
+	}
 }
 .sport-news__top {
 	padding: 8px 7px;
@@ -689,26 +707,6 @@
 		}
 	}
 }
-//athlete
-// .athlete {
-	
-// }
-// .athlete__inside {
-// 	position: relative;
-// 	padding: 10px;
-// 	background: #f1f8fe;
-// 	line-height: 1.3;	
-// 	li {
-// 		float: left;
-// 		width: 144px;
-// 	}
-// 	img {
-// 		display: block;
-// 		padding-bottom: 10px;
-// 	}
-
-// }
-
 .athlete {
 	position: relative;
 	padding-bottom: 30px;		
