@@ -1501,6 +1501,18 @@ i, em {
 		@include sized-sprite($icons, views);
 	}
 }
+/*cat-link*/
+.cat-link {
+	margin-left: 5px;
+	color: #999;
+	a {
+		margin-left: 5px;
+		color: #999;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
 /*banners and advert*/
 .banner240x400 {
 	margin-bottom: 20px;

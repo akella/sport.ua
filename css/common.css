@@ -2107,51 +2107,67 @@ i, em {
   height: 9px;
 }
 
-/*banners and advert*/
+/*cat-link*/
 /* line 1505, ../scss/common.scss */
+.cat-link {
+  margin-left: 5px;
+  color: #999;
+}
+/* line 1508, ../scss/common.scss */
+.cat-link a {
+  margin-left: 5px;
+  color: #999;
+}
+/* line 1511, ../scss/common.scss */
+.cat-link a:hover {
+  text-decoration: underline;
+}
+
+/*banners and advert*/
+/* line 1517, ../scss/common.scss */
 .banner240x400 {
   margin-bottom: 20px;
 }
 
-/* line 1508, ../scss/common.scss */
+/* line 1520, ../scss/common.scss */
 .banner1000x90 {
   width: 1000px;
 }
 
-/* line 1511, ../scss/common.scss */
+/* line 1523, ../scss/common.scss */
 .banner760x90 {
   width: 760px;
 }
 
-/* line 1514, ../scss/common.scss */
+/* line 1526, ../scss/common.scss */
 .banner728x90 {
   width: 728px;
 }
 
-/* line 1517, ../scss/common.scss */
+/* line 1529, ../scss/common.scss */
 .banner1000x90, .banner760x90, .banner728x90 {
   height: 90px;
   margin: 0 auto;
 }
 
-/* line 1521, ../scss/common.scss */
+/* line 1533, ../scss/common.scss */
 .banner685x90 {
   width: 685px;
   height: 90px;
   margin: -10px 0 15px 0;
 }
 
-/* line 1526, ../scss/common.scss */
+/* line 1538, ../scss/common.scss */
 .banner240x220 {
   margin-bottom: 20px;
 }
 
-/* line 1529, ../scss/common.scss */
+/* line 1541, ../scss/common.scss */
 .banner690x200 {
   margin-bottom: 15px;
 }
 
-/* line 1532, ../scss/common.scss */
+/* line 1544, ../scss/common.scss */
 .banner160x270 {
   margin-bottom: 15px;
 }
