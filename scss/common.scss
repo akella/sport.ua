@@ -1464,6 +1464,43 @@ i, em {
 		border-bottom: 1px solid #c4d0e1;
 	}
 }
+/*meta*/
+.meta {
+	padding: 3px 0;
+	overflow: hidden;
+	font-size: 10px;
+	color: #999;
+}
+.meta__date, .meta__comm {
+	margin-right: 10px;
+}
+.meta__date {
+	float: left;
+}
+.meta__comm, .meta__view {
+	position: relative;
+	float: left;
+	padding-left: 15px;
+	i {
+		position: absolute;
+		top: 1px;
+		left: 0;
+	}
+}
+.meta__comm {
+	a {
+		font-weight: bold;
+		color: #2ea90d;
+	}
+	i {
+		@include sized-sprite($icons, link-comm);
+	}
+}
+.meta__view {
+	i {
+		@include sized-sprite($icons, views);
+	}
+}
 /*banners and advert*/
 .banner240x400 {
 	margin-bottom: 20px;

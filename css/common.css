@@ -1,3 +1,4 @@
+@charset "IBM866";
 /*resets*/
 /* line 5, ../scss/common.scss */
 article, aside, details, figcaption, figure, footer, header,
@@ -123,7 +124,6 @@ i, em {
   background-image: -webkit-linear-gradient(#fefefe, #eeeeee);
   background-image: -moz-linear-gradient(#fefefe, #eeeeee);
   background-image: -o-linear-gradient(#fefefe, #eeeeee);
-  background-image: -ms-linear-gradient(#fefefe, #eeeeee);
   background-image: linear-gradient(#fefefe, #eeeeee);
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 11px;
@@ -231,7 +231,6 @@ i, em {
   background-image: -webkit-linear-gradient(#1f9df1, #3a6cb9);
   background-image: -moz-linear-gradient(#1f9df1, #3a6cb9);
   background-image: -o-linear-gradient(#1f9df1, #3a6cb9);
-  background-image: -ms-linear-gradient(#1f9df1, #3a6cb9);
   background-image: linear-gradient(#1f9df1, #3a6cb9);
 }
 /* line 165, ../scss/common.scss */
@@ -438,7 +437,6 @@ i, em {
   background-image: -webkit-linear-gradient(#fbfbfb, #ebebeb);
   background-image: -moz-linear-gradient(#fbfbfb, #ebebeb);
   background-image: -o-linear-gradient(#fbfbfb, #ebebeb);
-  background-image: -ms-linear-gradient(#fbfbfb, #ebebeb);
   background-image: linear-gradient(#fbfbfb, #ebebeb);
   cursor: pointer;
 }
@@ -1035,7 +1033,6 @@ i, em {
   background-image: -webkit-linear-gradient(#1f9df1, #3a6cb9);
   background-image: -moz-linear-gradient(#1f9df1, #3a6cb9);
   background-image: -o-linear-gradient(#1f9df1, #3a6cb9);
-  background-image: -ms-linear-gradient(#1f9df1, #3a6cb9);
   background-image: linear-gradient(#1f9df1, #3a6cb9);
   -webkit-box-shadow: #cdd8e7 0px 1px 2px;
   -moz-box-shadow: #cdd8e7 0px 1px 2px;
@@ -1099,7 +1096,6 @@ i, em {
   background-image: -webkit-linear-gradient(#fff2a9, #f3bb4d);
   background-image: -moz-linear-gradient(#fff2a9, #f3bb4d);
   background-image: -o-linear-gradient(#fff2a9, #f3bb4d);
-  background-image: -ms-linear-gradient(#fff2a9, #f3bb4d);
   background-image: linear-gradient(#fff2a9, #f3bb4d);
   -webkit-box-shadow: lightgrey 0px 1px 2px;
   -moz-box-shadow: lightgrey 0px 1px 2px;
@@ -1121,7 +1117,6 @@ i, em {
   background-image: -webkit-linear-gradient(#fff7b2, #f9d45a);
   background-image: -moz-linear-gradient(#fff7b2, #f9d45a);
   background-image: -o-linear-gradient(#fff7b2, #f9d45a);
-  background-image: -ms-linear-gradient(#fff7b2, #f9d45a);
   background-image: linear-gradient(#fff7b2, #f9d45a);
   -webkit-box-shadow: lightgrey 0px 1px 2px, #fdea94 0 -1px 1px inset;
   -moz-box-shadow: lightgrey 0px 1px 2px, #fdea94 0 -1px 1px inset;
@@ -1146,7 +1141,6 @@ i, em {
   background-image: -webkit-linear-gradient(#fbfbfb, #ebebeb);
   background-image: -moz-linear-gradient(#fbfbfb, #ebebeb);
   background-image: -o-linear-gradient(#fbfbfb, #ebebeb);
-  background-image: -ms-linear-gradient(#fbfbfb, #ebebeb);
   background-image: linear-gradient(#fbfbfb, #ebebeb);
   border: 1px solid #cdcdcd;
   border-bottom: 1px solid #b6b6b6;
@@ -1193,7 +1187,6 @@ i, em {
   background-image: -webkit-linear-gradient(#1f9df1, #3a6cb9);
   background-image: -moz-linear-gradient(#1f9df1, #3a6cb9);
   background-image: -o-linear-gradient(#1f9df1, #3a6cb9);
-  background-image: -ms-linear-gradient(#1f9df1, #3a6cb9);
   background-image: linear-gradient(#1f9df1, #3a6cb9);
 }
 /* line 858, ../scss/common.scss */
@@ -1276,7 +1269,6 @@ i, em {
   background-image: -webkit-linear-gradient(#1f9df1, #3a6cba);
   background-image: -moz-linear-gradient(#1f9df1, #3a6cba);
   background-image: -o-linear-gradient(#1f9df1, #3a6cba);
-  background-image: -ms-linear-gradient(#1f9df1, #3a6cba);
   background-image: linear-gradient(#1f9df1, #3a6cba);
 }
 /* line 909, ../scss/common.scss */
@@ -1292,7 +1284,6 @@ i, em {
   background-image: -webkit-linear-gradient(#1f9df1, #3a6cba);
   background-image: -moz-linear-gradient(#1f9df1, #3a6cba);
   background-image: -o-linear-gradient(#1f9df1, #3a6cba);
-  background-image: -ms-linear-gradient(#1f9df1, #3a6cba);
   background-image: linear-gradient(#1f9df1, #3a6cba);
   cursor: default;
 }
@@ -1332,7 +1323,6 @@ i, em {
   background-image: -webkit-linear-gradient(#1f9df1, #3a6cba);
   background-image: -moz-linear-gradient(#1f9df1, #3a6cba);
   background-image: -o-linear-gradient(#1f9df1, #3a6cba);
-  background-image: -ms-linear-gradient(#1f9df1, #3a6cba);
   background-image: linear-gradient(#1f9df1, #3a6cba);
   -webkit-box-shadow: #d5f6ff 0px 0px 3px 3px;
   -moz-box-shadow: #d5f6ff 0px 0px 3px 3px;
@@ -1493,7 +1483,6 @@ i, em {
   background-image: -webkit-linear-gradient(#6a6a6a, #2e2e2e);
   background-image: -moz-linear-gradient(#6a6a6a, #2e2e2e);
   background-image: -o-linear-gradient(#6a6a6a, #2e2e2e);
-  background-image: -ms-linear-gradient(#6a6a6a, #2e2e2e);
   background-image: linear-gradient(#6a6a6a, #2e2e2e);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1579,7 +1568,6 @@ i, em {
   background-image: -webkit-linear-gradient(#1f9df1, #3a6cb9);
   background-image: -moz-linear-gradient(#1f9df1, #3a6cb9);
   background-image: -o-linear-gradient(#1f9df1, #3a6cb9);
-  background-image: -ms-linear-gradient(#1f9df1, #3a6cb9);
   background-image: linear-gradient(#1f9df1, #3a6cb9);
   -webkit-box-shadow: #cdd8e7 0px 1px 2px;
   -moz-box-shadow: #cdd8e7 0px 1px 2px;
@@ -2068,51 +2056,102 @@ i, em {
   border-bottom: 1px solid #c4d0e1;
 }
 
-/*banners and advert*/
+/*meta*/
 /* line 1468, ../scss/common.scss */
+.meta {
+  padding: 3px 0;
+  overflow: hidden;
+  font-size: 10px;
+  color: #999;
+}
+
+/* line 1474, ../scss/common.scss */
+.meta__date, .meta__comm {
+  margin-right: 10px;
+}
+
+/* line 1477, ../scss/common.scss */
+.meta__date {
+  float: left;
+}
+
+/* line 1480, ../scss/common.scss */
+.meta__comm, .meta__view {
+  position: relative;
+  float: left;
+  padding-left: 15px;
+}
+/* line 1484, ../scss/common.scss */
+.meta__comm i, .meta__view i {
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+
+/* line 1491, ../scss/common.scss */
+.meta__comm a {
+  font-weight: bold;
+  color: #2ea90d;
+}
+/* line 1495, ../scss/common.scss */
+.meta__comm i {
+  background: url('../img/icons-s977c957dc9.png') 0 -1823px no-repeat;
+  width: 13px;
+  height: 13px;
+}
+
+/* line 1500, ../scss/common.scss */
+.meta__view i {
+  background: url('../img/icons-s977c957dc9.png') 0 -1546px no-repeat;
+  width: 13px;
+  height: 9px;
+}
+
+/*banners and advert*/
+/* line 1505, ../scss/common.scss */
 .banner240x400 {
   margin-bottom: 20px;
 }
 
-/* line 1471, ../scss/common.scss */
+/* line 1508, ../scss/common.scss */
 .banner1000x90 {
   width: 1000px;
 }
 
-/* line 1474, ../scss/common.scss */
+/* line 1511, ../scss/common.scss */
 .banner760x90 {
   width: 760px;
 }
 
-/* line 1477, ../scss/common.scss */
+/* line 1514, ../scss/common.scss */
 .banner728x90 {
   width: 728px;
 }
 
-/* line 1480, ../scss/common.scss */
+/* line 1517, ../scss/common.scss */
 .banner1000x90, .banner760x90, .banner728x90 {
   height: 90px;
   margin: 0 auto;
 }
 
-/* line 1484, ../scss/common.scss */
+/* line 1521, ../scss/common.scss */
 .banner685x90 {
   width: 685px;
   height: 90px;
   margin: -10px 0 15px 0;
 }
 
-/* line 1489, ../scss/common.scss */
+/* line 1526, ../scss/common.scss */
 .banner240x220 {
   margin-bottom: 20px;
 }
 
-/* line 1492, ../scss/common.scss */
+/* line 1529, ../scss/common.scss */
 .banner690x200 {
   margin-bottom: 15px;
 }
 
-/* line 1495, ../scss/common.scss */
+/* line 1532, ../scss/common.scss */
 .banner160x270 {
   margin-bottom: 15px;
 }

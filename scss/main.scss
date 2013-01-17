@@ -7,12 +7,15 @@
 }
 /*main-post*/
 .main-post {
+	.meta {
+		margin-bottom: 10px;
+	}
 	p {
 		line-height: 1.3;
 	}
 }
 .main-post__title {
-	margin: 15px 0;
+	margin: 15px 0 3px 0;
 	a {
 		position: relative;
 		font-size: 18px;
@@ -52,23 +55,23 @@
 	img {
 		float: left;
 		margin-right: 10px;
-	}
-	a {
-		font-size: 12px;
-		font-weight: bold;
-		color: #3b6ab7;
-		line-height: 1.3;
-		&:hover {
-			color: #ED3C0C;
-			text-decoration: underline;
-		}
-	}
+	}	
 	p {
 		margin-top: 2px;
 		font-size: 11px;		
 		color: #4a4a4a;
 		line-height: 1.3;
 		overflow: hidden;
+	}
+}
+.main-news__title {
+	font-size: 12px;
+	font-weight: bold;
+	color: #3b6ab7;
+	line-height: 1.3;
+	&:hover {
+		color: #ED3C0C;
+		text-decoration: underline;
 	}
 }
 /*result*/

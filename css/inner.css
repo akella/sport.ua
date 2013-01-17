@@ -8,7 +8,6 @@
   background-image: -webkit-linear-gradient(#ffffff 60%, #fafafa);
   background-image: -moz-linear-gradient(#ffffff 60%, #fafafa);
   background-image: -o-linear-gradient(#ffffff 60%, #fafafa);
-  background-image: -ms-linear-gradient(#ffffff 60%, #fafafa);
   background-image: linear-gradient(#ffffff 60%, #fafafa);
   overflow: hidden;
 }
@@ -446,7 +445,6 @@
   background-image: -webkit-linear-gradient(#5bbdfd, #228ade);
   background-image: -moz-linear-gradient(#5bbdfd, #228ade);
   background-image: -o-linear-gradient(#5bbdfd, #228ade);
-  background-image: -ms-linear-gradient(#5bbdfd, #228ade);
   background-image: linear-gradient(#5bbdfd, #228ade);
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
@@ -480,7 +478,6 @@
   background-image: -webkit-linear-gradient(#fbfbfb, #ebebeb);
   background-image: -moz-linear-gradient(#fbfbfb, #ebebeb);
   background-image: -o-linear-gradient(#fbfbfb, #ebebeb);
-  background-image: -ms-linear-gradient(#fbfbfb, #ebebeb);
   background-image: linear-gradient(#fbfbfb, #ebebeb);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -814,7 +811,6 @@
   background-image: -webkit-linear-gradient(#f8f8f8, #eaeaea);
   background-image: -moz-linear-gradient(#f8f8f8, #eaeaea);
   background-image: -o-linear-gradient(#f8f8f8, #eaeaea);
-  background-image: -ms-linear-gradient(#f8f8f8, #eaeaea);
   background-image: linear-gradient(#f8f8f8, #eaeaea);
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 1px inset, rgba(0, 0, 0, 0.1) 0 1px 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 1px inset, rgba(0, 0, 0, 0.1) 0 1px 1px;
@@ -951,7 +947,6 @@
   background-image: -webkit-linear-gradient(#f9f9f9, #e6e6e6);
   background-image: -moz-linear-gradient(#f9f9f9, #e6e6e6);
   background-image: -o-linear-gradient(#f9f9f9, #e6e6e6);
-  background-image: -ms-linear-gradient(#f9f9f9, #e6e6e6);
   background-image: linear-gradient(#f9f9f9, #e6e6e6);
 }
 /* line 659, ../scss/inner.scss */
@@ -1025,7 +1020,6 @@
   background-image: -webkit-linear-gradient(#fbfbfb, #ebebeb);
   background-image: -moz-linear-gradient(#fbfbfb, #ebebeb);
   background-image: -o-linear-gradient(#fbfbfb, #ebebeb);
-  background-image: -ms-linear-gradient(#fbfbfb, #ebebeb);
   background-image: linear-gradient(#fbfbfb, #ebebeb);
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 1px inset, rgba(0, 0, 0, 0.1) 0 1px 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 1px inset, rgba(0, 0, 0, 0.1) 0 1px 1px;
