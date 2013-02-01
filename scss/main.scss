@@ -17,7 +17,6 @@
 .main-post__title {
 	margin: 15px 0 3px 0;
 	a {
-		position: relative;
 		font-size: 18px;
 		font-weight: bold;
 		color: #3b6ab7;
@@ -27,16 +26,25 @@
 		}
 	}		
 	i {
-		position: absolute;
-		top: 8px;
-		right: -26px;
+		display: inline-block;
+		margin: 0 0 1px 5px;		
+	}
+}
+.main-post__title_video {
+	i {
 		@include sized-sprite($icons, video);
+	}
+}
+.main-post__title_photo {
+	i {
+		@include sized-sprite($icons, photo);
 	}
 }
 /*main-news*/
 .main-news {
 	position: relative;
 	width: 287px;
+	height: 410px;
 	padding-bottom: 20px;
 	li {
 		float: left;
@@ -202,6 +210,9 @@
 /*pop-news*/
 .pop-news {
 	margin-top: 40px;	
+	.meta {
+		padding: 5px 0;
+	}
 	.title {
 		margin-bottom: 20px;
 		border-bottom: 2px solid #ff5b01;
@@ -215,38 +226,40 @@
 			float: left;
 			margin-right: 20px;
 		}
-		a {
-			font-weight: bold;
-			color: #3b6ab7;
-			font-size: 12px;
-			&:hover {
-				color: #ED3C0C;
-				text-decoration: underline;
-			}
-		}
 		p {
-			margin: 3px 0;
+			margin: 0 0 3px 0;
 			font-size: 11px;
 			color: #4a4a4a;
 			line-height: 1.2;
-		}
-		span {
-			font-size: 10px;
-			color: #999;
-		}
-		span.pop-news__date {
-			color: #8a919d;
-		}
-		em {
-			margin: 0 5px;
-			font-style: normal;
-			color: #b7bec9;
-		}
+		}		
 		&:first-child {
 			margin: 0;
 			padding: 0;
 			border: none;
 		}
+	}
+}
+.pop-news__title {
+	font-weight: bold;
+	color: #3b6ab7;
+	font-size: 12px;
+	&:hover {
+		color: #ED3C0C;
+		text-decoration: underline;
+	}
+}
+.pop-news__date {
+	a {
+		font-size: 10px;
+		color: #999;
+	}
+	span {
+		color: #8a919d;
+	}
+	em {
+		margin: 0 5px;
+		font-style: normal;
+		color: #b7bec9;
 	}
 }
 /*all news*/
@@ -358,20 +371,7 @@
 		color: #999;
 		.link-comm {
 			margin-left: 10px;
-		}	
-		a:visited {
-			color: #7c889a;
-		}	
-		a:link {
-			color: #3b6ab7;
-		}				
-		a:hover {
-			color: #ed3c0c;
-			text-decoration: underline;
-		}
-		&:hover {			
-			color: #000;
-		}
+		}			
 		&:first-child {
 			border: none;
 		}
@@ -381,11 +381,32 @@
 	}
 }
 .all-news__list {
+	.link-comm {
+		color: #2ea90d;
+	}
 	li {
 		padding: 10px 0 10px 35px;
 		&:hover {
 			background: #fffce5;
-		}
+			.cat-link {
+				a {
+					color: #000;
+				}			
+			}			
+		}		
+	}
+}
+.all-news__title {
+	color: #999;
+	&:visited {
+		color: #7c889a;
+	}	
+	&:link {
+		color: #3b6ab7;
+	}				
+	&:hover {
+		color: #ed3c0c;
+		text-decoration: underline;
 	}
 }
 .sport-news__list {
@@ -400,6 +421,9 @@
 	left: 2px;
 	font-size: 10px;
 	color: #8a919d;
+}
+.sport-news__time {
+	top: 6px;
 }
 /*best blog*/
 .best-blog {
