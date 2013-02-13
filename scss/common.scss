@@ -114,15 +114,15 @@ i, em {
  	span {
  		color: #727272;
  	}
- 	.enter__fb, .enter__tw {
+ 	.enter__fb, .enter__vk {
  		display: inline-block;
  		margin: 7px 5px 0 0;
  	}
  	.enter__fb {
  		@include sized-sprite($icons, enter-fb);
  	}
- 	.enter__tw {
- 		@include sized-sprite($icons, enter-tw);
+ 	.enter__vk {
+ 		@include sized-sprite($icons, enter-vk);
  	}
 }
 .logged {
@@ -1286,13 +1286,13 @@ i, em {
 				@include sized-sprite($icons, fb-big3);
 			}
 		}
-		.popup-enter__social-tw {
-			@include sized-sprite($icons, tw-big1);
+		.popup-enter__social-vk {
+			@include sized-sprite($icons, vk-big1);
 			&:hover {
-				@include sized-sprite($icons, tw-big2);
+				@include sized-sprite($icons, vk-big2);
 			}
 			&:active {
-				@include sized-sprite($icons, tw-big3);
+				@include sized-sprite($icons, vk-big3);
 			}
 		}
 	}

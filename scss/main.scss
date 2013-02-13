@@ -29,7 +29,7 @@
 		display: inline-block;
 		margin: 0 0 1px 5px;		
 	}
-}
+} 
 .main-post__title_video {
 	i {
 		@include sized-sprite($icons, video);
@@ -38,6 +38,11 @@
 .main-post__title_photo {
 	i {
 		@include sized-sprite($icons, photo);
+	}
+}
+.main-post__title_dissc {
+	i {
+		@include sized-sprite($icons, dissc);
 	}
 }
 /*main-news*/
