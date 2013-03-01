@@ -93,15 +93,6 @@ $('.go-top').click(function() {
 	$('body').scrollTo(0, 600);
 });
 
-$(window).scroll(function() {
-  if ($('body').scrollTop() > 800) {
-  	$('.go-top').fadeIn(300);
-  }
-  else {
-  	$('.go-top').fadeOut(300);
-  }
-});
-
 //sub nav
 $('.nav-list li').hover(	
   function () {  	
@@ -111,6 +102,17 @@ $('.nav-list li').hover(
     $(this).children('.nav-sub').hide(); 
   }
 );
+//menu hover trigger
+function menu_hover() {
+  $('.nav-list__item').each(function() {
+    if ($(this).hasClass('active')) {
+      $(this).children('.nav-sub').show();
+    };
+  });
+}
+$('.menu li:last').hover(function() {
+  menu_hover();
+});
 
 //all news filter
 $('.all-news__filter').hover(	
@@ -168,7 +170,7 @@ $('.author').hover(
 );
 
 //main news
-if ($('.main-news')) {
+if ($('.main-news').length > 0) {
   $('.main-news ul').carouFredSel({
     items: 1,
     circular: false,
@@ -250,4 +252,13 @@ $('.sport-news__top button').click(function() {
   $('.'+sport_val).show();
 });
 
+});
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 800) {
+    $('.go-top').fadeIn(300);
+  }
+  else {
+    $('.go-top').fadeOut(300);
+  }
 });

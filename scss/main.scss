@@ -2,11 +2,11 @@
 @import "base";
 /*main*/
 .main-block {
-	margin-bottom: 40px;
 	overflow: hidden;
 }
 /*main-post*/
 .main-post {
+	margin-bottom: 40px;
 	.meta {
 		margin-bottom: 10px;
 	}
@@ -51,6 +51,7 @@
 	width: 287px;
 	height: 410px;
 	padding-bottom: 20px;
+	margin-bottom: 40px;
 	li {
 		float: left;
 		width: 287px;

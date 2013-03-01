@@ -49,5 +49,6 @@
 /* line 35, ../scss/layouts.scss */
 .col-6 {
   float: right;
-  width: 503px;
+  width: 500px;
+  overflow: hidden;
 }
