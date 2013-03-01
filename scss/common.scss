@@ -21,6 +21,11 @@ a img, fieldset {
 }
 a {
 	text-decoration:none;
+	color: #3b6ab7;
+	&:hover {
+		color: #ED3C0C;
+		text-decoration: underline;
+	}
 }
 ul,ol {
 	list-style: none;

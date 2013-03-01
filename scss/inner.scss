@@ -216,9 +216,13 @@
 .content {
 	line-height: 1.5;
 	figure {
+		margin: 0 20px 20px 0;
 		img {
 			display: block;
-			margin-bottom: 10px;
+			margin: 0 0 10px 0;
+		}
+		&.content__pic {
+			float: left;
 		}
 	}
 	figcaption {
@@ -226,19 +230,22 @@
 		color: #7e7e7e;
 	}
 	h3 {
-		margin: 20px 0 15px 0;
+		margin-bottom: 15px;
 		font-size: 17px;
 		color: #373737;
 	}
-	ul,ol{
-	   margin: 1em 2em;
-	   list-style:disc;
-	   li{
-	      margin-bottom: 4px;
-	   }
+	p {
+		margin-bottom: 20px;
 	}
-	ol{
-	   list-style:decimal;
+	ul, ol {
+	  margin: 20px;
+	  list-style:disc;
+	  li{
+	    margin-bottom: 4px;
+	  }
+	}
+	ol {
+	  list-style:decimal;
 	}
 	table{
 	   border: 1px solid #ccc;

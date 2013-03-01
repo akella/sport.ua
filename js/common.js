@@ -252,6 +252,16 @@ $('.sport-news__top button').click(function() {
   $('.'+sport_val).show();
 });
 
+//content pictures
+$('.content img').load(function() {
+  $('.content img').each(function() {
+    if($(this).width() >= 300) {
+      $(this).parent().addClass('content__pic');
+    };
+  }); 
+})
+
+
 });
 
 $(window).scroll(function() {
