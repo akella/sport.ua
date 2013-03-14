@@ -1,0 +1,19 @@
+@charset "IBM866";
+/* line 3, ../scss/ie - копия.scss */
+.ltie8 .photo-report__item li {
+  display: inline;
+  zoom: 1;
+}
+
+/* line 12, ../scss/ie - копия.scss */
+.ie8 .live button i {
+  margin-top: -7px;
+}
+/* line 18, ../scss/ie - копия.scss */
+.ie8 .open i {
+  margin-top: -13px;
+}
+/* line 24, ../scss/ie - копия.scss */
+.ie8 .play__open button i {
+  margin-top: -13px;
+}
