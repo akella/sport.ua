@@ -162,15 +162,16 @@ i, em {
 	width: 987px;
 	height: 167px;
 	background: url(../img/head-bg.jpg) repeat-x 0 27px;
-	z-index: 1000;
+	z-index: 100;
 }
 /*header live*/
 .live {
 	position: absolute;
 	top: 52px;
 	right: 0;
-	width: 360px;
-	height: 56px;
+	width: 400px;
+	height: 65px;
+	padding-right: 70px;
 	font-size: 10px;
 	button {
 		position: absolute;
@@ -235,34 +236,33 @@ i, em {
 			}
 		}
 	}
-	.caroufredsel_wrapper {
-		padding-bottom: 10px;
-		background: rgba(0,0,0,0.3);
-		@include border-radius(7px);
-		@include box-shadow(rgba(255,255,255,0.15 ) 0 1px 1px inset);
-	}
 }
 .live__slider {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 285px;
-	height: 64px;	
+	float: right;
+	li {
+		width: 400px;
+	}	
 }
 .live__item {
-	float: left;
-	width: 272px;
-	padding: 8px 0 0 13px;
-	overflow: hidden;
+	float: right;
+	width: 292px;
+	height: 65px;	
+	background: rgba(0,0,0,0.3);
+	@include border-radius(7px);
+	@include box-shadow(rgba(255,255,255,0.15 ) 0 1px 1px inset);
+}
+.live__item_mod {	
+	width: 178px;
+	margin-left: 11px;
 }
 .live__flag {
 	float: left;
-	margin: 4px 9px 0 0;
-	@include sized-sprite($icons, flag);
+	padding: 11px 9px 0 13px;
 }
-.live__link {
+.live__title {
 	float: left;
-	width: 90px;
+	width: 76px;
+	padding-top: 9px;
 	a {		
 		font-weight: bold;
 		color: #9c9c9c;
@@ -273,25 +273,28 @@ i, em {
 	float: left;
 	width: 85px;
 	height: 40px;
-	padding-right: 10px;
+	padding: 0 13px 0 13px;
+	margin-top: 12px;
 	border-right: 1px solid #4b4b4b;
 	span {
-		display: block;
-		margin-top: 2px;
+		float: left;
+		width: 70px;
 		padding-bottom: 12px;
-		color: #fff;
-		i {
-			float: right;
-			font-weight: bold;
-			color: #d0d0d0;
-		}
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color: #fff;		
+	}
+	strong {
+		float: right;
+		color: #d0d0d0;
 	}
 }
 .live__time {
 	float: left;
-	width: 45px;
-	padding: 2px 0 0 12px;
-	span {
+	width: 38px;
+	padding: 11px 13px 0 13px;
+	span, a {
 		display: block;
 		margin-bottom: 10px;
 		color: #9c9c9c;
@@ -918,10 +921,10 @@ i, em {
 	left: 0;
 	width: 190px;
 	height: 9px;
-	a {
+	button {
 		float: left;
-		width: 5px;
-		height: 5px;		
+		width: 7px;
+		height: 7px;		
 		margin-right: 11px;
 		@include border-radius(4px);
 		border: 1px solid #cbcbcb;
@@ -939,7 +942,7 @@ i, em {
 			display: none;
 		}
 	}
-	.selected {
+	.activeSlide {
 		padding: 1px;
 		border: none;
 		@include box-shadow(#c3dffb 0px 1px 1px);

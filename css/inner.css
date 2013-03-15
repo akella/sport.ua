@@ -941,34 +941,40 @@
 }
 /* line 653, ../scss/inner.scss */
 .matches .play__team-1, .matches .play__team-2 {
-  width: 87px;
+  width: 38%;
+  margin: 0 2%;
+  padding: 2px 0;
 }
-/* line 657, ../scss/inner.scss */
+/* line 658, ../scss/inner.scss */
+.matches .play__result {
+  width: 16%;
+}
+/* line 662, ../scss/inner.scss */
 .matches .play__item:nth-child(2n) {
   background: #f7f7f7;
 }
-/* line 660, ../scss/inner.scss */
+/* line 665, ../scss/inner.scss */
 .matches .play__item:nth-child(2n+1) {
   background: #fdfdfd;
 }
 
-/* line 665, ../scss/inner.scss */
+/* line 670, ../scss/inner.scss */
 .matches__top {
   position: relative;
   padding: 10px 0 30px 10px;
 }
-/* line 668, ../scss/inner.scss */
+/* line 673, ../scss/inner.scss */
 .matches__top .datepicker-out {
   top: 25px;
   left: -5px;
 }
 
-/* line 673, ../scss/inner.scss */
+/* line 678, ../scss/inner.scss */
 .matches__title {
   font-size: 18px;
 }
 
-/* line 676, ../scss/inner.scss */
+/* line 681, ../scss/inner.scss */
 .matches__chemp {
   padding: 10px;
   border-top: 1px solid #fdfdfd;
@@ -982,66 +988,66 @@
   background-image: -o-linear-gradient(#f9f9f9, #e6e6e6);
   background-image: linear-gradient(#f9f9f9, #e6e6e6);
 }
-/* line 682, ../scss/inner.scss */
+/* line 687, ../scss/inner.scss */
 .matches__chemp span, .matches__chemp i {
   display: block;
 }
-/* line 685, ../scss/inner.scss */
+/* line 690, ../scss/inner.scss */
 .matches__chemp span {
   margin-bottom: 5px;
   font-size: 12px;
   font-weight: bold;
   color: #000;
 }
-/* line 691, ../scss/inner.scss */
+/* line 696, ../scss/inner.scss */
 .matches__chemp i {
   font-size: 10px;
   color: #767676;
 }
 
-/* line 696, ../scss/inner.scss */
+/* line 701, ../scss/inner.scss */
 .matches__nav {
   margin-top: 1px;
   padding: 10px;
   border-top: 1px solid #ededed;
   overflow: hidden;
 }
-/* line 701, ../scss/inner.scss */
+/* line 706, ../scss/inner.scss */
 .matches__nav li {
   float: left;
   margin-bottom: 3px;
 }
-/* line 704, ../scss/inner.scss */
+/* line 709, ../scss/inner.scss */
 .matches__nav li:nth-child(2n+1) {
   width: 135px;
 }
-/* line 708, ../scss/inner.scss */
+/* line 713, ../scss/inner.scss */
 .matches__nav a {
   font-size: 10px;
   color: #686868;
 }
-/* line 711, ../scss/inner.scss */
+/* line 716, ../scss/inner.scss */
 .matches__nav a:hover {
   text-decoration: underline;
 }
 
-/* line 718, ../scss/inner.scss */
+/* line 723, ../scss/inner.scss */
 .sport-news .sport-news__list {
   display: none;
 }
 
-/* line 722, ../scss/inner.scss */
+/* line 727, ../scss/inner.scss */
 .sport-news__top {
   padding: 8px 7px;
   border-bottom: 2px solid #fbd10d;
 }
-/* line 725, ../scss/inner.scss */
+/* line 730, ../scss/inner.scss */
 .sport-news__top span {
   display: block;
   margin-bottom: 10px;
   font-size: 18px;
 }
-/* line 730, ../scss/inner.scss */
+/* line 735, ../scss/inner.scss */
 .sport-news__top button {
   height: 19px;
   margin-right: 8px;
@@ -1066,7 +1072,7 @@
   text-shadow: 0 1px 1px #fff;
   color: #000;
 }
-/* line 741, ../scss/inner.scss */
+/* line 746, ../scss/inner.scss */
 .sport-news__top button.active {
   color: #939393;
   background: #f1f1f1;
@@ -1075,64 +1081,61 @@
   box-shadow: rgba(0, 0, 0, 0.8) 0 0 1px inset, rgba(0, 0, 0, 0.1) 0 2px 1px inset;
 }
 
-/* line 748, ../scss/inner.scss */
+/* line 753, ../scss/inner.scss */
 .athlete {
   position: relative;
   padding-bottom: 30px;
   margin-bottom: 25px;
   overflow: hidden;
 }
-/* line 754, ../scss/inner.scss */
+/* line 759, ../scss/inner.scss */
 .athlete:after {
   bottom: 48px;
   -webkit-box-shadow: #93a9ba 0 15px 10px;
   -moz-box-shadow: #93a9ba 0 15px 10px;
   box-shadow: #93a9ba 0 15px 10px;
 }
-/* line 758, ../scss/inner.scss */
-.athlete .caroufredsel_wrapper {
-  background: #f1f8fe;
-}
-/* line 761, ../scss/inner.scss */
+/* line 763, ../scss/inner.scss */
 .athlete .arrs-nav {
   bottom: 0;
   left: 0;
 }
 
-/* line 766, ../scss/inner.scss */
+/* line 768, ../scss/inner.scss */
 .athlete__slider {
   position: relative;
+  background: #f1f8fe;
   z-index: 10;
 }
-/* line 769, ../scss/inner.scss */
+/* line 772, ../scss/inner.scss */
 .athlete__slider li {
   float: left;
   width: 144px;
   padding: 10px;
 }
-/* line 774, ../scss/inner.scss */
+/* line 777, ../scss/inner.scss */
 .athlete__slider img {
   margin-bottom: 10px;
 }
-/* line 777, ../scss/inner.scss */
+/* line 780, ../scss/inner.scss */
 .athlete__slider p {
   padding-top: 10px;
   font-size: 11px;
   color: #000;
 }
-/* line 782, ../scss/inner.scss */
+/* line 785, ../scss/inner.scss */
 .athlete__slider a {
   color: #3b6ab7;
 }
-/* line 784, ../scss/inner.scss */
+/* line 787, ../scss/inner.scss */
 .athlete__slider a:hover {
   text-decoration: underline;
 }
-/* line 788, ../scss/inner.scss */
+/* line 791, ../scss/inner.scss */
 .athlete__slider span {
   color: #7e7e7e;
 }
-/* line 791, ../scss/inner.scss */
+/* line 794, ../scss/inner.scss */
 .athlete__slider i {
   display: inline-block;
   margin-left: 6px;
@@ -1140,33 +1143,33 @@
   height: 9px;
 }
 
-/* line 798, ../scss/inner.scss */
+/* line 801, ../scss/inner.scss */
 .athlete__name {
   font-weight: bold;
 }
 
-/* line 802, ../scss/inner.scss */
+/* line 805, ../scss/inner.scss */
 .tags {
   position: absolute;
   bottom: 73px;
   left: 0;
   width: 164px;
 }
-/* line 807, ../scss/inner.scss */
+/* line 810, ../scss/inner.scss */
 .tags .title {
   margin-bottom: 12px;
   border-bottom: 2px solid #fbd10d;
 }
-/* line 811, ../scss/inner.scss */
+/* line 814, ../scss/inner.scss */
 .tags li {
   margin-bottom: 3px;
 }
-/* line 814, ../scss/inner.scss */
+/* line 817, ../scss/inner.scss */
 .tags a {
   font-size: 11px;
   color: #5e5e5e;
 }
-/* line 817, ../scss/inner.scss */
+/* line 820, ../scss/inner.scss */
 .tags a:hover {
   text-decoration: underline;
 }

@@ -1,7 +1,4 @@
 <!DOCTYPE HTML>
-<!--[if lt IE 9]> 
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
-<![endif]-->
 <!--[if lt IE 8]><html lang="ru-RU" class="ltie8"><![endif]-->
 <!--[if IE 8]><html lang="ru-RU" class="ie8"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="ru-RU"> <!--<![endif]-->
@@ -12,10 +9,11 @@
 	<meta name="keywords" content="">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/screen.css" />
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<script src="js/jquery.tools.min.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script src="js/jquery-ui-1.9.1.custom.min.js"></script>
-	<script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>	
+	<script src="js/jquery.cycle.all.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -700,56 +698,52 @@
 		<h1 class="logo">
 			<a href="#">Sport.ua</a>
 		</h1>
-		<!-- BEGIN .header-live -->
-		<div class="live">
-			<button class="live__prev"><i class="live__prev-arr"></i></button>
-			<button class="live__next"><i class="live__next-arr"></i></button>
-			<div class="live__slider">
-				<div class="live__item">
-					<div class="live__flag"></div>
-					<div class="live__link">
-						<a href="#">Футбол — Чемпионат Украины</a>
+		<!-- BEGIN .live -->
+		<div class="live">			
+			<ul class="live__slider js-sl-live">
+				<li>
+					<div class="live__item">
+						<div class="live__flag"><img src="img/flags/ua.png" alt=""></div>
+						<div class="live__title">
+							<a href="#">Футбол — Чемпионат Украины</a>
+						</div>
+						<div class="live__teams">
+							<span>СКА Одесса</span><strong>5</strong>
+							<span>Скала</span><strong>5</strong>
+						</div>
+						<div class="live__time">
+							<a href="#">Онлайн</a>
+							<span>42"</span>
+						</div>
 					</div>
-					<div class="live__teams">
-						<span>СКА Одесса<i>0</i></span>
-						<span>Скала<i>0</i></span>
+				</li>
+				<li>
+					<div class="live__item live__item_mod">
+						<div class="live__teams">
+							<span>Скала</span><strong>5</strong>
+							<span>СКА Одесса</span><strong>5</strong>
+						</div>
+						<div class="live__time">
+							<a href="#">Онлайн</a>
+							<span>42"</span>
+						</div>
 					</div>
-					<div class="live__time">
-						<span>Онлайн</span>
-						<span>42"</span>
+					<div class="live__item live__item_mod">
+						<div class="live__teams">
+							<span>Длиннааааааааяяяя</span><strong>5</strong>
+							<span>Скала</span><strong>5</strong>
+						</div>
+						<div class="live__time">
+							<a href="#">Онлайн</a>
+							<span>42"</span>
+						</div>
 					</div>
-				</div>
-				<div class="live__item">
-					<div class="live__flag"></div>
-					<div class="live__link">
-						<a href="#">Футбол — Чемпионат Украины</a>
-					</div>
-					<div class="live__teams">
-						<span>СКА Одесса<i>0</i></span>
-						<span>Скала<i>0</i></span>
-					</div>
-					<div class="live__time">
-						<span>Онлайн</span>
-						<span>42"</span>
-					</div>
-				</div>
-				<div class="live__item">
-					<div class="live__flag"></div>
-					<div class="live__link">
-						<a href="#">Футбол — Чемпионат Украины</a>
-					</div>
-					<div class="live__teams">
-						<span>СКА Одесса<i>0</i></span>
-						<span>Скала<i>0</i></span>
-					</div>
-					<div class="live__time">
-						<span>Онлайн</span>
-						<span>42"</span>
-					</div>
-				</div>
-			</div>
+				</li>
+			</ul>
+			<button class="live__prev js-sl-live-prev"><i class="live__prev-arr"></i></button>
+			<button class="live__next js-sl-live-next"><i class="live__next-arr"></i></button>
 		</div>
-		<!-- END .header-live -->
+		<!-- END .live -->
 		<a class="site-title" href="#"></a>
 		<nav class="nav">
 			<ul class="nav-list">

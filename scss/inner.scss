@@ -651,7 +651,12 @@
 .matches { 	
 	margin-bottom: 20px;
 	.play__team-1, .play__team-2 {
-		width: 87px;
+		width: 38%;
+		margin: 0 2%;
+		padding: 2px 0;
+	}
+	.play__result {
+		width: 16%;
 	}
 	.play__item {
 		&:nth-child(2n) {
@@ -755,9 +760,6 @@
 		bottom: 48px;
 		@include box-shadow(#93a9ba 0 15px 10px);
 	}
-	.caroufredsel_wrapper {
-		background: #f1f8fe;
-	}
 	.arrs-nav {
 		bottom: 0;
 		left: 0;
@@ -765,6 +767,7 @@
 }
 .athlete__slider {
 	position: relative;
+	background: #f1f8fe;
 	z-index: 10;
 	li {
 		float: left;

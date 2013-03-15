@@ -80,6 +80,7 @@ $('.search-open').click(function() {
 });
 $('.enter__open').click(function() {
 	$('.popup-enter, .hide-popup-dark').fadeIn(200);
+  return false;
 });
 $('.hide-popup-opacity').click(function() {
 	$('.hide-popup-opacity, .search').fadeOut(200);
@@ -169,77 +170,36 @@ $('.author').hover(
   }
 );
 
-//main news
-if ($('.main-news').length > 0) {
-  $('.main-news ul').carouFredSel({
-    items: 1,
-    circular: false,
-    infinite: false,
-    auto: false,
-    prev: {
-      button: '.main-news .arrs-nav__prev',
-      key: 'left'
-    },
-    next: {
-      button: '.main-news .arrs-nav__next',
-      key: 'right'
-    },
-    pagination: '.main-news .navi'
+//sliders
+//sldier live
+if ($('.js-sl-live').length > 0) {
+  $('.js-sl-live').cycle({
+    fx: 'fade', 
+    speed: 'slow', 
+    timeout: 0, 
+    wrap: false,
+    next: '.js-sl-live-next', 
+    prev: '.js-sl-live-prev'
   });
 };
-
-//photo report slider
-if ($('.photo-report__slider').length>0) {
-  $('.photo-report__slider').carouFredSel({
-    items: 1,
-    circular: false,
-    infinite: false,
-    auto: false,
-    prev: {
-      button: '.photo-report .arrs-nav__prev',
-      key: 'left'
-    },
-    next: {
-      button: '.photo-report .arrs-nav__next',
-      key: 'right'
-    },
-    pagination: '.photo-report .navi'
-  });
-};
-
-//live skider
-if ($('.live__slider').length>0) {
-  $('.live__slider').carouFredSel({
-    items: 1,
-    circular: false,
-    infinite: false,
-    auto: false,
-    prev: {
-      button: '.live__prev',
-      key: 'left'
-    },
-    next: {
-      button: '.live__next',
-      key: 'right'
-    }
-  });
-};
-
-//athlete slider
-if ($('.athlete__slider').length>0) {
-  $('.athlete__slider').carouFredSel({
-    items: 1,
-    circular: false,
-    infinite: false,
-    auto: false,
-    prev: {
-      button: '.athlete .arrs-nav__prev',
-      key: 'left'
-    },
-    next: {
-      button: '.athlete .arrs-nav__next',
-      key: 'right'
-    }
+//general slider
+if ($('.js-sl').length > 0) {
+  $('.js-sl').each(function() {
+    var slider_prev = $(this).next().children('.js-sl-prev');
+    var slider_next = $(this).next().children('.js-sl-next');
+    var slider_navi = $(this).next().next();
+    $(this).cycle({ 
+      fx: 'scrollHorz', 
+      speed: 'fast', 
+      timeout: 0, 
+      wrap: false,
+      next:   slider_next, 
+      prev:   slider_prev,
+      pager: slider_navi,
+      pagerAnchorBuilder: function(index, el) {
+        return '<button></button>'; 
+      }
+    });
   });
 };
 
