@@ -1,54 +1,51 @@
+.flags-sprite, .flags-ag, .flags-bg, .flags-bl, .flags-de, .flags-fr, .flags-gl, .flags-gr, .flags-it, .flags-pl, .flags-pt, .flags-rm, .flags-ru, .flags-sp, .flags-tr, .flags-ua, .flags-uk { background: url('../img/flags-s85acbfc97f.png') no-repeat; }
+
+.flags-ag { background-position: 0 -36px; }
+
+.flags-bg { background-position: 0 -117px; }
+
+.flags-bl { background-position: 0 -18px; }
+
+.flags-de { background-position: 0 -135px; }
+
+.flags-fr { background-position: 0 -63px; }
+
+.flags-gl { background-position: 0 -108px; }
+
+.flags-gr { background-position: 0 -72px; }
+
+.flags-it { background-position: 0 -45px; }
+
+.flags-pl { background-position: 0 -90px; }
+
+.flags-pt { background-position: 0 -9px; }
+
+.flags-rm { background-position: 0 -54px; }
+
+.flags-ru { background-position: 0 -126px; }
+
+.flags-sp { background-position: 0 -99px; }
+
+.flags-tr { background-position: 0 -27px; }
+
+.flags-ua { background-position: 0 -81px; }
+
+.flags-uk { background-position: 0 0; }
+
 /*cols*/
-/* line 3, ../scss/layouts.scss */
-.cols {
-  padding: 0 20px;
-  overflow: hidden;
-}
+.cols { padding: 0 20px; overflow: hidden; }
 
-/* line 7, ../scss/layouts.scss */
-.cols_no-pad {
-  position: relative;
-  padding: 0;
-  overflow: visible;
-}
-/* line 11, ../scss/layouts.scss */
-.cols_no-pad .col-5 {
-  padding-bottom: 200px;
-}
+.cols_no-pad { position: relative; padding: 0; overflow: visible; }
+.cols_no-pad .col-5 { padding-bottom: 200px; }
 
-/* line 15, ../scss/layouts.scss */
-.col-1 {
-  float: left;
-  width: 690px;
-}
+.col-1 { float: left; width: 690px; }
 
-/* line 19, ../scss/layouts.scss */
-.col-2 {
-  float: right;
-  width: 240px;
-}
+.col-2 { float: right; width: 240px; }
 
-/* line 23, ../scss/layouts.scss */
-.col-3 {
-  float: left;
-  width: 380px;
-}
+.col-3 { float: left; width: 380px; }
 
-/* line 27, ../scss/layouts.scss */
-.col-4 {
-  float: right;
-  width: 287px;
-}
+.col-4 { float: right; width: 287px; }
 
-/* line 31, ../scss/layouts.scss */
-.col-5 {
-  float: left;
-  width: 164px;
-}
+.col-5 { float: left; width: 164px; }
 
-/* line 35, ../scss/layouts.scss */
-.col-6 {
-  float: right;
-  width: 500px;
-  overflow: hidden;
-}
+.col-6 { float: right; width: 500px; overflow: hidden; }

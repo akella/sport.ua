@@ -1,0 +1,46 @@
+// this one just agregates all the libs
+@import "compass/css3";
+@import "lib/mixins";
+@import "lib/animations";
+@import "lib/keyframes";
+@import "lib/media";
+@import "lib/ceaser-easing/ceaser";
+//gradient for ie
+$experimental-support-for-svg: true;
+//icons
+$icons: sprite-map("icons/*.png", $spacing: 10px);
+//flags
+@import "flags/*.png";
+@include all-flags-sprites;
+//color
+$blue: #3b6ab7;
+$red: #ED3C0C;
+$border: #ececec;
+@mixin image-size($path) {
+	width: image-width($path);
+	height: image-height($path);
+}
+@mixin sized-sprite($map, $sprite) {
+	background: sprite($map, $sprite) no-repeat;
+	@include image-size(sprite-file($map, $sprite));
+}
+//extend
+%shadow {
+	&:after {
+		content: "";
+		position:absolute; 	  
+		bottom: 12px;
+		left: 10px;
+		width: 245px;
+		height: 20px;
+		@include box-shadow(0 15px 10px rgba(0, 0, 0, 0.2));
+		-webkit-transform: rotate(-4deg);
+		-moz-transform: rotate(-4deg);
+		-ms-transform: rotate(-4deg);
+		-o-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+	}	
+}
+
+
+
