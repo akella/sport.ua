@@ -95,14 +95,15 @@ $('.go-top').click(function() {
 });
 
 //sub nav
-// $('.nav-list li').hover(	
-//   function () {  	
-//   	$(this).children('.nav-sub').show();	
-//   },
-//   function () {
-//     $(this).children('.nav-sub').hide(); 
-//   }
-// );
+$('.nav-list li').hover(	
+  function () {  	
+  	$(this).children('.nav-sub').show();
+    js_gallery();	
+  },
+  function () {
+    $(this).children('.nav-sub').hide(); 
+  }
+);
 //menu hover trigger
 function menu_hover() {
   $('.nav-list__item').each(function() {
@@ -117,7 +118,7 @@ $('.menu li:last').hover(function() {
 
 //all news filter
 $('.all-news__filter').hover(	
-  function () {  	
+  function () {
   	$(this).addClass('active').children('ul').show();  	
   },
   function () {
@@ -214,27 +215,27 @@ function js_gallery() {
   sl_next = $('.js-sl-clubs-next');
   sl_width = 0;
   sl_img_value = sl_item.length;
-  sl_img.each(function() {
-    sl_img_count = 0;
-    $(this).load(function() {
-      sl_img_count++;
-      if (sl_img_value == sl_img_count) {
+  //sl_img.each(function() {
+    // sl_img_count = 0;
+    // $(this).load(function() {
+    //   sl_img_count++;
+    //   if (sl_img_value == sl_img_count) {
         sl_item.each(function(i) {
           sl_width += $(this).width();
           $(this).attr('id', 'js-sl-clubs-id' + i);
           return(sl_width);
         });
         sl_list.width(sl_width);
-      };
-    });
-  });
+    //   };
+    // });
+  //});
   sl_next.click(function() {
     if (!$(this).hasClass('disabled')) {
       sl_prev.removeClass('disabled');
       sl_act = $('.js-sl-clubs-scrto');
       sl_act_next = sl_act.next().attr('id');
       sl_act.removeClass('js-sl-clubs-scrto').next().addClass('js-sl-clubs-scrto');
-      sl.scrollTo($('#' + sl_act_next), 100, {
+      sl.scrollTo($('#' + sl_act_next), 1000, {
         onAfter: function() { 
           var sl_left = sl_list.position().left;
           var sl_list_width = sl_list.width();
@@ -270,7 +271,6 @@ function js_gallery() {
     };
   });
 };
-js_gallery();
 
 //sport-news tabs
 $('.sport-news__top button').click(function() {

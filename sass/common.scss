@@ -1,6 +1,6 @@
 @import "compass/css3";
 @import "base";
-/*resets*/
+//resets
 article, aside, details, figcaption, figure, footer, header,
 hgroup, menu, nav, section { 
  display: block;
@@ -202,7 +202,7 @@ i, em {
 	background: url(../img/head-bg.jpg) repeat-x 0 27px;
 	z-index: 100;
 }
-/*header live*/
+//header live
 .live {
 	position: absolute;
 	top: 52px;
@@ -341,7 +341,7 @@ i, em {
 		color: #9c9c9c;
 	}
 }
-/*logo*/
+//logo
 .logo {
 	position: absolute;
 	top: 43px;
@@ -360,7 +360,7 @@ i, em {
 	left: 206px;
 	@include sized-sprite($icons, logo1);
 }
-/*search*/
+//search
 .search {
 	display: none;
 	position: absolute;
@@ -396,7 +396,7 @@ i, em {
 		@include box-shadow(#34b6ff 0px 0px 5px, #dadada 0px 1px 5px inset);
 	}	
 }
-/*go top*/
+//go top
 .go-top {
 	display: none;
 	position: fixed;
@@ -418,7 +418,7 @@ i, em {
 		@include sized-sprite($icons, top);
 	}
 }
-/*nav*/
+//nav
 .nav {
 	position: absolute;
 	left: 8px;
@@ -510,7 +510,7 @@ i, em {
 	}		
 }
 .nav-sub {
-	//display: none;
+	display: none;
 	position: absolute;
 	top: 40px;
 	left: -1px;

@@ -25,7 +25,7 @@ $border: #ececec;
 	@include image-size(sprite-file($map, $sprite));
 }
 //extend
-%shadow {
+@mixin shadow {
 	&:after {
 		content: "";
 		position:absolute; 	  

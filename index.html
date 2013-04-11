@@ -11,7 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="css/screen.css" />
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<script src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/jquery.tools.min.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script src="js/jquery-ui-1.9.1.custom.min.js"></script>
 	<script src="js/jquery.cycle.all.js"></script>
@@ -218,7 +217,7 @@
 			<!-- END .banner685x90 -->
 			<div class="col-3">				
 				<!-- BEGIN .result -->
-				<div class="result">
+				<div class="result result_main">
 					<div class="title">Результаты LIVE
 						<!-- BEGIN .datepicker -->
 						<div class="datepicker-out">
@@ -232,7 +231,7 @@
 						</div>
 					</div>
 					<div class="result__title">
-						<i>Чемпионат Украины</i>
+						<strong>Чемпионат Украины</strong>
 						<span>(премьер-лига) 5-й тур</span>
 						<button class="btn-orange">Сделать ставку</button>
 						<button id="btn1" class="open"><i></i></button>
@@ -246,116 +245,125 @@
 						</div>
 						<div class="play">
 							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1">Динамо К</div>
-								<div class="play__cell play__result"><span>—</span></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn2"><i></i></button></div>
-							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><span>—</span></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn2"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>										
+									</ul>
+								</div>
 							</div>
 							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1 play__winner">Энергия</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"></div>
-								<div class="play__cell play__open"><button id="btn3"><i></i></button></div>
-							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><a href="#">4:1</a></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn3"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>										
+									</ul>
+								</div>
 							</div>
 							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1 play__winner">Энергия<br>(Н. Каховка)</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch2.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn4"><i></i></button></div>
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><a href="#">4:1</a></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn4"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>										
+									</ul>
+								</div>
 							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
+							<div class="play__item">
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><a href="#">4:1</a></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn5"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>										
+									</ul>
+								</div>
+							</div>
+							<div class="play__item">
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><a href="#">4:1</a></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn6"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>										
+									</ul>
+								</div>
 							</div>
 							<div class="play__item play__now">
-								<div class="play__cell play__time">42"</div>
-								<div class="play__cell play__team-1">Динамо К</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn5"><i></i></button></div>
-							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
-							</div>
-							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1 play__winner">Энергия<br>(Н. Каховка)</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch2.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn6"><i></i></button></div>
-							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
+								<div class="play__desc">
+									<div class="play__cell play__time">42"</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><a href="#">4:1</a></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn7"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a class="online" href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>	
+									</ul>
+								</div>
 							</div>
 						</div>	
 					</div>				
 					<div class="result__title">
-						<i>Чемпионат Украины</i>
+						<strong>Чемпионат Украины</strong>
 						<button class="btn-orange">Сделать ставку</button>
-						<button id="btn7" class="open"><i></i></button>
+						<button id="btn8" class="open"><i></i></button>
 					</div>
 					<div class="result__block">
 						<div class="result__nav">
@@ -369,193 +377,177 @@
 							<button id="btn8" class="open"><i></i></button>
 						</div>
 						<div class="play">
-							<div class="play__item play__now">
-								<div class="play__cell play__time">42"</div>
-								<div class="play__cell play__team-1">Динамо К</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn9"><i></i></button></div>
-							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
-							</div>
 							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1">Динамо К</div>
-								<div class="play__cell play__result"><span>—</span></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn10"><i></i></button></div>
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><span>—</span></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn9"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>										
+									</ul>
+								</div>
 							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
+							<div class="play__item play__now">
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><a href="#">4:1</a></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn10"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a class="online" href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>	
+									</ul>
+								</div>
 							</div>
-						</div>
+						</div>	
 						<div class="play-group">
 							группа B
 							<button id="btn11" class="open"><i></i></button>							
 						</div>
 						<div class="play">
 							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1 play__winner">Энергия<br>(Н. Каховка)</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch2.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn12"><i></i></button></div>
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><span>—</span></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn12"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>										
+									</ul>
+								</div>
 							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
+							<div class="play__item play__now">
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><a href="#">4:1</a></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn13"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a class="online" href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>	
+									</ul>
+								</div>
 							</div>
-							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1 play__winner">Энергия<br>(Н. Каховка)</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch2.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn13"><i></i></button></div>
-							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
-							</div>
-						</div>
+						</div>	
 						<div class="play-group">
 							группа C
 							<button id="btn14" class="open"><i></i></button>							
 						</div>
 						<div class="play">
 							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1 play__winner">Энергия<br>(Н. Каховка)</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch2.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn15"><i></i></button></div>
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><span>—</span></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn15"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>										
+									</ul>
+								</div>
 							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
+							<div class="play__item play__now">
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><a href="#">4:1</a></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn16"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a class="online" href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>	
+									</ul>
+								</div>
 							</div>
-							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1 play__winner">Энергия<br>(Н. Каховка)</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch2.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn16"><i></i></button></div>
-							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
-							</div>
-						</div>
+						</div>	
 						<div class="play-group">
 							группа D
 							<button id="btn17" class="open"><i></i></button>							
 						</div>
 						<div class="play">
 							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1 play__winner">Энергия<br>(Н. Каховка)</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch2.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn18"><i></i></button></div>
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><span>—</span></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn18"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>										
+									</ul>
+								</div>
 							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
+							<div class="play__item play__now">
+								<div class="play__desc">
+									<div class="play__cell play__time">19:30</div>
+									<div class="play__cell play__team-1">Динамо К</div>
+									<div class="play__cell play__result"><a href="#">4:1</a></div>
+									<div class="play__cell play__team-2">Волынь</div>
+									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
+									<div class="play__cell play__open"><button id="btn19"><i></i></button></div>
+								</div>
+								<div class="play__view">
+									<ul>
+										<li><a href="#">Анонс матча</a></li>
+										<li><a href="#">Обзор</a></li>
+										<li><a href="#">Фентези</a></li>
+										<li><a class="online" href="#">Онлайн</a></li>										
+										<li><a href="#">Пресс-конференция</a></li>	
+									</ul>
+								</div>
 							</div>
-							<div class="play__item">
-								<div class="play__cell play__time">19:30</div>
-								<div class="play__cell play__team-1 play__winner">Энергия<br>(Н. Каховка)</div>
-								<div class="play__cell play__result"><a href="#">4:1</a></div>
-								<div class="play__cell play__team-2">Волынь</div>
-								<div class="play__cell play__channel"><img src="img/icons/ch2.png" alt=""></div>
-								<div class="play__cell play__open"><button id="btn19"><i></i></button></div>
-							</div>
-							<div class="play__view">
-								<ul>
-									<li><a href="#">Анонс матча</a></li>
-									<li><a class="online" href="#">Онлайн</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Обзор</a></li>
-									<li><a href="#">Пресс-конференция</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">Фентези</a></li>
-								</ul>
-							</div>
-						</div>
+						</div>	
 					</div>
 				</div>
 				<!-- END .result -->				
@@ -1158,7 +1150,7 @@
 			<a href="#" class="enter__vk"></a>
 		</div>
 	</nav>
-	<!-- END .top-nav -->
+	<!-- END .top-nav -->	
 	<h1 class="logo">
 		<a href="#">Sport.ua</a>
 	</h1>
@@ -1281,28 +1273,28 @@
 							</div>
 							<div class="nav-clubs__slider js-sl-clubs">				
 								<ul>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
 								</ul>
 							</div>							
 						</div>
