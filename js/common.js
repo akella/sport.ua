@@ -117,7 +117,7 @@ $('.menu li:last').hover(function() {
 });
 
 //all news filter
-$('.all-news__filter').hover(	
+$('.select').hover(	
   function () {
   	$(this).addClass('active').children('ul').show();  	
   },
@@ -125,7 +125,7 @@ $('.all-news__filter').hover(
   	$(this).removeClass('active').children('ul').hide();  	
   }
 );
-$('.all-news__filter ul li').click(function() {
+$('.select ul li').click(function() {
 	filter_val = $(this).text();
 	$(this).parent().prev().html(filter_val+'<i></i>').parent().removeClass('active').children('ul').fadeOut(300);
 });
