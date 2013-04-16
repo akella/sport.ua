@@ -40,12 +40,16 @@
 	margin-bottom: 10px;
 	h2 {
 		margin-bottom: 5px;
-		font-size: 24px;
 	}
 	p {
 		font-size: 15px;
 		line-height: 1.3;
 		color: #676767;
+	}
+}
+.post-detail {
+	.social {
+		padding: 0 0 15px 10px;
 	}
 }
 //author
@@ -81,7 +85,8 @@
 		}
 	}
 	i {
-		position: absolute;		
+		position: absolute;	
+		top: 0;	
 		left: 14px;
 	}		
 }
@@ -90,9 +95,6 @@
 	border-top: 1px dotted #c6d0dc;
 	li {
 		padding: 5px 0;
-	}
-	i {
-		top: 0;
 	}
 }
 .author__name {
@@ -121,10 +123,9 @@
 .author__print {
 	@include sized-sprite($icons, aut2);
 }
-//post-social 
-.post-social {
+//social 
+.social {
 	position: relative;
-	padding: 0 0 15px 10px;
 	border-bottom: 1px solid #e0e0e0;	
 	font-size: 0;
 	li {
@@ -135,64 +136,61 @@
 		display: block;
 	}
 }
-.post-social__another {
+.social__another {
 	display: none;
 	position: absolute;
-	top: 35px;
+	top: 20px;
 	left: 0;
-	width: 144px;
 	padding: 10px;
 	background: #fff;
 	@include box-shadow(rgba(0, 0, 0, 0.3) 0px 4px 20px);
 	font-size: 12px;
 	z-index: 10;
 }
-.post-social__fb {
-	@include sized-sprite($icons, fb_);
+.social__fb {
+	@include sized-sprite($icons, s-fb);
 	&:hover {
-		@include sized-sprite($icons, fb_h);
+		@include sized-sprite($icons, s-fb_h);
 	}
 }
-.post-social__vk {
-	@include sized-sprite($icons, vk_);
+.social__vk {
+	@include sized-sprite($icons, s-vk);
 	&:hover {
-		@include sized-sprite($icons, vk_h);
+		@include sized-sprite($icons, s-vk_h);
 	}
 }
-.post-social__tw {
-	@include sized-sprite($icons, tw_);
+.social__tw {
+	@include sized-sprite($icons, s-tw);
 	&:hover {
-		@include sized-sprite($icons, tw_h);
+		@include sized-sprite($icons, s-tw_h);
 	}
 }
-.post-social__gg {
-	@include sized-sprite($icons, gg_);
+.social__gg {
+	@include sized-sprite($icons, s-gg);
 	&:hover {
-		@include sized-sprite($icons, gg_h);
+		@include sized-sprite($icons, s-gg_h);
 	}
 }
-.post-social__ok {
-	@include sized-sprite($icons, ok_);
+.social__ok {
+	@include sized-sprite($icons, s-ok);
 	&:hover {
-		@include sized-sprite($icons, ok_h);
+		@include sized-sprite($icons, s-ok_h);
 	}
 }
-.post-social__sh {
-	@include sized-sprite($icons, sh_);
+.social__sh {
+	@include sized-sprite($icons, s-sh);
 	&:hover {
-		@include sized-sprite($icons, sh_h);
-		.post-social__another {
+		@include sized-sprite($icons, s-sh_h);
+		.social__another {
 			display: block;
 		}
 	}
 }
 .post-info {
+	margin-bottom: 20px;
 	border-bottom: 1px dotted #c6d0dc;
 	li {
 		padding: 4px 0;
-	}
-	i {
-		top: 1px;
 	}
 }
 .post-info__date {
@@ -206,7 +204,7 @@
 }
 //pari-match
 .pari-match {
-	padding: 15px 0;
+	margin-bottom: 20px;
 	text-align: center;
 	font-size: 0;
 	a {
@@ -684,13 +682,16 @@
 		@include sized-sprite($icons, minus3);
 	}
 }
-//matches
-.matches, .sport-news {
+//matches-result
+.matches-result, .sport-news {
 	padding: 3px;
 	border: 1px solid $border;
 }
-.matches { 	
+.matches-result { 	
 	margin-bottom: 20px;
+	.title {
+		padding: 0;
+	}
 	.play__team-1, .play__team-2 {
 		width: 34%;
 		margin: 0 4%;
@@ -708,7 +709,7 @@
 		}
 	}
 }
-.matches__top {
+.matches-result__top {
 	position: relative;
 	padding: 10px 0 30px 10px;
 	.datepicker-out {
@@ -716,10 +717,7 @@
 		left: -5px;
 	}
 }
-.matches__title {
-	font-size: 18px;
-}
-.matches__chemp {
+.matches-result__chemp {
 	padding: 10px;
 	border-top: 1px solid #fdfdfd;
 	border-bottom: 1px solid #bbb;
@@ -739,7 +737,7 @@
 		color: #767676;
 	}
 }
-.matches__nav {
+.matches-result__nav {
 	margin-top: 1px;
 	padding: 10px;
 	border-top: 1px solid #ededed;
@@ -761,34 +759,12 @@
 }
 //sport-news
 .sport-news {
-	.sport-news__list {
-		display: none;
+	.title {
+		padding: 8px 7px;
 	}
-}
-.sport-news__top {
-	padding: 8px 7px;
-	border-bottom: 2px solid #fbd10d;
-	span {
-		display: block;
-		margin-bottom: 10px;
-		font-size: 18px;
-	}
-	button {
-		height: 19px;
-		margin-right: 8px;
-		padding: 0 7px;
-		background: #fbfbfb;
-		@include background-image(linear-gradient(#fbfbfb, #ebebeb));
-		@include box-shadow(rgba(0,0,0,0.4) 0 0 1px inset, rgba(0,0,0,0.1) 0 1px 1px);
-		@include border-radius(3px);
-		font-size: 11px;
-		text-shadow: 0 1px 1px #fff; 
-		color: #000;
-		&.active {
-			color: #939393;
-			background: #f1f1f1;
-			@include box-shadow(rgba(0,0,0,0.8) 0 0 1px inset, rgba(0,0,0,0.1) 0 2px 1px inset);
-		}
+	.tabs-small {
+		padding: 0 7px 8px 7px;
+		border-bottom: 2px solid #fbd10d;
 	}
 }
 //tags 
@@ -813,12 +789,12 @@
 	}
 }
 //online
-.online-info {
+.scoreboard {
 	background: #f7f7f7;
 	text-align: center;
 	font-size: 0;
 }
-.online-info__teams {
+.scoreboard__teams {
 	height: 40px;
 	padding: 25px 0 19px 0;
 	line-height: 40px;	
@@ -830,7 +806,7 @@
 		color: #4e4e4e;
 	}
 }
-.online-info__team-1, .online-info__team-2 {
+.scoreboard__team-1, .scoreboard__team-2 {
 	width: 280px;	
 	a {
 		&:hover {
@@ -838,13 +814,13 @@
 		}
 	}
 }
-.online-info__team-1 {
+.scoreboard__team-1 {
 	text-align: right;
 }
-.online-info__team-2 {
+.scoreboard__team-2 {
 	text-align: left;
 }
-.online-info__count {
+.scoreboard__count {
 	width: auto;	
 	padding: 0 14px;
 	margin: 0 10px;
@@ -855,10 +831,10 @@
 		margin: 0 10px;
 	}
 }
-.online-info__winner {
+.scoreboard__winner {
 	color: #000;
 }
-.online-info__time {
+.scoreboard__time {
 	display: inline-block;	
 	border-top: 1px solid #e1e1e1;	
 	span {
@@ -871,7 +847,7 @@
 		color: #373737;
 	}
 }
-.play-statistic {
+.online-statistics {
 	margin-bottom: 50px;
 	color: #4e4e4e;
 	text-align: center;
@@ -912,10 +888,15 @@
 	height: 39px;
 	margin-bottom: 20px;
 	border-bottom: 1px solid $border;
-	ul {
-		float: left;
-		padding-left: 3px;
+	.social {
+		float: right;
+		margin-top: 9px;
+		border: none;
 	}
+}
+.tabs__list {
+	float: left;
+	padding-left: 3px;
 	li {
 		float: left;
 		margin-right: 34px;		
@@ -938,13 +919,8 @@
 		}
 	}
 }
-.tabs__share {
-	float: right;
-	margin: 14px 13px 0 0;
-	@include sized-sprite($icons, share1);
-}
-//team-players
-.team-players {
+//online-players
+.online-players {
 	position: relative;
 	margin-bottom: 20px;
 	border: 1px solid $border;
@@ -1045,17 +1021,17 @@
 		top: 27px;
 	}
 }
-.team-players_after {
+.online-players_after {
 	border: none;
 }
-.team-players__title {
+.online-players__title {
 	padding: 25px 0 5px 0;
 	font-size: 15px;
 	text-align: center;
 	color: #000;
 }
-//online-players
-.online-players {
+//online-info
+.online-info {
 	margin-bottom: 20px;
 	overflow: hidden;
 	ul {
@@ -1071,7 +1047,7 @@
 		top: 0;
 	}
 }
-.online-players__team-1 {
+.online-info__team-1 {
 	li {
 		padding-right: 40px;
 		text-align: right;
@@ -1080,7 +1056,7 @@
 		right: 20px;
 	}
 }
-.online-players__team-2 {
+.online-info__team-2 {
 	li {
 		padding-left: 40px;
 		text-align: left;
@@ -1104,6 +1080,10 @@
 		right: 4px;
 		height: 2px;
 		background: $border;
+	}
+	.pari-match {
+		float: right;
+		margin: 2px 0 0 0;
 	}
 }
 .online-type_mod {
@@ -1136,13 +1116,8 @@
 		@include sized-sprite($icons, online-audio);
 	}
 }
-.online-type__pari {
-	float: right;
-	margin-top: 2px;
-	@include sized-sprite($icons, pari);
-}
-//online-event
-.online-event {
+//online-events
+.online-events {
 	margin-bottom: 70px;
 	table {
 		width: 100%;
@@ -1171,8 +1146,8 @@
 		}
 	}
 }
-//other-matches & statistics-match
-.other-matches, .statistics-match {
+//other-matches & match-statistics
+.other-matches, .match-statistics {
 	padding: 0 3px;
 	border: 1px solid $border;
 	.title {
@@ -1234,7 +1209,7 @@
 		bottom: -27px;
 	}	
 }
-.statistics-match {
+.match-statistics {
 	td {
 		padding: 10px;
 		text-align: center;

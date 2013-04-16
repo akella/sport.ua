@@ -69,14 +69,27 @@
 			</div>
 			<!-- END .block-title -->
 			<!-- BEGIN .tabs -->
-			<div class="tabs">
-				<ul>
+			<div class="tabs"> 
+				<ul class="tabs__list">
 					<li><a class="active" href="#">Профиль</a></li>
 					<li><a href="#">Матчи</a></li>
 					<li><a href="#">Состав</a></li>
 					<li><a href="#">О команде</a></li>
 				</ul>                       
-				<div class="tabs__share"></div>
+				<ul class="social">
+					<li><a class="social__fb" href="#"></a></li>
+					<li><a class="social__vk" href="#"></a></li>
+					<li><a class="social__tw" href="#"></a></li>
+					<li><a class="social__gg" href="#"></a></li>
+					<li><a class="social__ok" href="#"></a></li>
+					<li>
+						<div class="social__sh">
+							<div class="social__another">
+								Здесь будут выводится есче социальные кнопки
+							</div>
+						</div>								
+					</li>
+				</ul>
 			</div>
 			<!-- END .tabs -->
 			<!-- BEGIN .team-detail -->
@@ -280,10 +293,10 @@
 				<!-- END .result -->
 			</div>
 			<!-- END .team-matches -->
-			<!-- BEGIN .team-members -->
-			<div class="team-members">
+			<!-- BEGIN .players -->
+			<div class="players">
 				<div class="title">Состав игроков</div>
-				<div class="team-members__list">
+				<div class="players__list">
 					<strong>Вратари</strong>
 					<ul>
 						<li>
@@ -385,7 +398,7 @@
 						</li>
 					</ul>
 				</div>
-			<!-- END .team-members -->
+			<!-- END .players -->
 		</section>
 		<aside class="col-2">
 			<!-- BEGIN .banner -->
@@ -418,12 +431,12 @@
 			<!-- END .position-tour -->
 			<!-- BEGIN .sport-news -->
 			<div class="sport-news">
-				<div class="sport-news__top">
-					<span>Новости</span>
+				<div class="title">Спортивные новости</div>										
+				<div class="tabs-small js-tabs-sm">
 					<button data-tab="sport-news__list-1" class="active">Популярные</button>
 					<button data-tab="sport-news__list-2">Последние</button>
 				</div>
-				<ul class="sport-news__list sport-news__list-1" style="display: block">
+				<ul class="sport-news__list sport-news__list-1 js-tabs-sm-item" style="display: block">
 					<li>
 						<span class="sport-news__time">00:14</span>
 						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
@@ -481,42 +494,7 @@
 						<span class="count-views">8979<i></i></span>
 					</li>
 				</ul>
-				<ul class="sport-news__list sport-news__list-2">
-					<li>
-						<span class="sport-news__time">00:14</span>
-						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
-						<span class="cat-link">-<a href="#">Футбол</a></span>
-						<a href="#" class="comm-link">72<i></i></a>
-						<span class="count-views">8979<i></i></span>
-					</li>
-					<li>
-						<span class="sport-news__time">00:14</span>
-						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
-						<span class="cat-link">-<a href="#">Футбол</a></span>
-						<a href="#" class="comm-link">72<i></i></a>
-						<span class="count-views">8979<i></i></span>
-					</li>
-					<li>
-						<span class="sport-news__time">00:14</span>
-						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
-						<span class="cat-link">-<a href="#">Футбол</a></span>
-						<a href="#" class="comm-link">72<i></i></a>
-						<span class="count-views">8979<i></i></span>
-					</li>
-					<li>
-						<span class="sport-news__time">00:14</span>
-						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
-						<span class="cat-link">-<a href="#">Футбол</a></span>
-						<a href="#" class="comm-link">72<i></i></a>
-						<span class="count-views">8979<i></i></span>
-					</li>
-					<li>
-						<span class="sport-news__time">00:14</span>
-						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
-						<span class="cat-link">-<a href="#">Футбол</a></span>
-						<a href="#" class="comm-link">72<i></i></a>
-						<span class="count-views">8979<i></i></span>
-					</li>
+				<ul class="sport-news__list sport-news__list-2 js-tabs-sm-item">					
 					<li>
 						<span class="sport-news__time">00:14</span>
 						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>

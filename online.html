@@ -55,16 +55,16 @@
 	<!-- BEGIN .cols -->
 	<div class="cols">
 		<section class="col-1">
-			<!-- BEGIN .online-info -->
-			<div class="online-info">
-				<div class="online-info__teams">
-					<strong class="online-info__team-1"><a href="#">Реал Мадрид</a></strong>
-					<strong class="online-info__count">1<span>:</span>15</strong>
-					<strong class="online-info__team-2"><a href="#">Шахтер Д</a></strong>
+			<!-- BEGIN .scoreboard -->
+			<div class="scoreboard">
+				<div class="scoreboard__teams">
+					<strong class="scoreboard__team-1"><a href="#">Реал Мадрид</a></strong>
+					<strong class="scoreboard__count">1<span>:</span>15</strong>
+					<strong class="scoreboard__team-2"><a href="#">Шахтер Д</a></strong>
 				</div>
-				<div class="online-info__time"><span>89'</span></div>
+				<div class="scoreboard__time"><span>89'</span></div>
 			</div>
-			<!-- END .online-info -->
+			<!-- END .scoreboard -->
 			<!-- BEGIN .tabs -->
 			<div class="tabs">
 				<ul>
@@ -80,16 +80,16 @@
 				<div class="tabs__share"></div>
 			</div>
 			<!-- END .tabs -->
-			<!-- BEGIN .online-players -->
-			<div class="online-players">
-				<ul class="online-players__team-1">
+			<!-- BEGIN .online-info -->
+			<div class="online-info">
+				<ul class="online-info__team-1">
 					<li>Мортен Норстранн, '24<i class="ico-goal"></i></li>
 					<li>Каспер Лоренцен, '30<i class="ico-yellow-card"></i></li>
 					<li>Энох Аду, '64<i class="ico-yellow-card"></i></li>
 					<li>Андерс Кристиансен, '90<i class="ico-goal"></i></li>
 					<li>Майкл Паркхерст, '92<i class="ico-yellow-card"></i></li>
 				</ul>
-				<ul class="online-players__team-2">
+				<ul class="online-info__team-2">
 					<li>Луис Адриано, '26<i class="ico-goal"></i></li>
 					<li>Виллиан, '44<i class="ico-yellow-card"></i></li>
 					<li>Виллиан, '50<i class="ico-goal"></i></li>
@@ -99,9 +99,9 @@
 					<li>Александр Кучер, '90<i class="ico-goal"></i></li>
 				</ul>
 			</div>
-			<!-- END .online-players -->
-			<!-- BEGIN .play-statistic -->
-			<ul class="play-statistic">
+			<!-- END .online-info -->
+			<!-- BEGIN .online-statistics -->
+			<ul class="online-statistics">
 				<li>
 					<strong>Удары</strong>
 					<span>6</span>
@@ -151,18 +151,20 @@
 					<span>2</span>
 				</li>
 			</ul>
-			<!-- END .play-statistic -->
+			<!-- END .online-statistics -->
 			<!-- BEGIN .online-type -->
 			<div class="online-type">
 				<a href="#" class="online-type__ether">Прямой эфир<i></i></a>
 				<a href="#" class="online-type__audio">Аудио-трансляция<i></i></a>
-				<a href="#" class="online-type__pari"></a>
+				<div class="pari-match">
+					<a href="#"></a>
+				</div>
 			</div>
 			<!-- END .online-type -->
-			<!-- BEGIN .team-players -->
-			<div class="team-players">
+			<!-- BEGIN .online-players -->
+			<div class="online-players">
 				<button class="btn-arr-right"><i></i></button>
-				<div class="team-players__title">Основа</div>
+				<div class="online-players__title">Основа</div>
 				<div class="list">
 					<ul class="list__first">
 						<li class="player">
@@ -235,7 +237,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="team-players__title">Запасные</div>
+				<div class="online-players__title">Запасные</div>
 				<div class="list">
 					<ul class="list__first">
 						<li class="player">
@@ -310,9 +312,9 @@
 				</div>
 			</div>
 			<!-- END .compos-players -->
-			<!-- BEGIN .team-players -->
-			<div class="team-players team-players_after">
-				<div class="team-players__title">Основа</div>
+			<!-- BEGIN .online-players -->
+			<div class="online-players online-players_after">
+				<div class="online-players__title">Основа</div>
 				<div class="list">
 					<ul class="list__first">
 						<li class="player">
@@ -395,7 +397,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="team-players__title">Запасные</div>
+				<div class="online-players__title">Запасные</div>
 				<div class="list">
 					<ul class="list__first">
 						<li class="player">
@@ -455,8 +457,8 @@
 				<a href="#" class="online-type__pari"></a>
 			</div>
 			<!-- END .online-type -->						
-			<!-- BEGIN .online-event -->
-			<div class="online-event">
+			<!-- BEGIN .online-events -->
+			<div class="online-events">
 				<table>
 					<tr>
 						<td>88'</td>
@@ -533,7 +535,7 @@
 					<button href="#" class="btn-white btn-white_more">Показать еще<i></i></button>
 				</div>
 			</div>
-			<!-- END .online-event -->
+			<!-- END .online-events -->
 			<!-- BEGIN .likes -->
 			<div class="likes">
 				<div class="likes__line"></div>
@@ -735,8 +737,8 @@
 				<div class="navi js-sl-navi"></div>
 			</div>
 			<!-- END .other-matches -->
-			<!-- BEGIN .statistics-match -->
-			<div class="statistics-match">
+			<!-- BEGIN .match-statistics -->
+			<div class="match-statistics">
 				<div class="title">Статистика матча</div>
 				<div class="play">
 					<div class="play__item">
@@ -780,7 +782,7 @@
 					</tr>
 				</table>
 			</div>
-			<!-- END .statistics-match -->
+			<!-- END .match-statistics -->
 		</aside>
 	</div>
 	<!-- END .cols -->

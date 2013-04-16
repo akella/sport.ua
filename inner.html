@@ -58,7 +58,7 @@
 		<section class="col-1">
 			<!-- BEGIN .news-title -->
 			<div class="news-title">
-				<h2>Бразилия власти. Как «Челси» дожал «Шахтер»</h2>
+				<h2 class="h2">Бразилия власти. Как «Челси» дожал «Шахтер»</h2>
 				<p>Иван Калашников наблюдал за шоу бразильцев на «Стэмфорд Бридж», куда решил вмешаться АндрейПятов.</p>
 			</div>
 			<!-- END .news-title -->
@@ -89,15 +89,15 @@
 								</ul>
 							</div>
 						</div>
-						<ul class="post-social">
-							<li><a class="post-social__fb" href="#"></a></li>
-							<li><a class="post-social__vk" href="#"></a></li>
-							<li><a class="post-social__tw" href="#"></a></li>
-							<li><a class="post-social__gg" href="#"></a></li>
-							<li><a class="post-social__ok" href="#"></a></li>
+						<ul class="social">
+							<li><a class="social__fb" href="#"></a></li>
+							<li><a class="social__vk" href="#"></a></li>
+							<li><a class="social__tw" href="#"></a></li>
+							<li><a class="social__gg" href="#"></a></li>
+							<li><a class="social__ok" href="#"></a></li>
 							<li>
-								<div class="post-social__sh">
-									<div class="post-social__another">
+								<div class="social__sh">
+									<div class="social__another">
 										Здесь будут выводится есче социальные кнопки
 									</div>
 								</div>								
@@ -272,7 +272,10 @@
 			<!-- END .facts -->
 			<!-- BEGIN .comments -->
 			<div class="comments">
-				<div class="comments__title">5 комментариев<label for="subscribe-news"><input id="subscribe-news" type="checkbox" checked="checked">подписаться на новые комментарии</label></div>
+				<div class="comments__title">
+					<strong>5 комментариев</strong>
+					<label for="subscribe-news"><input id="subscribe-news" type="checkbox" checked="checked">подписаться на новые комментарии</label>
+				</div>
 				<ul class="comments__list">
 					<li>
 						<div class="comments__user">
@@ -331,10 +334,10 @@
 				<img src="img/pic18.jpg" alt="">
 			</div>
 			<!-- END .banner -->
-			<!-- BEGIN .matches -->
-			<div class="matches">
-				<div class="matches__top">
-					<div class="matches__title">Результаты матчей</div>					
+			<!-- BEGIN .matches-result -->
+			<div class="matches-result">
+				<div class="matches-result__top">
+					<div class="title">Результаты матчей</div>					
 					<!-- BEGIN .datepicker -->
 					<div class="datepicker-out">
 						<div class="datepicker-date"><span>12 августа, Пт</span></div>
@@ -342,7 +345,7 @@
 					</div>
 					<!-- END .datepicker -->						
 				</div>
-				<div class="matches__chemp">
+				<div class="matches-result__chemp">
 					<span>Чемпионат Италии</span>
 					<i>11-й тур</i>
 				</div>
@@ -415,22 +418,22 @@
 						</div>
 					</div>
 				</div>
-				<ul class="matches__nav">
+				<ul class="matches-result__nav">
 					<li><a href="#">Турнирная таблица </a></li>
 					<li><a href="#">Бомбардиры</a></li>
 					<li><a href="#">Календарь</a></li>
 					<li><a href="#">Зрители</a></li>
 				</ul>
 			</div>
-			<!-- END .matches -->
+			<!-- END .matches-result -->
 			<!-- BEGIN .sport-news -->
 			<div class="sport-news">
-				<div class="sport-news__top">
-					<span>Спортивные новости</span>
+				<div class="title">Спортивные новости</div>										
+				<div class="tabs-small js-tabs-sm">
 					<button data-tab="sport-news__list-1" class="active">Популярные</button>
 					<button data-tab="sport-news__list-2">Последние</button>
 				</div>
-				<ul class="sport-news__list sport-news__list-1" style="display: block">
+				<ul class="sport-news__list sport-news__list-1 js-tabs-sm-item" style="display: block">
 					<li>
 						<span class="sport-news__time">00:14</span>
 						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
@@ -488,42 +491,7 @@
 						<span class="count-views">8979<i></i></span>
 					</li>
 				</ul>
-				<ul class="sport-news__list sport-news__list-2">
-					<li>
-						<span class="sport-news__time">00:14</span>
-						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
-						<span class="cat-link">-<a href="#">Футбол</a></span>
-						<a href="#" class="comm-link">72<i></i></a>
-						<span class="count-views">8979<i></i></span>
-					</li>
-					<li>
-						<span class="sport-news__time">00:14</span>
-						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
-						<span class="cat-link">-<a href="#">Футбол</a></span>
-						<a href="#" class="comm-link">72<i></i></a>
-						<span class="count-views">8979<i></i></span>
-					</li>
-					<li>
-						<span class="sport-news__time">00:14</span>
-						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
-						<span class="cat-link">-<a href="#">Футбол</a></span>
-						<a href="#" class="comm-link">72<i></i></a>
-						<span class="count-views">8979<i></i></span>
-					</li>
-					<li>
-						<span class="sport-news__time">00:14</span>
-						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
-						<span class="cat-link">-<a href="#">Футбол</a></span>
-						<a href="#" class="comm-link">72<i></i></a>
-						<span class="count-views">8979<i></i></span>
-					</li>
-					<li>
-						<span class="sport-news__time">00:14</span>
-						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>
-						<span class="cat-link">-<a href="#">Футбол</a></span>
-						<a href="#" class="comm-link">72<i></i></a>
-						<span class="count-views">8979<i></i></span>
-					</li>
+				<ul class="sport-news__list sport-news__list-2 js-tabs-sm-item">					
 					<li>
 						<span class="sport-news__time">00:14</span>
 						<a href="#" class="all-news__title"><strong>Мирча ЛУЧЕСКУ: «Будемдумать, что делать с Димой»</strong></a>

@@ -273,9 +273,9 @@ function js_gallery() {
 };
 
 //sport-news tabs
-$('.sport-news__top button').click(function() {
-  $('.sport-news__top button').removeClass('active');
-  $('.sport-news__list').hide();
+$('.js-tabs-sm button').click(function() {
+  $(this).parent().children('button').removeClass('active');
+  $(this).parent().parent().children('.js-tabs-sm-item').hide();
   $(this).addClass('active');
   sport_val = $(this).attr('data-tab');
   $('.'+sport_val).show();

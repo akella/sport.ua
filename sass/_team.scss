@@ -261,13 +261,23 @@
 		line-height: 1.4;
 	}
 }
-//team-members
-.team-members {
+//players
+.players {
 	margin-bottom: 50px;
 	overflow: hidden;
+	.title {
+		padding: 0;
+	}
+	.tabs-small {
+		padding-bottom: 10px;
+	}
 }
-.team-members_mod {
-	.team-members__list {
+.players_mod {
+	.title {
+		padding-bottom: 8px;
+	}
+	.players__list {
+		display: none;
 		margin-bottom: -2px;
 		li {
 			margin: 0 3.3% 0 0;
@@ -279,28 +289,7 @@
 		}
 	}
 }
-.team-members__tabs {
-	padding-bottom: 20px;
-	overflow: hidden;
-	button {
-		height: 19px;
-		margin-right: 8px;
-		padding: 0 7px;
-		background: #fbfbfb;
-		@include background-image(linear-gradient(#fbfbfb, #ebebeb));
-		@include box-shadow(rgba(0,0,0,0.4) 0 0 1px inset, rgba(0,0,0,0.1) 0 1px 1px);
-		@include border-radius(3px);
-		font-size: 11px;
-		text-shadow: 0 1px 1px #fff; 
-		color: #000;
-		&.active {
-			color: #939393;
-			background: #f1f1f1;
-			@include box-shadow(rgba(0,0,0,0.8) 0 0 1px inset, rgba(0,0,0,0.1) 0 2px 1px inset);
-		}
-	}
-}
-.team-members__list {
+.players__list {
 	margin-bottom: -1px;
 	strong {
 		display: block;
