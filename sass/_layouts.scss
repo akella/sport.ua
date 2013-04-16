@@ -1,0 +1,40 @@
+@import "base";
+/*cols*/
+.cols {
+	padding: 0 20px;
+	overflow: hidden;	
+}
+.cols_no-pad {
+	position: relative;
+	padding: 0;
+	overflow: visible;
+	.col-5 {
+		padding-bottom: 200px;
+	}
+}
+.col-1 {
+	float: left;
+	width: 690px; 
+}
+.col-2 {
+	float: right;
+	width: 240px;
+}
+.col-3 {
+	float: left;
+	width: 380px;
+}
+.col-4 {
+	float: right;
+	width: 287px;
+}
+.col-5 {
+	float: left;
+	width: 164px;
+}
+.col-6 {
+	float: right;
+	width: 500px;
+	overflow: hidden;
+}
+
