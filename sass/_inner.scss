@@ -140,7 +140,7 @@
 	display: none;
 	position: absolute;
 	top: 20px;
-	left: 0;
+	right: 0;
 	padding: 10px;
 	background: #fff;
 	@include box-shadow(rgba(0, 0, 0, 0.3) 0px 4px 20px);
@@ -1030,6 +1030,79 @@
 	text-align: center;
 	color: #000;
 }
+//aside-players
+.aside-players {
+	display: none;
+	position: relative;
+	margin-bottom: 20px;
+	padding: 0 3px;
+	border: 1px solid #ececec;
+	.title {
+		padding: 10px 0 10px 9px;
+		border-bottom: 2px solid #47b8ff;
+	}
+}
+.aside-players__nav {
+	padding: 15px 10px 5px 10px;
+	button {
+		background: none;
+		font-weight: normal;
+		border-bottom: 1px dashed #c4d2e9;
+		color: $blue;
+		font-size: 12px;		
+		&.active {			
+			font-weight: bold;			
+			border: none;
+			color: #000;
+			cursor: default;
+		}
+	}
+}
+.aside-players__title {
+	height: 6px;
+	margin: 15px 10px 15px 10px;
+	border-bottom: 1px dotted #c6d0dc;
+	text-align: center;
+	font-weight: bold;
+	font-size: 11px;
+	span {
+		padding: 0 5px;
+		background: #FFF;
+	}
+}
+.aside-players__team {
+	display: none;
+}
+.aside-players__list {
+	padding: 0 10px;
+	li {
+		padding-bottom: 10px;
+		font-size: 11px;
+		overflow: hidden;
+	}
+	a {
+		float: left;
+		color: #373737;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	span, i {
+		float: right;		
+	}
+	span {
+		color: #7e7e7e;
+	}
+	i {
+		margin-right: 20px;
+	}
+}
+.aside-players__change-in {
+	padding-top: 3px;
+}
+.aside-players__change-out {
+	padding-bottom: 13px;
+}
 //online-info
 .online-info {
 	margin-bottom: 20px;
@@ -1210,6 +1283,7 @@
 	}	
 }
 .match-statistics {
+	margin-bottom: 20px;
 	td {
 		padding: 10px;
 		text-align: center;

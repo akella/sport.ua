@@ -67,7 +67,7 @@
 			<!-- END .scoreboard -->
 			<!-- BEGIN .tabs -->
 			<div class="tabs">
-				<ul>
+				<ul class="tabs__list">
 					<li><a href="#">Анонс</a></li>
 					<li><a class="active" href="#">Онлайн</a></li>
 					<li><a href="#">Составы</a></li>
@@ -76,8 +76,18 @@
 					<li><a class="disabled" href="#">Пресс</a></li>
 					<li><a class="disabled" href="#">Видео</a></li>
 					<li><a class="disabled" href="#">Фото</a></li>
-				</ul>  
-				<div class="tabs__share"></div>
+				</ul>                        
+				<ul class="social">
+					<li><a class="social__fb" href="#"></a></li>
+					<li><a class="social__vk" href="#"></a></li>
+					<li>
+						<div class="social__sh">
+							<div class="social__another">
+								Здесь будут выводится есче социальные кнопки
+							</div>
+						</div>								
+					</li>
+				</ul>
 			</div>
 			<!-- END .tabs -->
 			<!-- BEGIN .online-info -->
@@ -162,8 +172,8 @@
 			</div>
 			<!-- END .online-type -->
 			<!-- BEGIN .online-players -->
-			<div class="online-players">
-				<button class="btn-arr-right"><i></i></button>
+			<div class="online-players js-players-move">
+				<button class="btn-arr-right js-players-move-btn"><i></i></button>
 				<div class="online-players__title">Основа</div>
 				<div class="list">
 					<ul class="list__first">
@@ -737,6 +747,148 @@
 				<div class="navi js-sl-navi"></div>
 			</div>
 			<!-- END .other-matches -->
+			<!-- BEGIN .aside-players -->
+			<div class="aside-players js-players-move">
+				<button class="btn-arr-left js-players-move-btn"><i></i></button>
+				<div class="title">Составы</div>
+				<div class="aside-players__nav js-tabs-sm">
+					<button class="active" data-tab="aside-players__team-1">Норшелланд</button>
+					<span>—</span>
+					<button data-tab="aside-players__team-2">Шахтер Д</button>
+				</div>
+				<div class="aside-players__team aside-players__team-1 js-tabs-sm-item" style="display: block">			
+					<div class="aside-players__title"><span>Основа</span></div>
+					<ul class="aside-players__list">
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>12</span>
+						</li>
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>21</span>
+						</li><li>
+							<a href="#">Йеспер Хансен</a>
+							<span>12</span>
+						</li>
+						<li class="aside-players__change-in">
+							<a href="#">Йеспер Хансен</a>											
+							<span>21</span>
+							<i class="ico-change-in"></i>	
+						</li>
+						<li class="aside-players__change-out">
+							<a href="#">Йеспер Хансен</a>						
+							<span>12</span>
+							<i class="ico-change-out"></i>
+						</li>
+						<li class="aside-players__change-in">
+							<a href="#">Йеспер Хансен</a>											
+							<span>21</span>
+							<i class="ico-change-in"></i>	
+						</li>
+						<li class="aside-players__change-out">
+							<a href="#">Йеспер Хансен</a>						
+							<span>12</span>
+							<i class="ico-change-out"></i>
+						</li>
+					</ul>
+					<div class="aside-players__title"><span>Запасные</span></div>
+					<ul class="aside-players__list">
+						<li>
+							<a href="#">Хансен Йеспер</a>
+							<span>12</span>
+						</li>
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>21</span>
+						</li>
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>12</span>
+						</li>
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>21</span>
+						</li>
+					</ul>
+				</div>
+				<div class="aside-players__team aside-players__team-2 js-tabs-sm-item">		
+					<div class="aside-players__title"><span>Основа</span></div>
+					<ul class="aside-players__list">
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>12</span>
+						</li>
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>21</span>
+						</li>
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>12</span>
+						</li>
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>21</span>
+						</li><li>
+							<a href="#">Йеспер Хансен</a>
+							<span>12</span>
+						</li>
+						<li class="aside-players__change-in">
+							<a href="#">Йеспер Хансен</a>											
+							<span>21</span>
+							<i class="ico-change-in"></i>	
+						</li>
+						<li class="aside-players__change-out">
+							<a href="#">Йеспер Хансен</a>						
+							<span>12</span>
+							<i class="ico-change-out"></i>
+						</li>
+						<li class="aside-players__change-in">
+							<a href="#">Йеспер Хансен</a>											
+							<span>21</span>
+							<i class="ico-change-in"></i>	
+						</li>
+						<li class="aside-players__change-out">
+							<a href="#">Йеспер Хансен</a>						
+							<span>12</span>
+							<i class="ico-change-out"></i>
+						</li>
+						<li class="aside-players__change-in">
+							<a href="#">Йеспер Хансен</a>											
+							<span>21</span>
+							<i class="ico-change-in"></i>	
+						</li>
+						<li class="aside-players__change-out">
+							<a href="#">Йеспер Хансен</a>						
+							<span>12</span>
+							<i class="ico-change-out"></i>
+						</li>
+					</ul>
+					<div class="aside-players__title"><span>Запасные</span></div>
+					<ul class="aside-players__list">
+						<li>
+							<a href="#">Хансен Йеспер</a>
+							<span>12</span>
+						</li>
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>21</span>
+						</li>
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>12</span>
+						</li>
+						<li>
+							<a href="#">Йеспер Хансен</a>
+							<span>21</span>
+						</li><li>
+							<a href="#">Йеспер Хансен</a>
+							<span>12</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- END .aside-players -->
 			<!-- BEGIN .match-statistics -->
 			<div class="match-statistics">
 				<div class="title">Статистика матча</div>
@@ -1017,12 +1169,38 @@
 					<div class="nav-clubs">
 						<div class="nav-clubs__nav">
 							<strong>Клубы</strong>
-							<ul>
-								<li class="active"><a href="#">украинские</a></li>
-								<li><a href="#">международные</a></li>
-							</ul>	
+							<div class="nav-clubs__btns js-clubs-nav">
+								<button class="active" data-item="nav-clubs__list-1"><span>украинские</span></button>
+								<button data-item="nav-clubs__list-2"><span>международные</span></button>
+							</div>
 						</div>
-						<div class="nav-clubs__list">	
+						<div class="nav-clubs__list nav-clubs__list-1 js-clubs-tab" style="display: block">						
+							<div id="putoSlider-1" class="nav-clubs__slider">				
+								<ul>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+								</ul>								
+							</div>
 							<div class="arrs-nav">						
 								<button class="arrs-nav__prev js-sl-clubs-prev">
 									<i class="arrs-nav__arr-p"></i>
@@ -1030,32 +1208,42 @@
 								<button class="arrs-nav__next js-sl-clubs-next">
 									<i class="arrs-nav__arr-n"></i>
 								</button>
-							</div>
-							<div class="nav-clubs__slider js-sl-clubs">				
+							</div>							
+						</div>
+						<div class="nav-clubs__list nav-clubs__list-2 js-clubs-tab">						
+							<div id="putoSlider-2" class="nav-clubs__slider">				
 								<ul>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="70" alt=""></a></li>
-								</ul>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/shakhtar.png" width="32" height="48" alt=""></a></li>
+									<li><a href="#"><img src="img/clubs/barsa.png" width="49" height="50" alt=""></a></li>
+								</ul>								
+							</div>
+							<div class="arrs-nav">						
+								<button class="arrs-nav__prev js-sl-clubs-prev">
+									<i class="arrs-nav__arr-p"></i>
+								</button>
+								<button class="arrs-nav__next js-sl-clubs-next">
+									<i class="arrs-nav__arr-n"></i>
+								</button>
 							</div>							
 						</div>
 					</div>

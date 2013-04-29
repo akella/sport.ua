@@ -94,27 +94,17 @@ $('.go-top').click(function() {
 	$('body').scrollTo(0, 600);
 });
 
-//sub nav
-$('.nav-list li').hover(	
-  function () {  	
-  	$(this).children('.nav-sub').show();
-    js_gallery();	
-  },
-  function () {
-    $(this).children('.nav-sub').hide(); 
-  }
-);
 //menu hover trigger
-function menu_hover() {
-  $('.nav-list__item').each(function() {
-    if ($(this).hasClass('active')) {
-      $(this).children('.nav-sub').show();
-    };
-  });
-}
-$('.menu li:last').hover(function() {
-  menu_hover();
-});
+// function menu_hover() {
+//   $('.nav-list__item').each(function() {
+//     if ($(this).hasClass('active')) {
+//       $(this).children('.nav-sub').css('visibility', 'visible');
+//     };
+//   });
+// }
+// $('.menu li:last').hover(function() {
+//   menu_hover();
+// });
 
 //all news filter
 $('.select').hover(	
@@ -204,73 +194,81 @@ if ($('.js-sl').length > 0) {
   });
 };
 //gallery
-function js_gallery() { 
-  sl = $('.js-sl-clubs'); 
-  sl_img = $('.js-sl-clubs img');
-  sl_list = $('.js-sl-clubs ul');
-  sl_item = $('.js-sl-clubs li'); 
-  sl_item.first().addClass('js-sl-clubs-scrto');  
-  sl_prev = $('.js-sl-clubs-prev');
-  sl_prev.addClass('disabled');
-  sl_next = $('.js-sl-clubs-next');
-  sl_width = 0;
-  sl_img_value = sl_item.length;
-  //sl_img.each(function() {
-    // sl_img_count = 0;
-    // $(this).load(function() {
-    //   sl_img_count++;
-    //   if (sl_img_value == sl_img_count) {
-        sl_item.each(function(i) {
-          sl_width += $(this).width();
-          $(this).attr('id', 'js-sl-clubs-id' + i);
-          return(sl_width);
-        });
-        sl_list.width(sl_width);
-    //   };
-    // });
-  //});
-  sl_next.click(function() {
-    if (!$(this).hasClass('disabled')) {
-      sl_prev.removeClass('disabled');
-      sl_act = $('.js-sl-clubs-scrto');
-      sl_act_next = sl_act.next().attr('id');
-      sl_act.removeClass('js-sl-clubs-scrto').next().addClass('js-sl-clubs-scrto');
-      sl.scrollTo($('#' + sl_act_next), 1000, {
-        onAfter: function() { 
-          var sl_left = sl_list.position().left;
-          var sl_list_width = sl_list.width();
-          var sl_wrap_width = sl.width();
-          var sl_result = sl_wrap_width - sl_list_width;
-          if (sl_left == sl_result) {
-            sl_next.addClass('disabled');
-          }
-          else {
-            sl_next.removeClass('disabled');
-          };
-        }
+(function($) {
+
+  $.fn.putoSlider = function(options) {
+    // merge default and user parameters
+    options = jQuery.extend({
+      prefix: 'puto'
+    }, options);
+    // traverse all nodes
+    this.each(function() {
+      // express a single node as a jQuery object
+      var $t = $(this);
+      var list = $t.children('ul');   
+      var width = 0;
+      var height = 0;
+      //width
+      list.children().each(function(i) {
+        width += $(this).width();
+        $(this).attr('id', options.prefix + '-id' + i);
+        return(width);
       });
-    };
-  });
-  sl_prev.click(function() {
-    if (!$(this).hasClass('disabled')) {
-      sl_next.removeClass('disabled');
-      sl_act = $('.js-sl-clubs-scrto');
-      sl_act_prev = sl_act.prev().attr('id');
-      sl_act.removeClass('js-sl-clubs-scrto').prev().addClass('js-sl-clubs-scrto');
-      sl.scrollTo($('#' + sl_act_prev), 100, {
-        onAfter: function() {
-          var sl_left = sl_list.position().left;
-          if (sl_left == 0) {
-            sl_prev.addClass('disabled');
-          }
-          else {
-            sl_prev.removeClass('disabled');
-          };
-        }
+      list.width(width);
+      //btns
+      var prev = $t.parent().find('.js-sl-clubs-prev');
+      var next = $t.parent().find('.js-sl-clubs-next');
+      prev.addClass('disabled');
+      //active element
+      list.children('li').first().addClass('current');
+      //prev
+      next.click(function() {
+        if (!$(this).hasClass('disabled')) {       
+          prev.removeClass('disabled');
+          var active = list.children('.current');        
+          var active_val = active.next().attr('id');
+          active.removeClass('current').next().addClass('current');  
+          $t.scrollTo($('#' + active_val), 200, {
+            onAfter: function() { 
+              var pos_left = list.position().left;
+              var width_list = list.width();
+              var width_wrap = $t.width();
+              var result = width_wrap - width_list;
+              if (pos_left == result) {
+                next.addClass('disabled');
+              };
+            }
+          });
+        };
+       return false;
       });
-    };
-  });
-};
+      prev.click(function() {
+        if (!$(this).hasClass('disabled')) {
+          next.removeClass('disabled');
+          var active = list.children('.current');
+          var active_val = active.prev().attr('id');
+          active.removeClass('current').prev().addClass('current');  
+          $t.scrollTo($('#' + active_val), 200, {
+            onAfter: function() {
+             var pos_left = list.position().left;
+              if (pos_left == 0) {
+                prev.addClass('disabled');
+              }
+              else {
+                prev.removeClass('disabled');
+              };
+            }
+          });
+        };
+        return false;
+      });
+    });
+  };
+})(jQuery);
+
+//init
+$('#putoSlider-1').putoSlider({prefix: "sl1"});
+$('#putoSlider-2').putoSlider({prefix: "sl2"});
 
 //sport-news tabs
 $('.js-tabs-sm button').click(function() {
@@ -290,6 +288,22 @@ $('.content img').load(function() {
   }); 
 })
 
+//clubs tabs
+$('.js-clubs-nav button').click(function() {
+  var js_tab = $(this).attr('data-item');
+  if (!$(this).hasClass('active')) {
+    $('.js-clubs-nav button').removeClass('active');
+    $(this).addClass('active');
+    $('.js-clubs-tab').hide();
+    $('.' + js_tab).show();
+  };
+});
+
+//players move
+$('.js-players-move-btn').click(function() {
+  $('.js-players-move').slideDown();
+  $(this).parent().slideUp();
+});
 
 });
 

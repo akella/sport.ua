@@ -135,18 +135,30 @@ i, em {
 	margin: 2px auto 275px;
 	padding-top: 167px;
 	background: #fff;
-	@include box-shadow(rgba(178,178,178,0.5) 0px 15px 30px);
+	box-shadow: rgba(178,178,178,0.5) 0px 15px 30px;
 }
-.btn-arr-right {
-	position: absolute;
-	top: 9px;
-	right: 9px;
+.btn-arr-right, .btn-arr-left {
+	position: absolute;		
 	border: 2px solid #e2e2e2;
 	background: #FFF;
-	@include border-radius(2px);	
+	border-radius: 2px;	
+	z-index: 10;
 	i {
-		display: block;
-		@include sized-sprite($icons, tp-btn);
+		display: block;		
+	}
+}
+.btn-arr-right {
+	top: 9px;
+	right: 9px;
+	i {
+		@include sized-sprite($icons, tp-btn-r);
+	}
+}
+.btn-arr-left {
+	top: 13px;
+	right: 13px;
+	i {
+		@include sized-sprite($icons, tp-btn-l);
 	}
 }
 //
@@ -459,7 +471,13 @@ i, em {
 				em {
 					display: none;
 				}				
-			}					
+			}	
+			.nav-sub {
+				visibility: visible;
+			}				
+			.nav-clubs__list {
+				display: none;
+			}
 		}
 		&.active {
 			.nav-list__title {
@@ -525,7 +543,7 @@ i, em {
 	}		
 }
 .nav-sub {
-	display: none;
+	visibility: hidden;
 	position: absolute;
 	top: 40px;
 	left: -1px;
@@ -596,7 +614,7 @@ i, em {
 .nav-clubs__nav {
 	margin-bottom: 10px;
 	overflow: hidden;
-	strong, ul {
+	strong {
 		float: left;
 	}
 	strong {
@@ -604,50 +622,56 @@ i, em {
 		color: #000;
 		font-size: 12px;
 	}
-	li {
-		float: left;		
-		padding: 3px 8px 4px 8px;
+}
+.nav-clubs__btns {
+	float: left;
+	button {
+		float: left;	
+		height: 18px;
+		padding: 0 8px;
+		background: none;
 		@include border-radius(3px);
+		line-height: 1;
 		&.active {
 			background: #efe4a8;
 			@include box-shadow(#cfba69 0px 1px 2px inset);
-			a {
+			span {
 				color: #957912;
 				border: none;
 			}
 		}
 	}
-	a {
+	span {
+		display: block;
 		font-size: 11px;
 		color: #5e5e5e;
-		border-bottom: 1px dashed #cecece;	
-		&:hover {
-			text-decoration: none;
-		}	
-	}
+		border-bottom: 1px dashed #cecece;		
+	}	
 }
 .nav-clubs__list {
+	position: relative;
 	padding: 15px 45px;
 	box-shadow: 0 10px 20px -10px #cecece inset;
 	.arrs-nav {
-		position: relative;
 		width: auto;
 		height: auto;
+		left: 27px;
+		right: 27px;
+		z-index: 10;
 	}	
 	.arrs-nav__prev, .arrs-nav__next {
-		top: 30px; 
+		top: -43px; 
 	}
 	.arrs-nav__prev {
-		left: -27px;
+		left: -10px;
 	}
 	.arrs-nav__next {
-		right: -27px;
+		right: -10px;
 	} 
 }
-.nav-clubs__slider {
+.nav-clubs__slider {	
 	position: relative;
 	width: 880px;
-	height: 70px;
 	overflow: hidden;
 	ul {
 		position: relative;
@@ -655,10 +679,13 @@ i, em {
 	}
 	li {
 		float: left;
+		height: 70px;		
+		line-height: 70px;
 	}
 	img {
-		display: block;
+		display: inline-block;
 		padding: 0 10px;
+		vertical-align: middle;		
 	}
 }
 /*footer-nav*/
@@ -1920,9 +1947,12 @@ i, em {
 	}
 }
 .table_tournir {
-	th {
-		&:last-child {
-			text-align: left;
+	thead {
+		th {
+			font-weight: bold;
+			&:last-child {
+				text-align: left;
+			}
 		}
 	}
 }
