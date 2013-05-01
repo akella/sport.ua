@@ -95,16 +95,20 @@ $('.go-top').click(function() {
 });
 
 //menu hover trigger
-// function menu_hover() {
-//   $('.nav-list__item').each(function() {
-//     if ($(this).hasClass('active')) {
-//       $(this).children('.nav-sub').css('visibility', 'visible');
-//     };
-//   });
-// }
-// $('.menu li:last').hover(function() {
-//   menu_hover();
-// });
+$('.menu li:last').hover(function() {
+  $('.nav-list__item').each(function() {
+    if ($(this).hasClass('active')) {
+      $(this).addClass('hover');
+    };
+  });
+});
+$('.nav-list__item').hover(function() {
+  $(this).addClass('hover');
+},
+function() {
+  $(this).removeClass('hover');
+});
+
 
 //all news filter
 $('.select').hover(	

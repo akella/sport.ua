@@ -457,7 +457,7 @@ i, em {
 	z-index: 10;
 	.nav-list__item {
 		float: left;			
-		&:hover {
+		&.hover {
 			.nav-list__title {
 				background: #fff;
 				margin-left: -1px;
@@ -472,11 +472,11 @@ i, em {
 					display: none;
 				}				
 			}	
-			.nav-sub {
-				visibility: visible;
-			}				
 			.nav-clubs__list {
 				display: none;
+			}
+			.nav-sub {
+				visibility: visible;
 			}
 		}
 		&.active {

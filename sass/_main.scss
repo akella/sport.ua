@@ -45,15 +45,17 @@
 	}
 	.arrs-nav {
 		right: 0;
-		top: 0px;		
+		top: 0px;
+		z-index: 10;		
 	}	
 	.navi {
-		bottom: -15px;
+		top: 8px;
 		width: 100%;
 		font-size: 0;
 		text-align: center;
 		button {
 			float: none;
+			margin: 0 5px;
 		}
 	}
 }
