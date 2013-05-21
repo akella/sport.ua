@@ -1,10 +1,42 @@
+//ie 8
+.ie8 {
+	.live__slider li {
+		background: none !important;
+	}
+	.live__item {
+		background: #2f2f2f;
+	}
+	.nav-sub, .search, .select.active, .datepicker-date_active, .datepicker, .social__another, .author.hover {
+		border: 1px solid #8f8f8f;		
+	}
+	.nav-sub {
+		left: -2px;
+		border-width: 0 1px 1px 1px;
+	}
+	.datepicker-date_active {
+		border-width: 1px 1px 0 1px;
+		&:after {
+			display: none;
+		}
+	}
+	.datepicker-date {
+		height: 35px;
+	}
+	.form-field {
+		input {
+			line-height: 26px;
+		}
+	}
+}
+
+// ie < 8
 .ltie8 {
 	.photo-report__item {
 		li {
 			display: inline;
 			zoom: 1;
 		}
-	}
+	}	
 }
 
 

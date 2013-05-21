@@ -42,7 +42,7 @@
 		padding: 12px 0;
 	}
 	.result__block {
-		margin-bottom: 30px;
+		margin-bottom: 0;
 		border-bottom: 1px solid #f0efec;
 	}
 	.play__time {
@@ -77,7 +77,7 @@
 	}
 	.more {
 		padding: 0 0 2px 0;
-		margin: -17px 0 30px 0;
+		margin: 15px 0 30px 0;
 		button {
 			padding: 0 6px;
 		}		
@@ -89,13 +89,17 @@
 		select {
 			width: 190px;
 			outline: none;
-		}
+		}		
 		.btn-orange {
 			right: 7px;
 		}
 	}
 	.play-group {
 		font-size: 10px;
+		.btn-orange {
+			right: 32px;
+			line-height: 1;
+		}
 	}
 	.play__open {
 		float: right;

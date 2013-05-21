@@ -109,7 +109,6 @@ function() {
   $(this).removeClass('hover');
 });
 
-
 //all news filter
 $('.select').hover(	
   function () {

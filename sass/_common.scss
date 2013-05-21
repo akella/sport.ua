@@ -472,11 +472,11 @@ i, em {
 					display: none;
 				}				
 			}	
-			.nav-clubs__list {
-				display: none;
-			}
 			.nav-sub {
 				visibility: visible;
+			}				
+			.nav-clubs__list {
+				display: none;
 			}
 		}
 		&.active {
@@ -863,6 +863,7 @@ i, em {
 		height: 20px;
 		padding: 0 7px 0 21px;
 		line-height: 1;
+		overflow: visible;
 		i {
 			top: 3px;
 			left: 5px;
@@ -945,6 +946,7 @@ i, em {
 	border: 1px solid #e0e0e0;
 	background: #fff;
 	color: #676767;
+	overflow: visible;
 	i {
 		position: absolute;
 	}
@@ -977,6 +979,7 @@ i, em {
 	text-align: center;
 	text-shadow: 0 1px 1px #ffebc4;
 	font-weight: bold;
+	overflow: visible;
 	&:hover {
 		background: #fff7b2;
 		@include background-image(linear-gradient(#fff7b2, #f9d45a));
@@ -1033,6 +1036,7 @@ i, em {
 	right: 10px;
 	@include sized-sprite($icons, close);
 	cursor: pointer;
+	overflow: visible;
 }
 /*for sliders*/
 .items {
