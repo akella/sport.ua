@@ -289,6 +289,7 @@ i, em { font-style: normal; }
 
 /*actual*/
 .actual, .breadcrumbs { position: relative; padding: 12px 0 24px 0; height: 19px; line-height: 19px; font-family: Verdana,Tahoma,sans-serif; font-size: 11px; }
+.actual #itamenu, .breadcrumbs #itamenu { display: none; }
 .actual span, .breadcrumbs span { position: relative; float: left; margin-right: 15px; color: #fff; }
 .actual span i, .breadcrumbs span i { position: absolute; top: 0; right: -5px; width: 0; height: 0; border-right: 5px solid transparent; }
 .actual ul, .breadcrumbs ul { float: left; }
@@ -300,10 +301,11 @@ i, em { font-style: normal; }
 .actual button:hover i, .breadcrumbs button:hover i { background: url('../img/icons-se8681e8410.png') 0 -2764px no-repeat; width: 13px; height: 13px; }
 .actual button:active i, .breadcrumbs button:active i { background: url('../img/icons-se8681e8410.png') 0 -2568px no-repeat; width: 13px; height: 13px; }
 
-.actual li { margin-right: 30px; }
-.actual span { padding: 0 15px 0 10px; border-left: 4px solid #2fba0a; background: #3cc817; }
-.actual span i { border-top: 19px solid #3cc817; }
-.actual a h3 { font-size: 11px; font-weight: normal; }
+.actual__label { padding: 0 15px 0 10px; border-left: 4px solid #2fba0a; background: #3cc817; }
+.actual__label i { border-top: 19px solid #3cc817; }
+
+.actual__list li { margin-right: 30px; }
+.actual__list a h3 { font-size: 11px; font-weight: normal; }
 
 .breadcrumbs li { position: relative; margin-right: 14px; }
 .breadcrumbs li:after { content: ""; position: absolute; top: 8px; left: -9px; color: #acacac; background: url('../img/icons-se8681e8410.png') 0 -3774px no-repeat; width: 3px; height: 5px; }

@@ -10,10 +10,15 @@
 	<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/screen.css" />
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+	<script type="text/javascript" src="http://www.google.com/cse/t13n?form=cse-search-box&t13n_langs=ru"></script>
+	<script type="text/javascript" src="http://www.google.com.ua/coop/cse/brand?form=cse-search-box&amp;lang="></script>
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script src="js/jquery-ui-1.9.1.custom.min.js"></script>
 	<script src="js/jquery.cycle.all.js"></script>
+	<script src="js/jquery.cookie.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -35,8 +40,8 @@
 <div class="wrap" id="top">	
 	<!-- BEGIN .actual -->
 	<div class="actual">
-		<span>Актуально<i></i></span>
-		<ul>
+		<span class="actual__label">Актуально<i></i></span>
+		<ul class="actual__list">
 			<li><a href="#"><h3>Олимпиада 2012 в Лондоне</h3></a></li>
 			<li><a href="#"><h3>Суперкубок Украины</h3></a></li>
 			<li><a href="#"><h3>Все о бое Кличко - Томпсон</h3></a></li>
@@ -44,10 +49,15 @@
 			<li><a href="#"><h3>Тур де Франс</h3></a></li>	
 		</ul>
 		<button class="search-open btn-white">Поиск<i></i></button>		
-		<form class="search" action="">
-			<input class="search__txt" type="text" placeholder="Поиск">
-			<input class="btn-white" type="submit" value="Найти">
-		</form>	
+		<form class="search" action="http://sport.ua/search/" id="cse-search-box">
+		  <div>
+		    <input type="hidden" name="cx" value="partner-pub-3808035447467183:7690052694" />
+		    <input type="hidden" name="cof" value="FORID:10" />
+		    <input type="hidden" name="ie" value="windows-1251" />
+		    <input class="search__txt" type="text" name="q" placeholder="Поиск"/>
+		    <input class="btn-white" type="submit" name="sa" value="Найти" />
+		  </div>
+		</form>
 	</div>
 	<!-- END .actual -->
 	<!-- BEGIN .cols -->
@@ -223,7 +233,7 @@
 						<strong>Чемпионат Украины</strong>
 						<span>(премьер-лига) 5-й тур</span>
 						<button class="btn-orange">Сделать ставку</button>
-						<button id="btn1" class="open"><i></i></button>
+						<button id="btn1" class="open js-btn"><i></i></button>
 					</div>
 					<div class="result__block">
 						<div class="result__nav">
@@ -240,7 +250,7 @@
 									<div class="play__cell play__result"><span>—</span></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn2"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn2" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -259,7 +269,7 @@
 									<div class="play__cell play__result"><a href="#">4:1</a></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn3"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn3" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -278,7 +288,7 @@
 									<div class="play__cell play__result"><a href="#">4:1</a></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn4"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn4" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -297,7 +307,7 @@
 									<div class="play__cell play__result"><a href="#">4:1</a></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn5"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn5" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -316,7 +326,7 @@
 									<div class="play__cell play__result"><a href="#">4:1</a></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn6"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn6" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -335,7 +345,7 @@
 									<div class="play__cell play__result"><a href="#">4:1</a></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn7"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn7" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -363,7 +373,7 @@
 						</div>					
 						<div class="play-group">
 							группа А
-							<button id="btn8" class="open"><i></i></button>
+							<button id="btn8" class="open js-open"><i></i></button>
 						</div>
 						<div class="play">
 							<div class="play__item">
@@ -373,7 +383,7 @@
 									<div class="play__cell play__result"><span>—</span></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn9"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn9" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -392,7 +402,7 @@
 									<div class="play__cell play__result"><a href="#">4:1</a></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn10"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn10" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -407,7 +417,7 @@
 						</div>	
 						<div class="play-group">
 							группа B
-							<button id="btn11" class="open"><i></i></button>							
+							<button id="btn11" class="open js-open"><i></i></button>							
 						</div>
 						<div class="play">
 							<div class="play__item">
@@ -417,7 +427,7 @@
 									<div class="play__cell play__result"><span>—</span></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn12"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn12" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -436,7 +446,7 @@
 									<div class="play__cell play__result"><a href="#">4:1</a></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn13"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn13" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -451,7 +461,7 @@
 						</div>	
 						<div class="play-group">
 							группа C
-							<button id="btn14" class="open"><i></i></button>							
+							<button id="btn14" class="open js-open"><i></i></button>							
 						</div>
 						<div class="play">
 							<div class="play__item">
@@ -461,7 +471,7 @@
 									<div class="play__cell play__result"><span>—</span></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn15"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn15" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -480,7 +490,7 @@
 									<div class="play__cell play__result"><a href="#">4:1</a></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn16"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn16" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -495,7 +505,7 @@
 						</div>	
 						<div class="play-group">
 							группа D
-							<button id="btn17" class="open"><i></i></button>							
+							<button id="btn17" class="open js-open"><i></i></button>							
 						</div>
 						<div class="play">
 							<div class="play__item">
@@ -505,7 +515,7 @@
 									<div class="play__cell play__result"><span>—</span></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn18"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn18" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>
@@ -524,7 +534,7 @@
 									<div class="play__cell play__result"><a href="#">4:1</a></div>
 									<div class="play__cell play__team-2">Волынь</div>
 									<div class="play__cell play__channel"><img src="img/icons/ch1.png" alt=""></div>
-									<div class="play__cell play__open"><button id="btn19"><i></i></button></div>
+									<div class="play__cell play__open"><button id="btn19" class="js-btn"><i></i></button></div>
 								</div>
 								<div class="play__view">
 									<ul>

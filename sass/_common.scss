@@ -828,6 +828,9 @@ i, em {
 	font-family: Verdana,Tahoma,sans-serif;
 	font-size: 11px;
 	//z-index: 5;
+	#itamenu {
+		display: none;
+	}
 	span {
 		position: relative;
 		float: left;
@@ -880,18 +883,18 @@ i, em {
 		}
 	}
 }
-.actual {
+.actual__label {
+	padding: 0 15px 0 10px;
+	border-left: 4px solid #2fba0a;
+	background: #3cc817;
+	i {
+		border-top: 19px solid #3cc817; 
+	}
+}
+.actual__list {
 	li {
 		margin-right: 30px;
-	}
-	span {
-		padding: 0 15px 0 10px;
-		border-left: 4px solid #2fba0a;
-		background: #3cc817;
-		i {
-			border-top: 19px solid #3cc817; 
-		}
-	}
+	}	
 	a {
 		h3 {
 			font-size: 11px;
