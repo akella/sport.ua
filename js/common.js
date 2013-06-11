@@ -14,7 +14,7 @@ function isLocalStorageAvailable() {
 
 function save_active_btns() {				
 	var btns_id = "";
-	$('.result button.active').each(function() {
+	$('.js-btn.active').each(function() {
 		btns_id =  btns_id + $(this).attr('id') + ' ';      
 	});
 	if('undefined' != typeof window['localStorage']) {
@@ -29,13 +29,25 @@ function save_active_btns() {
 };
 
 function load_active_btns() {
+
 	if('undefined' != typeof window['localStorage']) {
-		var btns_id = localStorage['active-btns'];
+		if ('undefined' != typeof localStorage['active-btns']) {
+			btns_id = localStorage['active-btns'];
+		}
+		else {
+			btns_id = "";
+		}
 	}
 	else {
 		//for ie (cookie)
 		var cookieName = 'btns';
-		var btns_id = $.cookie(cookieName);
+		if ($.cookie(cookieName) == null) {
+			var btns_id = "";
+		}
+		else {
+			var cookieName = 'btns';
+			var btns_id = $.cookie(cookieName);
+		};
 	};	
 	var new_btns_id = btns_id.split(' ');
 	for (var i = 0; i < new_btns_id.length; i++) {
