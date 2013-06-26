@@ -1343,3 +1343,82 @@
 .athlete__name {
 	font-weight: bold;	
 }
+//page 404
+.p404 {
+	width: 987px;
+	margin: 0 auto;
+}
+.p404_header {
+	position: relative;
+	height: 150px;
+	margin-bottom: 15px;
+	.logo {
+		top: 38px;
+		left: 0;
+		a {
+			@include sized-sprite($icons, logo_p404);		
+		}		
+	}
+}
+.p404__title {
+	padding: 55px 0 0 220px;
+	strong {
+		font-size: 18px;
+	}
+	p {
+		margin-top: 8px;
+		font-size: 13px;
+	}
+}
+.p404__tv {
+	position: relative;
+	padding-bottom: 80px;
+	font-size: 0;
+	text-align: center;
+	overflow: hidden;
+}
+.tv {
+	position: relative;
+	display: inline-block;
+	padding: 13px;
+	background: #434343;
+	@include background-image(linear-gradient(#434343, #303030));
+	border-top: 1px solid #7f7f7f;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50px;
+		right: 50px;
+		height: 10px;
+		border-radius: 45px;
+		box-shadow: 0 0 70px 20px rgba(0,0,0,.8);
+		z-index: -1;
+	}
+	img {
+		display: block;
+		border-top: 1px solid #1d1d1d;
+		border-bottom: 1px solid #585858;
+	}
+}
+.tv__empty {
+	width: 640px;
+	height: 390px;
+	background: #2d2d2d;
+	@include background-image(linear-gradient(#2d2d2d, #202020));
+	border-top: 1px solid #1d1d1d;
+	border-bottom: 1px solid #585858;
+}
+.tv__shine {
+	position: absolute;
+	top: -120px;
+	right: -120px;
+	width: 350px;
+	height: 400px;
+	@include background-image(linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,0)));
+	   -moz-transform: rotate(-20deg);
+	     -o-transform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+	    -ms-transform: rotate(-10deg);
+	        transform: rotate(-20deg)
+}

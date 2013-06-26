@@ -373,12 +373,10 @@ i, em {
 .logo {
 	position: absolute;
 	top: 43px;
-	left: 22px;
-	@include sized-sprite($icons, logo);
+	left: 22px;	
 	a {
 		display: block;
-		width: 152px;
-		height: 74px;
+		@include sized-sprite($icons, logo);
 		text-indent: -2000em;
 	}
 }
