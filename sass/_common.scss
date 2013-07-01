@@ -167,14 +167,17 @@ i, em {
 	font-size: 24px;
 	color: #000;
 }
-//top-nav
-.top-nav {
+//top
+.top {
 	height: 27px;
 	line-height: 27px;
 	background: #fefefe;
 	@include background-image(linear-gradient(#fefefe, #eee));
 	font-family: Verdana, Tahoma, sans-serif;
-	font-size: 11px;
+	font-size: 11px;	
+}
+.top__nav {
+	float: left;
 	ul {
 		float: left;
 		padding-left: 25px;
@@ -213,11 +216,15 @@ i, em {
  	}
 }
 .logged {
+	position: relative;
 	float: right;
-	width: 250px;
-	a {
-		color: #363636;;
-	}
+	min-width: 180px;
+	color: #363636;
+	z-index: 100;
+	img, span {
+		position: relative;
+		z-index: 5;
+	}		
 	img {
 		float: left;
 		margin: -5px 10px 0 0;
@@ -234,6 +241,37 @@ i, em {
 		top: 5px;
 		right: 0;
 		@include sized-sprite($icons, arr15);
+	}
+	&:hover {
+		.logged__nav {
+			display: block;			
+		}
+		i {
+			@include sized-sprite($icons, arr11);
+		}
+	}
+}
+.logged__nav {
+	display: none;
+	position: absolute;
+	top: -2px;
+	left: 30px;
+	right: 0;
+	padding: 30px 0 10px 0;
+	background: #FFF;
+	box-shadow: rgba(0,0,0,.3) 0px 4px 20px;
+	line-height: 1;
+	a {
+		display: block;
+		height: 25px;
+		padding: 0 10px 0 25px;
+		line-height: 25px;
+		color: #363636;
+		&:hover {
+			background: #fffdca;
+			color: #000;
+			text-decoration: underline;
+		}
 	}
 }
 /*header*/
