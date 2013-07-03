@@ -204,6 +204,8 @@ i, em { font-style: normal; }
 
 .nav-sub { visibility: hidden; position: absolute; top: 40px; left: -1px; width: 970px; background: #fff; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px; z-index: 10; }
 
+.nav-sub_mod { width: auto; left: auto; right: 0; }
+
 .nav-sub__menu { padding: 20px 16px; overflow: hidden; }
 .nav-sub__menu ul { float: left; }
 .nav-sub__menu ul li { margin-bottom: 10px; font-size: 12px; }

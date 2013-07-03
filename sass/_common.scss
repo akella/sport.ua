@@ -587,6 +587,11 @@ i, em {
 	@include box-shadow(rgba(0,0,0,0.3) 0px 0px 15px);
 	z-index: 10;
 }
+.nav-sub_mod {
+	width: auto;
+	left: auto;
+	right: 0;
+}
 .nav-sub__menu {
 	padding: 20px 16px;
 	ul {
@@ -615,6 +620,9 @@ i, em {
 		font-weight: bold;
 	}
 	overflow: hidden;
+}
+.nav-sub__list {
+	
 }
 .nav-sub__item-1 {
 	width: 190px;
