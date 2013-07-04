@@ -250,7 +250,7 @@ if ($('.js-sl').length > 0) {
 		this.each(function() {
 			// express a single node as a jQuery object
 			var $t = $(this);
-			var list = $t.children('ul');   
+			var list = $t.children('ul'); 
 			var width = 0;
 			var height = 0;
 			//width
@@ -264,6 +264,7 @@ if ($('.js-sl').length > 0) {
 			var prev = $t.parent().find('.js-sl-clubs-prev');
 			var next = $t.parent().find('.js-sl-clubs-next');
 			prev.addClass('disabled');
+			$t.scrollTo(0, 150);
 			//active element
 			list.children('li').first().addClass('current');
 			//prev
@@ -273,7 +274,7 @@ if ($('.js-sl').length > 0) {
 					var active = list.children('.current');        
 					var active_val = active.next().attr('id');
 					active.removeClass('current').next().addClass('current');  
-					$t.scrollTo($('#' + active_val), 200, {
+					$t.scrollTo($('#' + active_val), 150, {
 						onAfter: function() { 
 							var pos_left = list.position().left;
 							var width_list = list.width();
