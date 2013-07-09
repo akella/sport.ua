@@ -431,8 +431,8 @@ i, em { font-style: normal; }
 .play-group .active:hover i { background: url('../img/icons-se41a5111bd.png') 0 -3922px no-repeat; width: 10px; height: 11px; }
 .play-group .active:active i { background: url('../img/icons-se41a5111bd.png') 0 -3752px no-repeat; width: 10px; height: 11px; }
 
-.result_main li { width: 100px; margin: 0; }
-.result_main li:nth-child(2), .result_main li:nth-child(5) { width: 160px; }
+.result_main .play__time { width: 26%; }
+.result_main .play__channel { display: none; }
 
 .comm-link { position: relative; padding-left: 20px; font-size: 10px; font-weight: bold; color: #2ea90d; }
 .comm-link i { position: absolute; top: 2px; left: 4px; background: url('../img/icons-se41a5111bd.png') 0 -3113px no-repeat; width: 13px; height: 13px; }

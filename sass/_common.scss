@@ -1408,12 +1408,11 @@ i, em {
 	}
 }
 .result_main {
-	li {
-		width: 100px;
-		margin: 0;
-		&:nth-child(2), &:nth-child(5) {
-			width: 160px;
-		}
+	.play__time {
+		width: 26%;
+	}
+	.play__channel {
+		display: none;
 	}
 }
 //base link
