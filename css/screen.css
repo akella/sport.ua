@@ -1319,25 +1319,34 @@ i, em { font-style: normal; }
 .online-events .more button { float: left; }
 .online-events .more i { margin: 0; }
 
-.other-matches, .match-statistics { padding: 0 3px; border: 1px solid #ececec; }
-.other-matches .title, .match-statistics .title { padding: 10px 0 10px 9px; border-bottom: 2px solid #ff5b01; }
-.other-matches table, .match-statistics table { width: 100%; }
-.other-matches tr, .match-statistics tr { border-top: 1px dotted #c6d0dc; }
-.other-matches tr:first-child, .match-statistics tr:first-child { border: none; }
-.other-matches td, .match-statistics td { padding: 10px 0; vertical-align: top; line-height: 1.2; }
-.other-matches td:first-child, .match-statistics td:first-child { width: 25px; padding: 10px 5px; text-align: center; }
-.other-matches .play__desc, .match-statistics .play__desc { padding: 10px 0; background: #f7f7f7; }
-.other-matches .play__team-1, .other-matches .play__team-2, .match-statistics .play__team-1, .match-statistics .play__team-2 { width: 34%; margin: 0 4%; padding: 2px 0; }
-.other-matches .play__result, .match-statistics .play__result { width: 16%; }
+.other-matches, .match-statistics, .last-comms { padding: 0 3px; border: 1px solid #ececec; }
+.other-matches .title, .match-statistics .title, .last-comms .title { padding: 10px 0 10px 9px; border-bottom: 2px solid #ff5b01; }
+.other-matches table, .match-statistics table, .last-comms table { width: 100%; }
+.other-matches tr, .match-statistics tr, .last-comms tr { border-top: 1px dotted #c6d0dc; }
+.other-matches tr:first-child, .match-statistics tr:first-child, .last-comms tr:first-child { border: none; }
+.other-matches td, .match-statistics td, .last-comms td { padding: 10px 0; vertical-align: top; line-height: 1.2; }
+.other-matches td:first-child, .match-statistics td:first-child, .last-comms td:first-child { width: 25px; padding: 10px 5px; text-align: center; }
+.other-matches .play__desc, .match-statistics .play__desc, .last-comms .play__desc { padding: 10px 0; background: #f7f7f7; }
+.other-matches .play__team-1, .other-matches .play__team-2, .match-statistics .play__team-1, .match-statistics .play__team-2, .last-comms .play__team-1, .last-comms .play__team-2 { width: 34%; margin: 0 4%; padding: 2px 0; }
+.other-matches .play__result, .match-statistics .play__result, .last-comms .play__result { width: 16%; }
 
-.other-matches { position: relative; margin-bottom: 50px; }
-.other-matches td { padding: 10px 0; vertical-align: top; line-height: 1.2; }
-.other-matches td:first-child { width: 25px; padding: 10px 5px; text-align: center; }
-.other-matches .navi { width: 150px; left: 10px; bottom: -22px; }
-.other-matches .arrs-nav { right: 10px; bottom: -27px; }
+.other-matches, .last-comms { position: relative; margin-bottom: 50px; }
+.other-matches .navi, .last-comms .navi { width: 150px; left: 10px; bottom: -22px; }
+.other-matches .arrs-nav, .last-comms .arrs-nav { right: 10px; bottom: -27px; }
+.other-matches .other-matches td, .last-comms .other-matches td { padding: 10px 0; vertical-align: top; line-height: 1.2; }
+.other-matches .other-matches td:first-child, .last-comms .other-matches td:first-child { width: 25px; padding: 10px 5px; text-align: center; }
 
 .match-statistics { margin-bottom: 20px; }
 .match-statistics td { padding: 10px; text-align: center; }
+
+.last-comms li { padding: 5px 3px; line-height: 1.2; }
+.last-comms p { margin-bottom: 3px; }
+
+.last-comms__title { margin-bottom: 3px; font-weight: bold; }
+
+.last-comms__detail { margin-bottom: 3px; }
+.last-comms__detail span { color: #8a919d; }
+.last-comms__detail strong { font-weight: normal; margin: 0 5px; }
 
 .athlete { position: relative; padding-bottom: 30px; margin-bottom: 25px; overflow: hidden; }
 .athlete:after { content: ""; position: absolute; bottom: 12px; left: 10px; width: 220px; height: 20px; -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2); box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2); -webkit-transform: rotate(-4deg); -moz-transform: rotate(-4deg); -ms-transform: rotate(-4deg); -o-transform: rotate(-4deg); transform: rotate(-4deg); }

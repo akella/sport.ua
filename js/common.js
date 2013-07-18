@@ -29,7 +29,6 @@ function save_active_btns() {
 };
 
 function load_active_btns() {
-
 	if('undefined' != typeof window['localStorage']) {
 		if ('undefined' != typeof localStorage['active-btns']) {
 			btns_id = localStorage['active-btns'];

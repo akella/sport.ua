@@ -1223,7 +1223,7 @@
 	}
 }
 //other-matches & match-statistics
-.other-matches, .match-statistics {
+.other-matches, .match-statistics, .last-comms {
 	padding: 0 3px;
 	border: 1px solid $border;
 	.title {
@@ -1262,9 +1262,19 @@
 		width: 16%;
 	}
 } 
-.other-matches {
+.other-matches, .last-comms {
 	position: relative;
-	margin-bottom: 50px;	
+	margin-bottom: 50px;
+	.navi {
+		width: 150px;
+		left: 10px;
+		bottom: -22px;
+	}
+	.arrs-nav {
+		right: 10px;
+		bottom: -27px;
+	}		
+.other-matches
 	td {
 		padding: 10px 0;
 		vertical-align: top;
@@ -1274,15 +1284,6 @@
 			padding: 10px 5px;
 			text-align: center;
 		}
-	}
-	.navi {
-		width: 150px;
-		left: 10px;
-		bottom: -22px;
-	}
-	.arrs-nav {
-		right: 10px;
-		bottom: -27px;
 	}	
 }
 .match-statistics {
@@ -1290,6 +1291,29 @@
 	td {
 		padding: 10px;
 		text-align: center;
+	}
+}
+.last-comms {
+	li {
+		padding: 5px 3px;
+		line-height: 1.2;
+	}
+	p {
+		margin-bottom: 3px;		
+	}
+}
+.last-comms__title {
+	margin-bottom: 3px;
+	font-weight: bold;
+}
+.last-comms__detail {
+	margin-bottom: 3px;
+	span {
+		color: #8a919d;
+	}
+	strong {
+		font-weight: normal;
+		margin: 0 5px;
 	}
 }
 //athlete
