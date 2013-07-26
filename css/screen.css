@@ -914,6 +914,19 @@ i, em { font-style: normal; }
 .partners li { float: left; width: 33%; min-height: 60px; margin-bottom: 10px; text-align: center; }
 .partners img { vertical-align: middle; }
 
+.m-blogs { background: #eff3fe; margin-bottom: 20px; }
+.m-blogs .title { padding: 20px 12px; border-bottom: 2px solid #ff5b01; }
+.m-blogs .arrs-nav { top: 17px; right: 12px; }
+
+.m-blogs__list ul { width: 216px; padding: 0 12px; }
+.m-blogs__list li { position: relative; padding: 15px 0 15px 85px; min-height: 60px; border-top: 1px dotted #b6c4df; }
+.m-blogs__list li:first-child { border: none; }
+.m-blogs__list a { font-weight: bold; color: #3b6ab7; }
+.m-blogs__list img { position: absolute; top: 15px; left: 0; border-radius: 50%; }
+.m-blogs__list .meta { padding: 10px 0; }
+.m-blogs__list .meta__comm { margin-left: 0; }
+.m-blogs__list .meta__comm a { color: #2EA90D; }
+
 .flags-sprite, .flags-ag, .flags-bg, .flags-bl, .flags-de, .flags-fr, .flags-gl, .flags-gr, .flags-it, .flags-pl, .flags-pt, .flags-rm, .flags-ru, .flags-sp, .flags-tr, .flags-ua, .flags-uk { background: url('../img/flags-s85acbfc97f.png') no-repeat; }
 
 .flags-ag { background-position: 0 -36px; }

@@ -217,6 +217,17 @@ if ($('.js-sl-live').length > 0) {
 		prev: '.js-sl-live-prev'
 	});
 };
+//sldier blogs
+if ($('.js-sl-blogs').length > 0) {
+	$('.js-sl-blogs').cycle({
+		fx: 'scrollHorz', 
+		speed: 'slow', 
+		timeout: 0, 
+		wrap: false,
+		next: '.js-sl-blogs-next', 
+		prev: '.js-sl-blogs-prev'
+	});
+};
 //general slider
 if ($('.js-sl').length > 0) {
 	$('.js-sl').each(function() {
