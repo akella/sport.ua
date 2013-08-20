@@ -38,3 +38,17 @@
 	overflow: hidden;
 }
 
+
+.is-branded{
+	background: #000 url(http://rg.sport.ua/images/rg/sport_bg.png) no-repeat 50% 0;
+	.sitebg{
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 100%;
+	}
+	.wrap{
+		margin-top: 203px;
+	}
+}
+
