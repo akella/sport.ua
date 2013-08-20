@@ -683,7 +683,7 @@ i, em { font-style: normal; }
 .col-6 { float: right; width: 500px; overflow: hidden; }
 
 .is-branded { background: black url(http://rg.sport.ua/images/rg/sport_bg.png) no-repeat 50% 0; }
-.is-branded .sitebg { position: absolute; left: 0; right: 0; height: 100%; }
+.is-branded .sitebg { position: absolute; left: 0; right: 0; top: 0; height: 100%; }
 .is-branded .wrap { margin-top: 203px; }
 
 .flags-sprite, .flags-ag, .flags-bg, .flags-bl, .flags-de, .flags-fr, .flags-gl, .flags-gr, .flags-it, .flags-pl, .flags-pt, .flags-rm, .flags-ru, .flags-sp, .flags-tr, .flags-ua, .flags-uk { background: url('../img/flags-s85acbfc97f.png') no-repeat; }
