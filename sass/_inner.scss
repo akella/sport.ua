@@ -1561,3 +1561,37 @@
 }
 
 
+.field-link {
+	display: block;
+	margin-bottom: 21px;
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+	background: rgba(0,0,0,.7);
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2000;
+	width: 640px;
+	display: table;
+	margin: auto;
+	background: #fff;
+}
+.popup__in {
+	padding: 20px;
+}
+.popup__close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	@include sized-sprite($icons, close);
+}
