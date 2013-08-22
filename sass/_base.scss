@@ -10,7 +10,7 @@ $experimental-support-for-svg: true;
 //icons
 $icons: sprite-map("icons/*.png", $spacing: 10px);
 //flags
-@import "flags/*.png";
+@import "flags/*.png"; 
 @include all-flags-sprites;
 //color
 $blue: #3b6ab7;
