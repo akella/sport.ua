@@ -811,16 +811,26 @@
 .scoreboard__team-1, .scoreboard__team-2 {
 	width: 280px;	
 	a {
+		vertical-align: middle;
 		&:hover {
 			color: $red;
 		}
 	}
+	img{
+		vertical-align: middle;
+	}
 }
 .scoreboard__team-1 {
 	text-align: right;
+	img{
+		margin-right: 10px;
+	}
 }
 .scoreboard__team-2 {
 	text-align: left;
+	img{
+		margin-left: 10px;
+	}
 }
 .scoreboard__count {
 	width: auto;	
