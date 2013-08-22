@@ -425,7 +425,7 @@ i, em {
 	@include sized-sprite($icons, logo1);
 }
 //search
-.search {
+.search, .tagsearch{
 	display: none;
 	position: absolute;
 	top: -5px;

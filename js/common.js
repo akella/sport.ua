@@ -119,12 +119,16 @@ $('.play__open button').click(function() {
 $('.search-open').click(function() {
 	$('.search, .hide-popup-opacity').fadeIn(200);
 });
+$('.taglist__change').click(function() {
+	$('.tagsearch, .hide-popup-opacity').fadeIn(200);
+});
+
 $('.enter__open').click(function() {
 	$('.popup-enter, .hide-popup-dark').fadeIn(200);
 	return false;
 });
 $('.hide-popup-opacity').click(function() {
-	$('.hide-popup-opacity, .search').fadeOut(200);
+	$('.hide-popup-opacity, .search, .tagsearch').fadeOut(200);
 });
 $('.close, .hide-popup-dark').click(function() {
 	$('.popup-enter, .hide-popup-dark').fadeOut(200);
