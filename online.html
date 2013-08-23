@@ -59,7 +59,7 @@
 			<div class="scoreboard">
 				<div class="scoreboard__teams">
 					<strong class="scoreboard__team-1"><img src="http://placedog.com/50/50"><a href="#">Реал Мадрид</a></strong>
-					<strong class="scoreboard__count">1<span>:</span>15</strong>
+					<strong class="scoreboard__count">7<span>:</span>0</strong>
 					<strong class="scoreboard__team-2"><a href="#">Шахтер Д</a><img src="http://placedog.com/50/50"></strong>
 				</div>
 				<div class="scoreboard__time"><span>89'</span></div>
@@ -93,11 +93,14 @@
 			<!-- BEGIN .online-info -->
 			<div class="online-info">
 				<ul class="online-info__team-1">
-					<li>Мортен Норстранн, '24<i class="ico-goal"></i></li>
+					<li>Криштиану Роналдо, '24<i class="ico-goal"></i></li>
 					<li>Каспер Лоренцен, '30<i class="ico-yellow-card"></i></li>
 					<li>Энох Аду, '64<i class="ico-yellow-card"></i></li>
-					<li>Андерс Кристиансен, '90<i class="ico-goal"></i></li>
-					<li>Майкл Паркхерст, '92<i class="ico-yellow-card"></i></li>
+					<li>Криштиану Роналдо, '90<i class="ico-goal"></i></li>
+					<li>Криштиану Роналдо, '91<i class="ico-goal"></i></li>
+					<li>Криштиану Роналдо, '92<i class="ico-goal"></i></li>
+					<li>Криштиану Роналдо, '93<i class="ico-goal"></i></li>
+					<li>Майкл Паркхерст, '93<i class="ico-yellow-card"></i></li>
 				</ul>
 				<ul class="online-info__team-2">
 					<li>Луис Адриано, '26<i class="ico-goal"></i></li>
@@ -473,7 +476,7 @@
 					<tr>
 						<td>88'</td>
 						<td><i class="ico-change"></i></td>
-						<td><strong>Дуглас Коста</strong> (Шахтер Д) очень неточно пробивает по воротам из 52-го сектора.</td>					
+						<td><strong>Дуглас Коста</strong> (Шахтер Д) очень неточно пробивает по воротам из <span class="pseudo-link js-field-sector" data-count="sector-45">45-го сектора</span>.</td>					
 					</tr>
 					<tr>
 						<td>88'</td>
@@ -483,7 +486,7 @@
 					<tr>
 						<td>88'</td>
 						<td><i class="ico-goal"></i></td>
-						<td><strong>Дуглас Коста</strong> (Шахтер Д) очень неточно пробивает по воротам из 52-го сектора.</td>
+						<td><strong>Дуглас Коста</strong> (Шахтер Д) очень неточно пробивает по воротам из (Шахтер Д) очень неточно пробивает по воротам из <span class="pseudo-link js-field-sector" data-count="sector-52">52-го сектора</span></td>
 					</tr>
 					<tr>
 						<td>65'</td>
@@ -935,6 +938,7 @@
 				</table>
 			</div>
 			<!-- END .match-statistics -->
+			<a href="#" class="field-link js-field-link"><img src="img/field-small.jpg" alt=""></a>
 		</aside>
 	</div>
 	<!-- END .cols -->
@@ -1043,17 +1047,19 @@
 	<!-- BEGIN .header -->
 	<header class="header">
 	<!-- BEGIN .top-nav -->	
-	<nav class="top-nav">
-		<ul>
-			<li><a href="#">Результаты LIVE</a></li>
-			<li><a href="#">Видео</a></li>
-			<li><a href="#">Веб-конференции</a></li>
-			<li><a href="#">Блоги</a></li>
-			<li><a href="#">Fantasy</a></li>
-			<li><a href="#">Спорттовары</a></li>
-			<li><a href="#">Места</a></li>
-			<li><a href="#">Билеты</a></li>	                                       
-		</ul>
+	<div class="top">
+		<nav class="top__nav">
+				<ul>
+					<li><a href="#">Результаты LIVE</a></li>
+					<li><a href="#">Видео</a></li>
+					<li><a href="#">Веб-конференции</a></li>
+					<li><a href="#">Блоги</a></li>
+					<li><a href="#">Fantasy</a></li>
+					<li><a href="#">Спорттовары</a></li>
+					<li><a href="#">Места</a></li>
+					<li><a href="#">Билеты</a></li>	                                     
+				</ul>
+			</nav>
 		<div class="enter">
 			<a href="#" class="enter__open">Войти</a>
 			<span>или</span>
@@ -1061,7 +1067,7 @@
 			<a href="#" class="enter__fb"></a>
 			<a href="#" class="enter__vk"></a>
 		</div>
-	</nav>
+	</div>
 	<!-- END .top-nav -->	
 	<h1 class="logo">
 		<a href="#">Sport.ua</a>
@@ -1299,5 +1305,191 @@
 	</form>
 </div>
 <!-- END all for popups -->
+<div class="overlay js-overlay"></div>
+<div class="popup tooltip tooltip_field js-field-tooltip">
+	<div class="popup__in">
+		<div class="field-wrap">
+			<table class="field js-field-table">
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td>19</td>
+					<td>20</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+				</tr>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+					<td>31</td>
+					<td>32</td>
+					<td>33</td>
+					<td>34</td>
+					<td>35</td>
+					<td>36</td>
+				<tr>
+					<td>37</td>
+					<td>38</td>
+					<td>39</td>
+					<td>40</td>
+					<td>41</td>
+					<td>42</td>
+					<td>43</td>
+					<td>44</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>46</td>
+					<td>47</td>
+					<td>48</td>
+					<td>49</td>
+					<td>50</td>
+					<td>51</td>
+					<td>52</td>
+					<td>53</td>
+					<td>54</td>
+				</tr>
+					<td>55</td>
+					<td>56</td>
+					<td>57</td>
+					<td>58</td>
+					<td>59</td>
+					<td>60</td>
+					<td>61</td>
+					<td>62</td>
+					<td>63</td>
+				<tr>
+					<td>64</td>
+					<td>65</td>
+					<td>66</td>
+					<td>67</td>
+					<td>68</td>
+					<td>69</td>
+					<td>70</td>
+					<td>71</td>
+					<td>72</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="popup js-field-popup js-popup">
+	<div class="popup__in">
+		<div class="field-wrap">
+			<table class="field field_view js-field-view">
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td>19</td>
+					<td>20</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+				</tr>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+					<td>31</td>
+					<td>32</td>
+					<td>33</td>
+					<td>34</td>
+					<td>35</td>
+					<td>36</td>
+				<tr>
+					<td>37</td>
+					<td>38</td>
+					<td>39</td>
+					<td>40</td>
+					<td>41</td>
+					<td>42</td>
+					<td>43</td>
+					<td>44</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>46</td>
+					<td>47</td>
+					<td>48</td>
+					<td>49</td>
+					<td>50</td>
+					<td>51</td>
+					<td>52</td>
+					<td>53</td>
+					<td>54</td>
+				</tr>
+					<td>55</td>
+					<td>56</td>
+					<td>57</td>
+					<td>58</td>
+					<td>59</td>
+					<td>60</td>
+					<td>61</td>
+					<td>62</td>
+					<td>63</td>
+				<tr>
+					<td>64</td>
+					<td>65</td>
+					<td>66</td>
+					<td>67</td>
+					<td>68</td>
+					<td>69</td>
+					<td>70</td>
+					<td>71</td>
+					<td>72</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<button class="popup__close js-close-popup"></button>
+</div>
 </body>
 </html>

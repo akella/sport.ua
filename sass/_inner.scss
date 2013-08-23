@@ -1566,6 +1566,7 @@
 	margin-bottom: 21px;
 }
 .overlay {
+	display: none;
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -1575,6 +1576,7 @@
 	background: rgba(0,0,0,.7);
 }
 .popup {
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -1582,11 +1584,15 @@
 	bottom: 0;
 	z-index: 2000;
 	width: 640px;
-	display: table;
 	margin: auto;
 	background: #fff;
+	@include box-shadow(0 4px 20px rgba(0,0,0,.33));
+	&.is-active {
+		display: table;
+	}
 }
 .popup__in {
+	position: relative;
 	padding: 20px;
 }
 .popup__close {
@@ -1595,3 +1601,59 @@
 	right: 5px;
 	@include sized-sprite($icons, close);
 }
+.field-wrap {
+	@include box-sizing(border-box);
+	width: 600px;
+	height: 465px;
+	background: url(../img/field.jpg) 0 0 no-repeat;
+	padding: 16px;
+}
+.field {
+	width: 100%;
+	height: 100%;
+	table-layout: fixed;
+	td {
+		width: 77px;
+		font-weight: bold;
+		color: #fff;
+		height: 53px;
+		text-align: center;
+		vertical-align: middle;
+		background: rgba(255,255,255,.36);
+		border-top: 1px solid rgba(255,255,255,.2);
+		border-left: 1px solid rgba(255,255,255,.2);
+		@include box-shadow(inset -1px -1px 0 rgba(0,0,0,.2));
+	}
+	.is-small {
+		width: 42px;
+	}
+	.is-active {
+		background: transparent;
+	}
+}
+.field_view {
+	td {
+		background: transparent;	
+	}
+}
+.pseudo-link {
+	color: #009a00;
+	border-bottom: 1px dotted;
+	cursor: pointer;
+	@include unselectable();
+}
+.tooltip {
+	position: absolute;
+	right: auto;
+	bottom: auto;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -52px;
+		right: 190px;
+		@include sized-sprite($icons, arr20);
+	}
+}
+.tooltip_field {
+	height: 505px;
+}  
