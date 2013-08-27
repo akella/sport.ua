@@ -1600,29 +1600,38 @@
 	top: 5px;
 	right: 5px;
 	@include sized-sprite($icons, close);
+	&:hover {
+		@include opacity(.7);
+	}
+	&:active {
+		top: 6px;
+	}
 }
 .field-wrap {
 	@include box-sizing(border-box);
 	width: 600px;
 	height: 465px;
-	background: url(../img/field.jpg) 0 0 no-repeat;
-	padding: 16px;
+	background: url(../img/field-bg.png) 0 0 repeat;
+	padding: 17px;
 }
 .field {
 	width: 100%;
 	height: 100%;
 	table-layout: fixed;
+	background: url(../img/field.jpg) 0 0 no-repeat;
 	td {
 		width: 77px;
 		font-weight: bold;
-		color: #fff;
+		color: #051300;
 		height: 53px;
 		text-align: center;
 		vertical-align: middle;
-		background: rgba(255,255,255,.36);
-		border-top: 1px solid rgba(255,255,255,.2);
-		border-left: 1px solid rgba(255,255,255,.2);
-		@include box-shadow(inset -1px -1px 0 rgba(0,0,0,.2));
+		background: rgba(0,0,0,.29);
+		font-size: 20px;
+		text-shadow: 0 1px 0 rgba(132,211,136,.58);
+		border-top: 1px solid rgba(255,255,255,.1);
+		border-left: 1px solid rgba(255,255,255,.1);
+		@include box-shadow(inset -1px -1px 0 rgba(0,0,0,.1));
 	}
 	.is-small {
 		width: 42px;
@@ -1657,3 +1666,8 @@
 .tooltip_field {
 	height: 505px;
 }  
+.popup_field {
+	.field-wrap {
+		background: url(../img/field-bg-light.png) 0 0 repeat;
+	}
+}

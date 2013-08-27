@@ -1432,11 +1432,13 @@ i, em { font-style: normal; }
 .popup__in { position: relative; padding: 20px; }
 
 .popup__close { position: absolute; top: 5px; right: 5px; background: url('../img/icons-sfcfd894c19.png') 0 -2791px no-repeat; width: 14px; height: 15px; }
+.popup__close:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; }
+.popup__close:active { top: 6px; }
 
-.field-wrap { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 600px; height: 465px; background: url(../img/field.jpg) 0 0 no-repeat; padding: 16px; }
+.field-wrap { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 600px; height: 465px; background: url(../img/field-bg.png) 0 0 repeat; padding: 17px; }
 
-.field { width: 100%; height: 100%; table-layout: fixed; }
-.field td { width: 77px; font-weight: bold; color: #fff; height: 53px; text-align: center; vertical-align: middle; background: rgba(255, 255, 255, 0.36); border-top: 1px solid rgba(255, 255, 255, 0.2); border-left: 1px solid rgba(255, 255, 255, 0.2); -webkit-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.2); -moz-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.2); box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.2); }
+.field { width: 100%; height: 100%; table-layout: fixed; background: url(../img/field.jpg) 0 0 no-repeat; }
+.field td { width: 77px; font-weight: bold; color: #051300; height: 53px; text-align: center; vertical-align: middle; background: rgba(0, 0, 0, 0.29); font-size: 20px; text-shadow: 0 1px 0 rgba(132, 211, 136, 0.58); border-top: 1px solid rgba(255, 255, 255, 0.1); border-left: 1px solid rgba(255, 255, 255, 0.1); -webkit-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.1); box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.1); }
 .field .is-small { width: 42px; }
 .field .is-active { background: transparent; }
 
@@ -1448,6 +1450,8 @@ i, em { font-style: normal; }
 .tooltip:after { content: ""; position: absolute; bottom: -52px; right: 190px; background: url('../img/icons-sfcfd894c19.png') 0 -907px no-repeat; width: 68px; height: 52px; }
 
 .tooltip_field { height: 505px; }
+
+.popup_field .field-wrap { background: url(../img/field-bg-light.png) 0 0 repeat; }
 
 .ie8 .live__slider li { background: none !important; }
 .ie8 .live__item { background: #2f2f2f; }
