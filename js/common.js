@@ -246,10 +246,17 @@ if ($('.js-sl').length > 0) {
 			next:   slider_next, 
 			prev:   slider_prev,
 			pager: slider_navi,
+			after: onAfter,
 			pagerAnchorBuilder: function(index, el) {
 				return '<button></button>'; 
 			}
 		});
+		function onAfter(curr, next, opts, fwd) {
+		  var $ht = $(this).height();
+
+		  //set the container's height to that of the current slide
+		  $(this).parent().animate({height: $ht});
+		}
 	});
 };
 //gallery
