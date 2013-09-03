@@ -1360,7 +1360,7 @@ i, em { font-style: normal; }
 .match-statistics td { padding: 10px; text-align: center; }
 
 .last-comms li { padding: 5px 3px; line-height: 1.2; }
-.last-comms p { margin-bottom: 3px; font-size: 12px; }
+.last-comms p { margin-bottom: 3px; font-size: 11px; }
 
 .last-comms__title { margin-bottom: 3px; font-weight: bold; }
 
