@@ -1254,7 +1254,7 @@
 }
 //other-matches & match-statistics
 .other-matches, .match-statistics, .last-comms {
-	padding: 0 3px;
+	padding: 0 3px 10px;
 	border: 1px solid $border;
 	.title {
 		padding: 10px 0 10px 9px;
@@ -1366,6 +1366,7 @@
 }
 .athlete__slider {
 	position: relative;
+	padding-bottom: 30px;
 	background: #f1f8fe;
 	z-index: 10;
 	li {
@@ -1374,7 +1375,7 @@
 		padding: 10px;		
 	}
 	img {
-		margin-bottom: 10px;
+		padding-bottom: 10px;
 	}
 	p {
 		padding-top: 10px;
