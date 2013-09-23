@@ -4,6 +4,12 @@
 		padding-top: 13px;
 	}
 }
+.webconf-link{
+	border-bottom: 1px dotted;
+	&:hover{
+		text-decoration: none;
+	}
+}
 .block-title__job{
 	font-size: 16px;
 }

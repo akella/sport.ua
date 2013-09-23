@@ -1645,6 +1645,9 @@ i, em { font-style: normal; }
 
 .tabs .tabs__text { float: left; padding-top: 13px; }
 
+.webconf-link { border-bottom: 1px dotted; }
+.webconf-link:hover { text-decoration: none; }
+
 .block-title__job { font-size: 16px; }
 
 .wrap-webconference { position: relative; }
