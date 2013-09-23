@@ -229,8 +229,14 @@ if ($('.js-sl-blogs').length > 0) {
 		timeout: 0, 
 		wrap: false,
 		next: '.js-sl-blogs-next', 
-		prev: '.js-sl-blogs-prev'
+		prev: '.js-sl-blogs-prev',
+		after: function onAfter(curr, next, opts, fwd) {
+		  var $ht = $(this).height();
+		  //set the container's height to that of the current slide
+		  $(this).parent().animate({height: $ht});
+		}
 	});
+
 };
 //general slider
 if ($('.js-sl').length > 0) {
@@ -246,10 +252,15 @@ if ($('.js-sl').length > 0) {
 			next:   slider_next, 
 			prev:   slider_prev,
 			pager: slider_navi,
+			after: function onAfter(curr, next, opts, fwd) {
+		  	var $ht = $(this).height();
+		  	//set the container's height to that of the current slide
+		  	$(this).parent().animate({height: $ht});
+			},
 			pagerAnchorBuilder: function(index, el) {
 				return '<button></button>'; 
 			}
-		});
+		});		
 	});
 };
 //gallery
@@ -364,6 +375,55 @@ $('.js-players-move-btn').click(function() {
 	$('.js-players-move').slideDown();
 	$(this).parent().slideUp();
 });
+
+	// popups
+	$(".js-field-link").click(function(){
+		$(".js-field-popup").addClass("is-active");
+		$(".js-overlay").show();
+		return false;
+	});
+	$(".js-close-popup").click(function(){
+		$(this).parent().removeClass("is-active");
+		$(".js-overlay").hide();
+	})
+
+	$(".js-overlay").click(function(){
+		$(".js-popup").removeClass("is-active");
+		$(this).hide();
+	})
+
+
+	// field table
+	$(".js-field-table tr, .js-field-view tr").each(function(){
+		$(this).find("td").first().addClass("is-small");
+		$(this).find("td").first().next().addClass("is-small");
+		$(this).find("td").last().addClass("is-small");
+		$(this).find("td").last().prev().addClass("is-small");
+	});
+	$(".js-field-table td").each(function(i){
+		$(this).addClass("sector-"+(+i+1));
+	});
+	var field_tooltip = $(".js-field-tooltip");
+	$(".js-field-sector").on("click", function(){
+		var index = $(this).attr("data-count");
+		$(".js-field-table td").removeClass("is-active")
+		$("."+index).addClass("is-active");
+		field_tooltip.toggleClass("is-active");
+		var top = $(this).position().top - field_tooltip.outerHeight() - 40;
+		var left = $(this).position().left + 90;
+		console.log(top+" "+left);
+		field_tooltip.css({
+	      "top": top,
+	      "left": left
+	    });
+	});
+	//stop propagation
+	$(document).click(function() {
+	    field_tooltip.removeClass('is-active');
+	});
+	$(".js-field-sector").click(function(event){
+	    event.stopPropagation();
+	});
 
 });
 
