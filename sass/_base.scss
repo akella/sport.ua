@@ -12,6 +12,8 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 //flags
 @import "flags/*.png"; 
 @include all-flags-sprites;
+@import "logos/*.png"; 
+@include all-logos-sprites;
 //color
 $blue: #3b6ab7;
 $red: #ED3C0C;

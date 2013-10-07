@@ -40,6 +40,7 @@
 	margin-bottom: 10px;
 	h2 {
 		margin-bottom: 5px;
+		font-weight: normal;
 	}
 	p {
 		font-size: 15px;
@@ -236,6 +237,7 @@
 	}
 	p {
 		margin-bottom: 20px;
+		color: #000;
 	}
 	ul, ol {
 	  margin: 20px;
@@ -253,6 +255,9 @@
 	   td{
 	      padding: 10px;
 	   }
+	}
+	i, em{
+		font-style: italic;
 	}
 }
 //link-man
@@ -1612,10 +1617,10 @@
 }
 .field-wrap {
 	@include box-sizing(border-box);
-	width: 600px;
-	height: 465px;
+	width: 378px + 24px;
+	height: 288px + 24px;
 	background: url(../img/field-bg.png) 0 0 repeat;
-	padding: 17px;
+	padding: 12px;
 }
 .field {
 	width: 100%;
@@ -1623,21 +1628,21 @@
 	table-layout: fixed;
 	background: url(../img/field.jpg) 0 0 no-repeat;
 	td {
-		width: 77px;
+		//width: 52px;
 		font-weight: bold;
 		color: #051300;
-		height: 53px;
+		height: 35px;
 		text-align: center;
 		vertical-align: middle;
 		background: rgba(0,0,0,.29);
-		font-size: 20px;
+		font-size: 16px;
 		text-shadow: 0 1px 0 rgba(132,211,136,.58);
 		border-top: 1px solid rgba(255,255,255,.1);
 		border-left: 1px solid rgba(255,255,255,.1);
 		@include box-shadow(inset -1px -1px 0 rgba(0,0,0,.1));
 	}
 	.is-small {
-		width: 42px;
+		width: 29px;
 	}
 	.is-active {
 		background: transparent;
@@ -1656,7 +1661,8 @@
 }
 .tooltip {
 	position: absolute;
-	right: auto;
+	left: auto;
+	margin-left: -190px;
 	bottom: auto;
 	&:after {
 		content: "";
@@ -1667,10 +1673,33 @@
 	}
 }
 .tooltip_field {
-	height: 505px;
+	width: 378px;
+	height: 288px;
 }  
 .popup_field {
+	width: 402px;
 	.field-wrap {
 		background: url(../img/field-bg-light.png) 0 0 repeat;
 	}
+}
+.cite-collapsed { 
+	display: none; 
+}
+.cite-expand { 
+	cursor: pointer; 
+}
+.comment-cite { 
+	color: #999; 
+	border-left: 1px solid #bbb; 
+	background: #f7f7f7; 
+	border-left: 1px solid #bbb;
+	margin: 1.5em 10px; padding: 0.5em 10px;
+}
+.folded-comment { 
+	display: none; 
+	margin-top: 10px; 
+}
+.folded-msg { 
+	color: #AAA; 
+	line-height: 18px; 
 }

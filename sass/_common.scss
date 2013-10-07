@@ -17,7 +17,7 @@ body {
   }
   background: #f3f3f3;
   line-height: 1;
-  color: #373737;
+  color: #000000;
   position: relative;
 }
 a img, fieldset {
@@ -110,6 +110,11 @@ i, em {
 	display: inline-block;
 	width: 16px;
 	height: 9px;
+}
+.logos-sprite {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
 }
 .title {
 	position: relative;
@@ -229,7 +234,7 @@ i, em {
 	img {
 		float: left;
 		margin: -5px 10px 0 0;
-		border: 2px solid #fff;
+		border: 2px solid white;
 		@include border-radius(2px);
 		@include box-shadow(rgba(0,0,0,0.45) 0 7px 11px);
 	}
@@ -694,7 +699,7 @@ i, em {
 }
 .nav-clubs__list {
 	position: relative;
-	padding: 15px 45px;
+	padding: 25px 45px;
 	box-shadow: 0 10px 20px -10px #cecece inset;
 	.arrs-nav {
 		width: auto;
@@ -704,7 +709,7 @@ i, em {
 		z-index: 10;
 	}	
 	.arrs-nav__prev, .arrs-nav__next {
-		top: -43px; 
+		top: -31px; 
 	}
 	.arrs-nav__prev {
 		left: -10px;
@@ -723,10 +728,9 @@ i, em {
 	}
 	li {
 		float: left;
-		height: 70px;		
-		line-height: 70px;
+		height: 48px;		
 	}
-	img {
+	i {
 		display: inline-block;
 		padding: 0 10px;
 		vertical-align: middle;		
@@ -1012,29 +1016,6 @@ i, em {
 		text-shadow: 0 1px 1px #fefefe;
 		@include box-shadow(#cdd8e7 0px 1px 2px inset);
 		color: #939393;
-	}
-}
-.btn-orange {
-	@include border-radius(3px);
-	background: #fff2a9;
-	@include background-image(linear-gradient(#fff2a9, #f3bb4d));
-	@include box-shadow(#d3d3d3 0px 1px 2px);
-	border: 1px solid #ecc361;
-	border-bottom: 1px solid #daa230;
-	font-size: 9px;
-	color: #6d4b0b;
-	text-align: center;
-	text-shadow: 0 1px 1px #ffebc4;
-	font-weight: bold;
-	overflow: visible;
-	&:hover {
-		background: #fff7b2;
-		@include background-image(linear-gradient(#fff7b2, #f9d45a));
-		@include box-shadow(#d3d3d3 0px 1px 2px, #fdea94 0 -1px 1px inset);		
-	}
-	&:active {
-		background: #fce28f;
-		@include box-shadow(#f0c563 0px 1px 2px inset, #fff 0 1px 1px);
 	}
 }
 .open {
@@ -1347,6 +1328,7 @@ i, em {
 		height: 18px;
 		margin-right: 7px;
 		background: none;
+		border: 1px solid transparent;
 		@include border-radius(2px);
 		overflow: visible;
 		i {
@@ -1849,6 +1831,13 @@ i, em {
 .banner160x270 {
 	margin-bottom: 15px;
 }
+.banner-380x90 { 
+	width: 380px; 
+	height: 90px; 
+	margin: 17px 0px; 
+	float: none; 
+	text-align: center; 
+}
 //table
 .table {
 	table {
@@ -1916,7 +1905,7 @@ i, em {
 			}
 		}
 		a {
-			color: #4e4e4e;
+			color: #0066CC;
 			&:hover {
 				color: $red;
 			}

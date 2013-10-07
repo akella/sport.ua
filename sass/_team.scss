@@ -45,6 +45,7 @@
 }
 //team-matches
 .team-matches {
+	margin-bottom: 20px;
 	.title {
 		padding: 12px 0;
 	}
@@ -326,7 +327,7 @@
 		}
 		a {
 			font-size: 13px;
-			color: #4e4e4e;
+			color: #0066CC;
 		}
 		span {
 			display: block;
@@ -394,7 +395,7 @@
 			}			
 		}
 		a {
-			color: #4e4e4e;
+			color: #0066CC;
 			&:hover {
 				color: $red;
 			}
@@ -417,7 +418,7 @@
 		overflow: hidden;
 	}
 	a {
-		color: #4e4e4e;
+		color: #0066CC;
 		&:hover {
 			color: $red;
 		}

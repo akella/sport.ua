@@ -409,13 +409,13 @@ $('.js-players-move-btn').click(function() {
 		$(".js-field-table td").removeClass("is-active")
 		$("."+index).addClass("is-active");
 		field_tooltip.toggleClass("is-active");
-		var top = $(this).position().top - field_tooltip.outerHeight() - 40;
-		var left = $(this).position().left + 90;
+		var top = $(this).offset().top - field_tooltip.outerHeight() - 40;
+		var left = $(this).offset().left;
 		console.log(top+" "+left);
 		field_tooltip.css({
-	      "top": top,
-	      "left": left
-	    });
+	    "top": top,
+	    "left": left
+	  });
 	});
 	//stop propagation
 	$(document).click(function() {
@@ -423,6 +423,10 @@ $('.js-players-move-btn').click(function() {
 	});
 	$(".js-field-sector").click(function(event){
 	    event.stopPropagation();
+	});
+
+	$( "#comments-rules" ).click(function() {
+	  $( "#comments-disclaimer" ).toggle();
 	});
 
 });
@@ -435,3 +439,54 @@ $(window).scroll(function() {
 		$('.go-top').fadeOut(300);
 	}
 });
+
+
+var groupsLastNewsTime = {};
+var defaultNewsGroupPortionsCount = 5;
+var newsGroupsPortionsAllowed = { 'newsline': 26 }
+var newsGroupsPortionsLoaded = {};
+
+// Подгрузка дополнитльной порции новостей в ленту
+function loadMoreNews(newsGroup, lastNewsTime) {
+
+	// Если ещё не подгружали новости, то сохраняем таймштамп последней новости в текущей группе newsGroup,
+	if (groupsLastNewsTime[newsGroup] == undefined) {
+		groupsLastNewsTime[newsGroup] = lastNewsTime;
+	}
+
+	if (newsGroupsPortionsLoaded[newsGroup] == undefined) {
+		if (newsGroupsPortionsAllowed[newsGroup] == undefined) {
+			newsGroupsPortionsAllowed[newsGroup] = defaultNewsGroupPortionsCount;
+		}
+		newsGroupsPortionsLoaded[newsGroup] = 0;
+	}
+
+	if (newsGroupsPortionsLoaded[newsGroup] == newsGroupsPortionsAllowed[newsGroup]) {
+		return false;
+	}
+
+	$.getJSON("/main_page/get_more_news?ajax_no_auth=1&last_news_time=" + groupsLastNewsTime[newsGroup] + "&news_group=" + newsGroup + "&portion=" + (newsGroupsPortionsLoaded[newsGroup] + 1), function(news) {
+
+		if (news == null) {
+			removeShowMoreBlock(newsGroup);
+			return false;
+		}
+
+		// Вставляем HTML после последнего элемента в ленте
+		groupsLastNewsTime[newsGroup] = news.last_news_timestamp;
+		$("#" + newsGroup).append(news.html);
+
+		newsGroupsPortionsLoaded[newsGroup]++;
+		
+		if (newsGroupsPortionsLoaded[newsGroup] == newsGroupsPortionsAllowed[newsGroup]) {
+			removeShowMoreBlock(newsGroup);
+		}
+	});
+
+	return false;
+}
+
+// Удаляет блок со ссылкой "показать ещё" в заданной новостной группе
+function removeShowMoreBlock(newsGroup) {
+	$("#" + newsGroup).parent().find(".newsline-more").remove();
+}
