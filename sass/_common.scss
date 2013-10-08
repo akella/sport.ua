@@ -1214,7 +1214,7 @@ i, em {
 	.play-open {
 		background: #fffdca;
 		.play__result {
-			a {
+			a, span {
 				display: block;
 				height: 16px;
 				line-height: 16px;
@@ -1222,6 +1222,9 @@ i, em {
 				border: 1px solid #e8db9b;
 				color: #6e6013;
 			}			
+			span {
+				color: #373737;
+			}
 		}
 	}
 	.play__item_now {
@@ -1276,7 +1279,7 @@ i, em {
 .play__result {
 	width: 10%;
 	text-align: center;
-	a {
+	a, span {
 		display: block;
 		height: 18px;
 		line-height: 18px;
@@ -1310,9 +1313,12 @@ i, em {
 		float: left;
 		margin-right: 30px;
 	}
-	a {
+	a, span {
 		font-size: 11px;
 		color: #86732b;
+	}
+	span {
+		color: #373737;
 	}
 	.online {
 		color: #ff3600;
@@ -1820,7 +1826,7 @@ i, em {
 .banner685x90 {
 	width: 685px;
 	height: 90px;
-	margin: -10px 0 15px 0;
+	margin: 0 0 15px 0;
 }
 .banner240x220 {
 	margin-bottom: 20px;
