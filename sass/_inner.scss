@@ -1261,6 +1261,10 @@
 .other-matches, .match-statistics, .last-comms {
 	padding: 0 3px 10px;
 	border: 1px solid $border;
+	word-break: break-all;
+	& > ul {
+		width: 232px;
+	}
 	.title {
 		padding: 10px 0 10px 9px;
 		border-bottom: 2px solid #ff5b01;
@@ -1269,7 +1273,7 @@
 		width: 100%;		
 	}
 	tr {
-		border-top: 1px dotted #c6d0dc;
+		border-top: 1px dotted #c6d0dc; 
 		&:first-child {
 			border: none;
 		}
@@ -1334,7 +1338,7 @@
 		line-height: 1.2;
 	}
 	p {
-		margin-bottom: 3px;
+		padding-bottom: 3px;
 		font-size: 11px;		
 	}
 }
@@ -1630,13 +1634,13 @@
 	td {
 		//width: 52px;
 		font-weight: bold;
-		color: #051300;
+		color: #fff;
 		height: 35px;
 		text-align: center;
 		vertical-align: middle;
 		background: rgba(0,0,0,.29);
-		font-size: 16px;
-		text-shadow: 0 1px 0 rgba(132,211,136,.58);
+		font-size: 14px;
+		text-shadow: 0 1px 0 #000;
 		border-top: 1px solid rgba(255,255,255,.1);
 		border-left: 1px solid rgba(255,255,255,.1);
 		@include box-shadow(inset -1px -1px 0 rgba(0,0,0,.1));
