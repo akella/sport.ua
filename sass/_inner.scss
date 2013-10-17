@@ -222,9 +222,6 @@
 			display: block;
 			margin: 0 0 10px 0;
 		}
-		&.content__pic {
-			float: left;
-		}
 	}
 	figcaption {
 		font-size: 10px;
@@ -476,7 +473,7 @@
 	padding: 10px 13px 13px 13px;
 	margin-bottom: 35px;
 	background: #eff3fd;
-	ul {
+	/*ul {
 		margin-right: -50px;
 		overflow: hidden;
 	}
@@ -506,7 +503,7 @@
 			color: #ED3C0C;
 			text-decoration: underline;
 		}
-	}
+	}    */
 }
 .facts__title {
 	font-size: 18px;	
@@ -568,7 +565,8 @@
 	strong {
 		float: left;
 		margin-right: 12px;
-		font-size: 22px;
+		font-size: 19px;
+		font-weight: normal;
 	}
 	label {
 		position: relative;
@@ -1726,7 +1724,7 @@
 	border-left: 1px solid #bbb; 
 	background: #f7f7f7; 
 	border-left: 1px solid #bbb;
-	margin: 1.5em 10px; padding: 0.5em 10px;
+	margin: 1.5em 0px; padding: 0.5em 10px;
 }
 .folded-comment { 
 	display: none; 
@@ -1735,4 +1733,7 @@
 .folded-msg { 
 	color: #AAA; 
 	line-height: 18px; 
+}
+.comment-body {
+	margin-left: 40px;
 }
