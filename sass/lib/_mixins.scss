@@ -39,15 +39,15 @@ $break-large: 1180px;
 	text-shadow: none;
 	color: transparent;
 }
-// %clr{
-//   &:after{
-//     content: ".";
-//     display: block;
-//     height: 0;
-//     clear: both;
-//     visibility: hidden;
-//     }
-// }
+%clr{
+  &:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+}
 @mixin clr {
 	&:before,
 	&:after {

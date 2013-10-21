@@ -57,11 +57,29 @@ function load_active_btns() {
 load_active_btns();
 
 //comments
-$('.js-comments-show').bind('click', function() {
-	$(this).parent().parent().parent().removeClass('is-banned');
-	$(this).parent().hide();
-	return false;
-});
+function comm() {
+	var btn_show = $('.js-comments-show');
+	var btn_open = $('.js-comments-open');
+	btn_show.bind('click', function() {
+		var text_1 = 'Комментарий свернут. <span>Показать</span>';
+		var text_2 = '<span>Свернуть</span>';
+		if (!$(this).hasClass('is-hidden')) {
+			$(this).html(text_2);
+			$(this).parent().parent().removeClass('is-banned');
+			$(this).addClass('is-hidden');
+		}
+		else {
+			$(this).html(text_1);
+			$(this).parent().parent().addClass('is-banned');
+			$(this).removeClass('is-hidden');
+		}
+	});
+	btn_open.bind('click', function() {
+		$(this).parent().parent().toggleClass('is-close');
+	});
+}
+comm();
+
 
 //result title
 $('.result__title .open').each(function() {

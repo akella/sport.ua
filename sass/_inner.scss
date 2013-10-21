@@ -677,32 +677,45 @@
 	border-right: 1px solid #e8e8e8;
 	i, button {
 		display: block;
+		margin-bottom: 7px;
 	}
 	i {
-		margin-bottom: 7px;
 		@include sized-sprite($icons, comments-quote);
-	}
+	}	
 	button {
-		@include sized-sprite($icons, comments-quote-plus);
+		@include sized-sprite($icons, comments-quote-minus);
+	}
+}
+.comments__quote {
+	&.is-close {
+		.comments__text {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.comments__quote-left {
+			button {
+				@include sized-sprite($icons, comments-quote-plus);
+			}
+		}
 	}
 }
 .comments__quote-in {
-	display: table;
+	overflow: hidden;
 	padding-left: 10px;
-	border-left: 1px solid #e8e8e8;
-	margin-left: -1px;
-	color: #b099a4;
-	.comm__user {
+	color: #b099a4;	
+	.comments__user {
+		float: none;
 		margin-bottom: 3px;
 		font-size: 10px;
 		a {
 			color: #b099a4;
+			font-size: 10px;
+			font-weight: normal;
 		}
 	}
-	.comm__text {
+	.comments__text {
 		font-size: 13px;
-		color: #FFF;
-	}
+	}	
 }
 .comments__panel {
 	display: none;
@@ -724,10 +737,10 @@
 	padding-bottom: 5px;
 	color: #999;
 	line-height: 1;
-	a {
+	span {
 		color: #999;
 		border-bottom: 1px dotted;
-		text-decoration: none;
+		cursor: pointer;
 		&:hover {
 			border: none;
 		}
@@ -736,12 +749,7 @@
 .comments__add {
 	margin-bottom: 20px;
 	padding: 12px 15px 15px 15px;
-	background: #fafafa;
-	span {
-		display: block;
-		margin-bottom: 10px;
-		font-size: 18px;
-	}
+	background: #fafafa;	
 	textarea {
 		width: 638px;
 		height: 135px;
@@ -752,19 +760,83 @@
 		@include border-radius(3px);		
 		resize: none;
 		font-family: Arial;
+	}	
+}
+.comments__add-head {
+	padding-bottom: 10px;
+	@extend %clr;
+	span {
+		float: left;
+		font-size: 18px;
 	}
-	input, button {
+	a {
+		float: right;
+		margin-top: 3px;
+		font-size: 11px;
+	}
+}
+.comments__ad-foot {
+	@extend %clr;
+	.btn-white {
 		height: 26px;
 		margin-right: 13px;
 		padding: 0 10px;
-		background: #f8f8f8;
-		@include background-image(linear-gradient(#f8f8f8, #eaeaea));
-		@include box-shadow(rgba(0,0,0,0.4) 0 0 1px inset, rgba(0,0,0,0.1) 0 1px 1px);
-		@include border-radius(3px);
-		font-size: 12px; 
-		color: #000;
-		cursor: pointer;
 	}
+	.comments__btn-smile {
+		float: right;
+		@include sized-sprite($icons, comments-smile);
+		box-shadow: none;
+		&:hover {
+			@include sized-sprite($icons, comments-smile-h);
+		}
+	}
+}
+.warning {
+	position: relative;	
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 12px;
+		left: 10px;
+		width: 220px;
+		height: 20px;
+		box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+		-webkit-transform: rotate(-4deg);
+		-moz-transform: rotate(-4deg);
+		-ms-transform: rotate(-4deg);
+		-o-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+		z-index: 5;
+	}
+}
+.warning__in {
+	position: relative;
+	padding: 15px;
+	background: #fff3a8;
+	z-index: 10;
+	p {
+		margin-bottom: 10px;
+	}
+	.btn-white {
+		height: 26px;
+		padding: 0 10px;
+	}
+	label {
+		position: relative;
+		display: block;
+		padding-left: 20px;
+		margin-bottom: 5px;
+		input {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+.warning__title {
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
 }
 //rate
 .rate {

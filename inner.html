@@ -318,14 +318,14 @@
 								<button class="comments__plus"><i></i></button>
 								<button class="comments__minus"><i></i></button>
 							</div>							
-							<div class="comments__quote">
+							<div class="comments__quote is-close">
 								<div class="comments__quote-left">
 									<i></i>
-									<button></button>
+									<button class="js-comments-open"></button>
 								</div>
 								<div class="comments__quote-in">
-									<div class="comm__user"><a href="#">Pevchiy</a>, 03.10.2013 21:57</div>
-									<div class="comments__text">УРРААААААА!!!!! Может хоть теперь Блохина отправят в отставку!!!!</div>
+									<div class="comments__user"><a href="#">Pevchiy</a>, 03.10.2013 21:57</div>
+									<div class="comments__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, fuga, voluptas sunt dolore aut molestias soluta qui incidunt excepturi voluptates? Quam, sunt, totam debitis perferendis distinctio sed eum aperiam omnis.</div>
 								</div>
 							</div>
 							<div class="comments__text">вот именно может</div>							
@@ -363,7 +363,7 @@
 							<div class="comments__user"><a href="#">Джон купер</a>, 03.10.2013 21:59</div>
 							<div class="comments__rating is-bad">-23</div>
 						</div>
-						<div class="comments__slide">Комментарий свернут. <a class="js-comments-show" href="#">Показать</a></div>
+						<div class="comments__slide js-comments-show">Комментарий свернут. <span>Показать</span></div>
 						<div class="comments__content">
 							<div class="comments__btn">
 								<button class="comments__plus"><i></i></button>
@@ -407,11 +407,28 @@
 				</div>
 				<!-- END .pagination -->
 				<form action="" class="comments__add">
-					<span>Добавить комментарий</span>
+					<div class="comments__add-head">
+						<span>Добавить комментарий</span>
+						<a href="#">Правила комментирования</a>
+					</div>					
 					<textarea></textarea>
-					<input type="submit" value="Добавить">
-					<button>Предпросмотр</button>
+					<div class="comments__ad-foot">
+						<button class="btn-white">Добавить</button>
+						<button class="btn-white">Предпросмотр</button>
+						<button class="comments__btn-smile"></button>
+					</div>					
 				</form>
+				<!-- BEGIN .warning -->
+				<div class="warning">
+					<div class="warning__in">
+						<div class="warning__title">Предупреждение</div>
+						<p>Внимание! Администрация сайта выносит вам предупреждение о возможности бана в связи с вашим <a href="#">комментарием</a> от 07.10.2013 09:35</p>
+						<p>В случае повторного нарушения правил общения на сайте, вы можете быть забанены без предварительного предупреждения.</p>
+						<label><input type="checkbox">Принял к сведению и хочу иметь возможность и далее оставлять комментарии</label>
+						<button class="btn-white">Продолжить</button>
+					</div>
+				</div>
+				<!-- END .warning -->
 			</div>
 			<!-- END .comments -->
 		</section>
