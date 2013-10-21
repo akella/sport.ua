@@ -56,7 +56,12 @@ function load_active_btns() {
 
 load_active_btns();
 
-
+//comments
+$('.js-comments-show').bind('click', function() {
+	$(this).parent().parent().parent().removeClass('is-banned');
+	$(this).parent().hide();
+	return false;
+});
 
 //result title
 $('.result__title .open').each(function() {
@@ -95,22 +100,20 @@ $('.play-group .open').click(function() {
 });
 
 //result play
-$('.play__open button').each(function() {
+$('.play__item').each(function() {
 	if ($(this).hasClass('active')) {
-		$(this).parent().parent().next().show();
-		$(this).parent().parent().addClass('play-open');
+		$(this).find('.play__view').show();
+		$(this).addClass('play-open');
 	};
 });
-$('.play__open button').click(function() {	
+$('.play__item').click(function() {	
 	if ($(this).hasClass('active')) {	
-		$(this).removeClass('active');
-		$(this).parent().parent().next().slideUp(100);
-		$(this).parent().parent().removeClass('play-open');		
+		$(this).find('.play__view').slideUp(100);
+		$(this).removeClass('active');		
 	}
 	else {
+		$(this).find('.play__view').slideDown(100);
 		$(this).addClass('active');
-		$(this).parent().parent().next().slideDown(100);
-		$(this).parent().parent().addClass('play-open');
 	};
 	save_active_btns();
 });
