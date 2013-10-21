@@ -611,7 +611,7 @@
 		background: #FFF;
 		border-radius: 3px;
 		font-size: 0;
-		&.is-active {
+		&.is-active, &:hover {
 			background: #666;
 			border-color: #666;
 		}
@@ -625,7 +625,7 @@
 	i {
 		@include sized-sprite($icons, comments-plus);
 	}
-	&.is-active {
+	&.is-active, &:hover {
 		i {
 			@include sized-sprite($icons, comments-plus-a);
 		}
@@ -635,7 +635,7 @@
 	i {
 		@include sized-sprite($icons, comments-minus);
 	}
-	&.is-active {
+	&.is-active, &:hover {
 		i {
 			@include sized-sprite($icons, comments-minus-a);
 		}
