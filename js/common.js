@@ -135,6 +135,9 @@ $('.play__item').click(function() {
 	};
 	save_active_btns();
 });
+$('.play__item .play__cell a').click(function(event){
+  event.stopPropagation();
+});
 
 //popup open
 $('.search-open').click(function() {
