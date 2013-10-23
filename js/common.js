@@ -88,7 +88,7 @@ $('.result__title .open').each(function() {
 		$(this).parent().next().hide();
 	}
 });
-$('.result__title .open').click(function() {
+$('.result__title').on('click', '.open', function() {
 	if ($(this).hasClass('active')) {
 		$(this).removeClass('active');
 		$(this).parent().next().slideUp(200);		
@@ -107,7 +107,7 @@ $('.play-group .open').each(function() {
 		$(this).parent().next().hide();
 	}
 });
-$('.play-group .open').click(function() {
+$('.play-group').on('click', '.open', function() {
 	if ($(this).hasClass('active')) {		
 		$(this).removeClass('active').parent().next().slideUp(200);
 	}
@@ -124,7 +124,7 @@ $('.play__item').each(function() {
 		$(this).addClass('play-open');
 	};
 });
-$('.play__item').click(function() {	
+$('.play').on('click', '.play__item', function() {
 	if ($(this).hasClass('active')) {	
 		$(this).find('.play__view').slideUp(100);
 		$(this).removeClass('active');		
@@ -193,33 +193,34 @@ $('.select ul li').click(function() {
 });
 
 //datepicker
-$('.datepicker-out').hover( 
-	function () {   
-		$(this).children('.datepicker-date').addClass('datepicker-date_active'); 
-		$(this).children('.datepicker').show();   
-		$('.datepicker').datepicker({
-			inline: true,
-			monthNames: ['январь','февраль','март','апрель','май','июнь',
-			'июль','август','сентябрь','октябрь','ноябрь','декабрь'],
-			monthNamesShort: ['января','февраля','марта','апреля','мая','июня',
-			'июля','августа','сентября','октября','ноября','декабря'],
-			dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-			dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-			dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-			weekHeader: 'Не',
-			dateFormat: 'd M, yy',
-			firstDay: 1,
-			onSelect: function(){ 
-				$('.datepicker-date span').html($(this).val());
-				$('.datepicker').hide().prev().removeClass('datepicker-date_active');
-			}
-	});
-	},
-	function () {
-		$(this).children('.datepicker-date').removeClass('datepicker-date_active'); 
-		$(this).children('.datepicker').hide(); 
-	}
-);
+$(document).on({
+    mouseenter: function () {
+      $(this).children('.datepicker-date').addClass('datepicker-date_active'); 
+      $(this).children('.datepicker').show(); 
+      $('.datepicker').datepicker({
+      	inline: true,
+      	monthNames: ['январь','февраль','март','апрель','май','июнь',
+      	'июль','август','сентябрь','октябрь','ноябрь','декабрь'],
+      	monthNamesShort: ['января','февраля','марта','апреля','мая','июня',
+      	'июля','августа','сентября','октября','ноября','декабря'],
+      	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+      	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+      	dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+      	weekHeader: 'Не',
+      	dateFormat: 'd M, yy',
+      	firstDay: 1,
+      	onSelect: function(){ 
+      		$('.datepicker-date span').html($(this).val());
+      		$('.datepicker').hide().prev().removeClass('datepicker-date_active');
+      	}
+      });
+    },
+    mouseleave: function () {
+      $(this).children('.datepicker-date').removeClass('datepicker-date_active'); 
+      $(this).children('.datepicker').hide();
+    }
+}, '.datepicker-out'); //pass the element as an argument to .on
+
 
 //author
 $('.author').hover( 
