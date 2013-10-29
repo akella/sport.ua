@@ -124,7 +124,7 @@ $('.play__item').each(function() {
 		$(this).addClass('play-open');
 	};
 });
-$('.play').on('click', '.play__item', function() {
+$('.play').on('click', '.play__item.js-btn', function() {
 	if ($(this).hasClass('active')) {	
 		$(this).find('.play__view').slideUp(100);
 		$(this).removeClass('active');		

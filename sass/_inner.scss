@@ -1907,3 +1907,34 @@
 .comment-body {
 	margin-left: 40px;
 }
+//result_wide
+.result_wide {
+	margin-bottom: 20px;
+	.play__item {
+		border-bottom: 1px solid #D8D8D8;
+		overflow: hidden;
+	}
+	.play__desc {
+		float: left;
+		width: 455px;
+		border: none;
+		cursor: default;
+	}
+	.play__view {
+		display: block;
+		float: left;
+		width: 230px;
+		padding: 6px 0 5px;
+		background: none;
+		border: none;
+		li {
+			margin: 0 0 0 10px;
+			&:first-child {
+				margin: 0;
+			}
+			a {
+				color: #3B6AB7;
+			}
+		}
+	}
+}
