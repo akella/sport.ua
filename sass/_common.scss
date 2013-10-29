@@ -1058,6 +1058,21 @@ i, em {
 		border: 1px solid #c8c8c8;
 		@include box-shadow(#dfdfdf 0px 1px 1px inset, #fff 0 1px 1px);
 	}
+	&.active {
+		i {
+			@include sized-sprite($icons, minus);
+		}		
+		&:hover {
+			i {
+				@include sized-sprite($icons, minus1);
+			}
+		}
+		&:active {
+			i {
+				@include sized-sprite($icons, minus2);
+			}
+		}
+	}
 }
 .close {
 	position: absolute;
@@ -1372,6 +1387,9 @@ i, em {
 	}
 }
 .result_main {
+	.title {
+		padding-left: 25px;
+	}
 	.play__time {
 		width: 26%;
 	}

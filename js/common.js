@@ -101,6 +101,12 @@ $('.result__title').on('click', '.open', function() {
 });
 
 //result group
+$('.result .title .open').each(function() {
+	if ($(this).hasClass('active')) {}
+	else {
+		$(this).parent().next().hide();
+	}
+});
 $('.play-group .open').each(function() {
 	if ($(this).hasClass('active')) {}
 	else {
@@ -108,6 +114,15 @@ $('.play-group .open').each(function() {
 	}
 });
 $('.play-group').on('click', '.open', function() {
+	if ($(this).hasClass('active')) {		
+		$(this).removeClass('active').parent().next().slideUp(200);
+	}
+	else {		
+		$(this).addClass('active').parent().next().slideDown(200);
+	};
+	save_active_btns();
+});
+$('.result .title').on('click', '.open', function() {
 	if ($(this).hasClass('active')) {		
 		$(this).removeClass('active').parent().next().slideUp(200);
 	}

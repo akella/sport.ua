@@ -1910,6 +1910,9 @@
 //result_wide
 .result_wide {
 	margin-bottom: 20px;
+	.title {
+		padding-left: 25px;
+	}
 	.play__item {
 		border-bottom: 1px solid #D8D8D8;
 		overflow: hidden;
@@ -1937,4 +1940,10 @@
 			}
 		}
 	}
+}
+.result__btn-top {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	height: 18px;	
 }

@@ -2,6 +2,7 @@
 @import "base";
 //main
 .main-block {
+	margin-bottom: 20px;
 	overflow: hidden;
 }
 //main-post
@@ -94,6 +95,7 @@
 }
 //result
 .result {
+	margin-bottom: 30px;
 	font-family: Verdana, Tahoma, sans-serif;
 	.title {
 		border-bottom: 2px solid #a5a5a5;
@@ -174,7 +176,7 @@
 /*photo report*/
 .photo-report {
 	position: relative;
-	margin: 30px 0;
+	margin-bottom: 30px;
 	padding-bottom: 30px;
 	overflow: hidden;
 	.title {
@@ -221,7 +223,7 @@
 }
 /*pop-news*/
 .pop-news {
-	margin-top: 40px;	
+	margin-bottom: 30px;	
 	.meta {
 		padding: 5px 0;
 	}
