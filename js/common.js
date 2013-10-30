@@ -212,7 +212,7 @@ $(document).on({
     mouseenter: function () {
       $(this).children('.datepicker-date').addClass('datepicker-date_active'); 
       $(this).children('.datepicker').show(); 
-      $('.datepicker').datepicker({
+      $(this).children('.datepicker').datepicker({
       	inline: true,
       	monthNames: ['январь','февраль','март','апрель','май','июнь',
       	'июль','август','сентябрь','октябрь','ноябрь','декабрь'],

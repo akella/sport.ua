@@ -1908,11 +1908,26 @@
 	margin-left: 40px;
 }
 //result_wide
+.play__finish {
+	width: 6%;
+	margin-top: 1px;
+}
+.play__type {
+	width: 78%;
+	padding: 0 1%;
+	font-size: 11px;
+	color: #676767;
+}
 .result_wide {
 	margin-bottom: 20px;
 	.title {
 		padding-left: 25px;
 	}
+	.result__title {
+		strong, span {
+			display: inline;
+		}
+	}	
 	.play__item {
 		border-bottom: 1px solid #D8D8D8;
 		overflow: hidden;
