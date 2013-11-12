@@ -1388,7 +1388,7 @@ i, em {
 }
 .result_main {
 	.title {
-		padding-left: 25px;
+		padding-left: 0px;
 	}
 	.play__time {
 		width: 26%;
@@ -1403,6 +1403,12 @@ i, em {
 		display: none;
 	}
 }
+.result_channel {
+	.title {
+		padding-left: 25px;
+	}
+}
+
 //base link
 .comm-link {
 	position: relative;
@@ -2095,4 +2101,14 @@ i, em {
 			@include box-shadow(rgba(0,0,0,0.8) 0 0 1px inset, rgba(0,0,0,0.1) 0 2px 1px inset);
 		}
 	}
+}
+
+//result-btn
+.btn-arrow {
+	cursor: pointer;
+	background:#000;
+	color:#fff;
+	&:hover {
+		background:#278EE0;	
+		}
 }
