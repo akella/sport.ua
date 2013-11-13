@@ -1337,7 +1337,12 @@ i, em {
 	border-bottom: 1px solid #D8D8D8;
 	ul {
 		overflow: hidden;
+		.online {
+		width: 65px;
+		text-align: center;
+		}
 	}
+	
 	li {
 		float: left;
 		margin-right: 30px;
@@ -2112,3 +2117,4 @@ i, em {
 		background:#278EE0;	
 		}
 }
+
