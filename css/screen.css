@@ -496,6 +496,7 @@ i, em { font-style: normal; }
 
 .play__view { display: none; padding: 8px; border-bottom: 1px solid #d8d8d8; }
 .play__view ul { overflow: hidden; }
+.play__view ul .online { width: 65px; text-align: center; }
 .play__view li { float: left; margin-right: 30px; }
 .play__view a, .play__view span { font-size: 11px; color: #86732b; }
 .play__view span { color: #373737; }
