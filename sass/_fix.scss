@@ -1,0 +1,40 @@
+#us-vkontakte{margin:7px 0px;}
+#banner-160_left{width: 160px; height: 240px; margin-top: 20px;}
+#banner-970_250{width: 100%; text-align: center; clear: both; margin: 0 auto;}
+.collapsed-log { height: 1200px; overflow: hidden; position: relative; }
+
+.mauth {
+	float: right;
+}
+.mauth .mauth-box a.vkontakte, .mauth a.vkontakte, .oauth-vkontakte {
+	background: url('../img/icons-sef1153cfae.png') 0 -2185px no-repeat !important;
+	width: 12px;
+	height: 13px;
+	display: inline-block;
+	margin: 7px 5px 0 0;
+}
+.mauth .mauth-box a.facebook, .mauth a.facebook, .oauth-facebook {
+	background: url('../img/icons-sef1153cfae.png') 0 -2540px no-repeat !important;
+	width: 12px;
+	height: 13px;
+	display: inline-block;
+	margin: 7px 5px 0 0;
+}
+.mauth .mauth-box a.twitter, .mauth a.twitter, .oauth-twitter,
+.mauth .mauth-box a.yandex, .mauth a.yandex, .oauth-yandex,
+.mauth .mauth-box a.mailru, .mauth a.mailru, .oauth-mailru,
+.mauth .mauth-box a.odnoklassniki, .mauth a.odnoklassniki, .oauth-odnoklassniki,
+.mauth .mauth-box a.google, .mauth a.google, .oauth-google,
+.mauth span.mauth-box-title, .mauth span, .mauth-logout, .login-form {
+	display: none;	
+}
+
+.login-block {
+	left: 50%;
+	width: 480px;
+	margin-left: -240px;
+	background: #fff;	
+	position: relative;
+	top: 0px;
+	display: block;
+}
