@@ -500,7 +500,7 @@ i, em { font-style: normal; }
 .play__view li { float: left; margin-right: 30px; }
 .play__view a, .play__view span { font-size: 11px; color: #86732b; }
 .play__view span { color: #373737; }
-.play__view .online { color: #ff3600; text-decoration: underline; }
+.play__view .onlines { color: #ff3600; text-decoration: underline; }
 
 .play-group { position: relative; height: 26px; line-height: 26px; padding-left: 8px; background: #ebeff8; border-top: 1px solid #c6d0e7; font-size: 12px; color: #646e87; font-weight: bold; }
 .play-group button { position: absolute; top: 50%; height: 18px; margin-top: -9px; }
@@ -1852,7 +1852,7 @@ i, em { font-style: normal; }
 
 .comment-body { margin-left: 40px; }
 
-.play__finish { width: 6%; margin-top: 1px; }
+.play__finish { width: 6%; margin-top: 1px; text-align: center; }
 
 .play__type { width: 78%; padding: 0 1%; font-size: 11px; color: #676767; }
 
@@ -2173,3 +2173,21 @@ i, em { font-style: normal; }
 .webconference_no-answer .webquestion:first-child { padding-top: 0px; border-top: none; }
 
 .webconference__socials { position: absolute; bottom: -12px; left: 50%; margin-left: -250px; width: 500px; height: 25px; background: #fff; }
+
+#us-vkontakte { margin: 7px 0px; }
+
+#banner-160_left { width: 160px; height: 240px; margin-top: 20px; }
+
+#banner-970_250 { width: 100%; text-align: center; clear: both; margin: 0 auto; }
+
+.collapsed-log { height: 1200px; overflow: hidden; position: relative; }
+
+.mauth { float: right; }
+
+.mauth .mauth-box a.vkontakte, .mauth a.vkontakte, .oauth-vkontakte { background: url("../img/icons-sef1153cfae.png") 0 -2185px no-repeat !important; width: 12px; height: 13px; display: inline-block; margin: 7px 5px 0 0; }
+
+.mauth .mauth-box a.facebook, .mauth a.facebook, .oauth-facebook { background: url("../img/icons-sef1153cfae.png") 0 -2540px no-repeat !important; width: 12px; height: 13px; display: inline-block; margin: 7px 5px 0 0; }
+
+.mauth .mauth-box a.twitter, .mauth a.twitter, .oauth-twitter, .mauth .mauth-box a.yandex, .mauth a.yandex, .oauth-yandex, .mauth .mauth-box a.mailru, .mauth a.mailru, .oauth-mailru, .mauth .mauth-box a.odnoklassniki, .mauth a.odnoklassniki, .oauth-odnoklassniki, .mauth .mauth-box a.google, .mauth a.google, .oauth-google, .mauth span.mauth-box-title, .mauth span, .mauth-logout, .login-form { display: none; }
+
+.login-block { left: 50%; width: 480px; margin-left: -240px; background: #fff; position: relative; top: 0px; display: block; }
