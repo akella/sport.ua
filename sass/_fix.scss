@@ -38,3 +38,103 @@
 	top: 0px;
 	display: block;
 }
+
+.comments-login__social {
+	position: absolute;
+	top: 4px;
+	left:70%;
+	color: #999999;
+}
+.comments-login__social ul {
+	margin-left: -4px !important;	
+}
+.comments-login__social ul li {
+	margin: 0px 8px 0px 0px !important;	
+}
+.comments-login__social span {
+	margin: 0px 0px 5px !important;
+}
+
+#adsense_300 {		
+	width: 300px;
+	height: 250px;
+	margin-bottom: 20px;	
+}
+
+.stavka_adsense {
+	float: right;
+	position: relative;
+	top: 110px;
+	left: -31px;
+}
+
+.social__lj {
+	float: left;
+	margin-right: 2px;
+	background: url('../img/icons/livejournal.png') 0 0 no-repeat;
+	width: 24px;
+	height: 24px;
+}
+
+#adsense_300 {	
+	width: 336px !important;
+	height: 280px !important;
+}
+.stavka_adsense {
+	left: -24px !important;	
+}
+
+.invite_relogin {
+	left: 215px !important;
+	top: 128px !important;
+}
+.warning__noinvite {
+	margin-top: 15px;
+}
+
+#main_site_news .title {
+	margin-bottom: 10px;
+	border-bottom: 2px solid #ff5b01;
+}
+#main_site_news .main-news__title {
+	font-weight: normal;
+	font-size: 11px;
+}
+#main_site_news .meta {
+	display: inline;
+}
+#main_site_news .main-news__item img {
+	margin: 5px 0px 10px;
+}
+#main_site_news .main-news__item p {
+	display: inline;
+}
+
+.pop-news h1 {	
+	margin-bottom: 20px;
+	border-bottom: 2px solid #ff5b01;
+	position: relative;
+	padding: 8px 0;
+	font-size: 18px;
+	font-weight: normal;
+}
+.social__li {
+	float: left;	
+	background: url('../img/icons/linkedin.png') 0 0 no-repeat;
+	width: 24px;
+	height: 24px;
+}
+
+.banner-970_250-news {
+	width: 728px !important;
+	margin-left: -21px !important;
+}
+
+#poll-notification {
+	margin-bottom: 20px;
+}
+
+.all-news__date {
+	color: #6a6a6a;
+	font-weight: bold;
+}

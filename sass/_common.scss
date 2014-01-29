@@ -1229,6 +1229,15 @@ i, em {
 		background: #fffdca;
 	}
 	.play__item {
+		.play__result {
+			span, a.no_online {
+				height: 16px;
+				line-height: 16px;
+				background: none;
+				border: 1px solid #aaa;				
+				color: #363636;
+			}				
+		}
 		&.active {
 			background: #fffdca;
 			.play__result {
@@ -1240,11 +1249,10 @@ i, em {
 					border: 1px solid #e8db9b;
 					color: #6e6013;
 				}			
-				span {
-					color: #373737;
-				}
+				
 			}
 		}
+		
 	}	
 	.play__item_now {
 		.play__time {
@@ -1257,9 +1265,9 @@ i, em {
 			a {
 				height: 16px;
 				line-height: 16px;
-				background: none;
+				background: #fd6530;
 				border: 1px solid #fc5b23;				
-				color: #fc5b23;
+				color: #fff;
 			}			
 		}
 		&.active {
@@ -1281,6 +1289,28 @@ i, em {
 	}
 	.play__team-1, .play__team-2 {
 		line-height: 1.3;
+	}
+	.play__item_without_online {
+		.play__result {
+			span {
+				height: 16px;
+				line-height: 16px;
+				background: none;
+				border: 1px solid #fc5b23;				
+				color: #fc5b23;
+			}			
+		}
+		&.active {
+			.play__time {
+				color: #fc5b23;
+			}
+			.play__result {
+				a {
+					border: 1px solid #fc5b23;				
+					color: #fc5b23;
+				}			
+			}
+		}
 	}		
 }
 .play__item {
@@ -1411,6 +1441,15 @@ i, em {
 .result_channel {
 	.title {
 		padding-left: 25px;
+	}
+}
+
+.result_biathlon {
+	.play__time {
+		width: 30%;
+	}
+	.play__type {
+		width: 62%;
 	}
 }
 
