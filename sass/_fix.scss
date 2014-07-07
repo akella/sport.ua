@@ -138,3 +138,67 @@
 	color: #6a6a6a;
 	font-weight: bold;
 }
+
+
+
+.bet_chart_main {
+	clear: both; 
+	height:240px;	
+}
+
+.bet_chart_1 {
+	width: 340px; 
+	height: 240px; 
+	float: left; 
+}
+
+.bet_chart_2 {
+	width: 340px; 
+	height: 240px; 
+	float: right; 
+}
+
+.bet_set_link {
+	clear: both; 
+	padding-left: 280px;
+	margin-top: -40px;
+}
+
+.title__bet {
+	border-bottom: 2px solid #FBD10D; 
+	padding-left: 20px;
+}
+
+.partners_cyber {padding: 20px 0 10px 0px !important; text-align: center; margin: 20px 0px 15px;}
+
+.play .play__team-1 img, .play .play__team-2 img { vertical-align: middle; }
+
+.block-title {
+	height: 115px;
+}
+.tournir-table__sort { 
+	float: none !important; 
+	width: 150px !important;
+	margin-bottom: 0px !important; 
+	padding-right: 10px !important; 
+	border: none !important; 
+}
+.tournir-table__sort:after {
+	background: none !important;
+}
+.tournir-table__sortblock {
+	position: relative; 
+	float: right; 
+	top: -60px;
+}
+
+#banner-250_online { padding-bottom: 5px; }
+.glyva__block {	position: absolute; top: 47px; left: 367px;	width: 160px !important; height: 75px !important; font-size: 11px; background: #eff3fe !important;}
+.glyva__title { margin: 1px; height: 34px; }
+.glyva__title a { color: #2ea90d !important; text-decoration: none !important; }
+.glyva__title a:hover { color: #2ea90d !important; text-decoration: none !important; }
+.glyva__title img {	float: left; }
+.glyva__title div {	float: left; margin: 6px 1px 0px 3px; }		
+.glyva__news { margin: 2px 1px 2px 7px; }
+.glyva__news a { color: #ED3C0C !important; text-decoration: none !important; }
+.glyva__news a:hover { color: #ED3C0C !important; text-decoration: none !important; }
