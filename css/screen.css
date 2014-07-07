@@ -275,9 +275,9 @@ i, em { font-style: normal; }
 .nav-list .nav-list__item.active .nav-list__title h3 { padding: 11px 18px 12px 10px; margin: 0 5px; background: #fff; color: #000; }
 .nav-list .nav-list__item.active:hover .nav-list__title { top: 0; }
 .nav-list .nav-list__item.active:hover .nav-list__title h3 { padding: 16px 23px 12px 16px; margin: 0; }
-.nav-list .nav-list__item.no-sub h3 { padding: 16px 16px 12px 16px; }
+.nav-list .nav-list__item.no-sub h3 { padding: 16px 15px 12px 15px; }
 .nav-list .nav-list__item.no-sub i { display: none; }
-.nav-list .nav-list__item.no-sub:hover h3 { padding: 16px 17px 12px 16px; }
+.nav-list .nav-list__item.no-sub:hover h3 { padding: 16px 16px 12px 15px; }
 .nav-list .nav-list__title { position: relative; display: block; font-family: Arial,Tahoma,sans-serif; font-size: 12px; color: #fff; z-index: 20; }
 .nav-list .nav-list__title h3 { position: relative; padding: 16px 23px 12px 15px; font-size: 12px; }
 .nav-list .nav-list__title i { position: absolute; bottom: 17px; right: 14px; background: url('../img/icons-sef1153cfae.png') 0 -4058px no-repeat; width: 3px; height: 2px; }
@@ -469,6 +469,7 @@ i, em { font-style: normal; }
 .play .play__item_now .play__time { color: #fc5b23; }
 .play .play__item_now .play__team-1, .play .play__item_now .play__team-2 { color: #000; }
 .play .play__item_now .play__result a { height: 16px; line-height: 16px; background: #fd6530; border: 1px solid #fc5b23; color: #fff; }
+.play .play__item_now .play__result a.no_online { height: 16px; line-height: 16px; background: none; border: 1px solid #fc5b23; color: #6e6013; }
 .play .play__item_now.active .play__time { color: #fc5b23; }
 .play .play__item_now.active .play__result a { border: 1px solid #fc5b23; color: #fc5b23; }
 .play .play__cell { position: relative; float: left; line-height: 18px; }
@@ -514,6 +515,7 @@ i, em { font-style: normal; }
 .result_main .title { padding-left: 0px; }
 .result_main .play__time { width: 26%; }
 .result_main .play__type { width: 66%; }
+.result_main .play__race { width: 66%; }
 .result_main .play__team-1, .result_main .play__team-2 { width: 30%; }
 .result_main .play__channel { display: none; }
 
@@ -521,6 +523,10 @@ i, em { font-style: normal; }
 
 .result_biathlon .play__time { width: 30%; }
 .result_biathlon .play__type { width: 62%; }
+
+.result_auto .play__time { width: 30%; }
+.result_auto .play__race { width: 50%; }
+.result_auto .play__channel { width: 12%; }
 
 .comm-link { position: relative; padding-left: 20px; font-size: 10px; font-weight: bold; color: #2ea90d; }
 .comm-link i { position: absolute; top: 2px; left: 4px; background: url('../img/icons-sef1153cfae.png') 0 -3175px no-repeat; width: 13px; height: 13px; }
@@ -1299,7 +1305,8 @@ i, em { font-style: normal; }
 .menu a.active { color: #000; text-decoration: none; }
 
 .news-title { margin-bottom: 10px; }
-.news-title h2 { margin-bottom: 5px; font-weight: normal; }
+.news-title h1 { margin-bottom: 5px; font-weight: normal; font-size: 24px; color: #000; }
+.news-title h2 { font-size: 15px; line-height: 1.3; color: #676767; margin-bottom: 0px !important; font-weight: normal; }
 .news-title p { font-size: 15px; line-height: 1.3; color: #676767; }
 
 .post-detail .social { padding: 0 0 15px 10px; }
@@ -1862,6 +1869,8 @@ i, em { font-style: normal; }
 
 .play__type { width: 78%; padding: 0 1%; font-size: 11px; color: #676767; }
 
+.play__race { width: 62%; padding: 0 1%; font-size: 11px; color: #676767; }
+
 .result_wide { margin-bottom: 20px; }
 .result_wide .title { padding-left: 25px; }
 .result_wide .result__title strong, .result_wide .result__title span { display: inline; }
@@ -2239,3 +2248,45 @@ i, em { font-style: normal; }
 #poll-notification { margin-bottom: 20px; }
 
 .all-news__date { color: #6a6a6a; font-weight: bold; }
+
+.bet_chart_main { clear: both; height: 240px; }
+
+.bet_chart_1 { width: 340px; height: 240px; float: left; }
+
+.bet_chart_2 { width: 340px; height: 240px; float: right; }
+
+.bet_set_link { clear: both; padding-left: 280px; margin-top: -40px; }
+
+.title__bet { border-bottom: 2px solid #fbd10d; padding-left: 20px; }
+
+.partners_cyber { padding: 20px 0 10px 0px !important; text-align: center; margin: 20px 0px 15px; }
+
+.play .play__team-1 img, .play .play__team-2 img { vertical-align: middle; }
+
+.block-title { height: 115px; }
+
+.tournir-table__sort { float: none !important; width: 150px !important; margin-bottom: 0px !important; padding-right: 10px !important; border: none !important; }
+
+.tournir-table__sort:after { background: none !important; }
+
+.tournir-table__sortblock { position: relative; float: right; top: -60px; }
+
+#banner-250_online { padding-bottom: 5px; }
+
+.glyva__block { position: absolute; top: 47px; left: 367px; width: 160px !important; height: 75px !important; font-size: 11px; background: #eff3fe !important; }
+
+.glyva__title { margin: 1px; height: 34px; }
+
+.glyva__title a { color: #2ea90d !important; text-decoration: none !important; }
+
+.glyva__title a:hover { color: #2ea90d !important; text-decoration: none !important; }
+
+.glyva__title img { float: left; }
+
+.glyva__title div { float: left; margin: 6px 1px 0px 3px; }
+
+.glyva__news { margin: 2px 1px 2px 7px; }
+
+.glyva__news a { color: #ed3c0c !important; text-decoration: none !important; }
+
+.glyva__news a:hover { color: #ed3c0c !important; text-decoration: none !important; }
