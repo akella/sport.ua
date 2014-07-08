@@ -1019,6 +1019,32 @@ i, em {
 		color: #939393;
 	}
 }
+
+.btn-blue {
+	@include border-radius(3px);
+	border: 1px solid #0b6ab4;
+	background: #1f9df;
+	color: #fff;
+	overflow: visible;
+	@include background-image(linear-gradient(#1f9df1, #3a6cb9));
+	@include box-shadow(#cdd8e7 0px 1px 2px);
+	text-decoration: none;
+	cursor: pointer;
+	padding: 3px;
+	margin: 2px;
+	&:hover {
+		border: 1px solid #2593e5;
+		background: #fff;
+		color: #676767;
+	}
+	&:active {
+		border-color: #c8c8c8;
+		background: #f1f1f1;
+		text-shadow: 0 1px 1px #fefefe;
+		@include box-shadow(#cdd8e7 0px 1px 2px inset);
+		color: #939393;
+	}
+}
 .open {
 	right: 7px;
 	width: 18px;
